@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "id": "touchngo",
+  "name": "Touch 'n Go eWallet",
+  "version": 2,
+  "author": "PayPing community",
+  "description": "Real-notification starter for TNG transfers, payments, tolls, parking and informational alerts.",
+  "androidPackages": ["my.com.tngdigital.ewallet"],
+  "iosAppNames": ["TNG eWallet", "Touch 'n Go eWallet"],
+  "rules": [
+    {
+      "id": "touchngo.cashin-dup.v1",
+      "priority": 400,
+      "match": { "title": "Cash In Successful" },
+      "direction": "info"
+    },
+    {
+      "id": "touchngo.non-money.v1",
+      "priority": 390,
+      "match": {
+        "title": "points!$|^Travel eSIM purchase successful$|^Payment to |^Mobile prepaid top up$|^LPR parking payment is successful$"
+      },
+      "direction": "info",
+      "confidence": "none"
+    },
+    {
+      "id": "touchngo.kaching-review.v1",
+      "priority": 380,
+      "match": { "title": "^Ka-ching! Incoming Money", "body": "received from" },
+      "direction": "info",
+      "confidence": "none"
+    },
+    {
+      "id": "touchngo.toll.v1",
+      "priority": 370,
+      "match": { "title": "^Successful Toll Payment$" },
+      "direction": "out",
+      "extract": {
+        "amount": "(?:RM|MYR)\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": { "pattern": "(?<counterparty>Toll)", "source": "title" }
+      }
+    },
+    {
+      "id": "touchngo.received-title.v1",
+      "priority": 360,
+      "match": { "title": "^You.*received money" },
+      "direction": "in",
+      "extract": {
+        "amount": "(?:RM|MYR)\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "^(?:.*received from |(?=.* has transferred))(?<counterparty>.+?)(?: has transferred| for|\\.|$)"
+      }
+    },
+    {
+      "id": "touchngo.sent-title.v1",
+      "priority": 350,
+      "match": { "title": "^Payment To:|^DuitNow Payment to " },
+      "direction": "out",
+      "extract": {
+        "amount": "(?:RM|MYR)\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": { "pattern": "^(?:Payment To:|DuitNow Payment to )\\s?(?<counterparty>.+)$", "source": "title" }
+      }
+    },
+    {
+      "id": "touchngo.parking.v1",
+      "priority": 340,
+      "match": { "title": "^Parking Payment Successful" },
+      "direction": "out",
+      "extract": {
+        "amount": "(?:RM|MYR)\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "paid for (?<counterparty>Parking.*?)(?:\\.|$)"
+      }
+    },
+    {
+      "id": "touchngo.received-body.v1",
+      "priority": 330,
+      "match": { "body": "received from|has transferred" },
+      "direction": "in",
+      "extract": {
+        "amount": "(?:RM|MYR)\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "^(?:.*received from |(?=.* has transferred))(?<counterparty>.+?)(?: has transferred| for|\\.|$)"
+      }
+    },
+    {
+      "id": "touchngo.sent-body.v1",
+      "priority": 320,
+      "match": {
+        "body": "you have paid|has been deducted|deducted from your|successfully transferred|toll payment|parking"
+      },
+      "direction": "out",
+      "extract": {
+        "amount": "(?:RM|MYR)\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "(?:transferred (?:RM|MYR)\\s?[\\d,.]+ to|transferred to|paid (?:RM|MYR)\\s?[\\d,.]+ (?:to|at|for)|paid (?:to|at|for)|at)\\s?(?<counterparty>.+?)(?:\\.(?= (?:REF|Merchant)\\b|$)|$)"
+      }
+    },
+    {
+      "id": "touchngo.unmatched.v1",
+      "priority": -100,
+      "match": { "title": ".*" },
+      "direction": "info",
+      "confidence": "none"
+    }
+  ]
+}

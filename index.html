@@ -1,10 +1,441 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PayPing Lite</title>
-<meta http-equiv="refresh" content="0; url=privacy-policy.html">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PayPing Lite &mdash; Bank Parser Library</title>
+  <meta name="description" content="Offline bank notification parsers for PayPing Lite. Zero cloud, zero network, 100% local ringgit voice alerts.">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body><p><a href="privacy-policy.html">PayPing Lite privacy policy</a></p></body>
+<body>
+  
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <svg viewBox="0 0 32 32" width="28" height="28" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="#059669"/><text x="16" y="21" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="-0.5">RM</text></svg>
+        <span class="brand-text">PayPing <span class="brand-sub">Parser Library</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Parsers</a>
+        <a href="guide.html" class="nav-link ">Guide (EN)</a>
+        <a href="guide-ms.html" class="nav-link ">Panduan (MS)</a>
+        <a href="https://github.com/jongoz79/payping-lite-public/issues/new?template=parser.md" target="_blank" rel="noopener" class="nav-link nav-link-external">
+          Contribute <svg class="icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">Bank Notification Parsers</h1>
+      <p class="hero-subtitle">
+        Ready-to-use parser rules for Malaysian banks and digital wallets. PayPing Lite reads notifications offline using regular expressions with zero cloud dependencies.
+      </p>
+
+      <div class="callout-box">
+        <div>
+          <strong>How to use in PayPing Lite:</strong> In the app, open the <strong>Bank Rules</strong> tab, tap <strong>+ Add Bank Rule</strong>, then paste the JSON or choose <strong>Import Rule File (.json)</strong>. You can also tap <strong>Teach PayPing this format</strong> on any captured notification in Today or History.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container" style="flex: 1;">
+    <div class="controls-bar">
+      <div class="search-box">
+        <svg class="icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd"/></svg>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search by bank name or package name..." aria-label="Search bank parsers">
+      </div>
+      <div class="filter-group">
+        <button type="button" class="filter-btn active" data-filter="all">All (3)</button>
+        <button type="button" class="filter-btn" data-filter="tested">Tested (3)</button>
+        <button type="button" class="filter-btn" data-filter="untested">Untested (0)</button>
+      </div>
+    </div>
+
+    <div class="parsers-grid" id="parsersGrid">
+      
+    <article class="parser-card" data-name="HSBC Malaysia" data-packages="my.com.hsbc.hsbcmalaysia HSBC Malaysia" data-tested="true">
+      <div class="card-top">
+        <div class="card-header-line">
+          <h2 class="parser-name"><a href="parsers/hsbc.html">HSBC Malaysia</a></h2>
+          <span class="badge badge-version">v1</span>
+        </div>
+        <div style="margin-bottom: 10px;"><span class="badge badge-tested"><svg class="icon icon-status" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 1.75a.75.75 0 01.375.1l6 3.5a.75.75 0 01.375.65v4.5a10.5 10.5 0 01-5.733 9.35.75.75 0 01-.764 0A10.5 10.5 0 014.25 10.5v-4.5a.75.75 0 01.375-.65l6-3.5a.75.75 0 01.375-.1zm4.03 6.47a.75.75 0 00-1.06-1.06L9 11.19l-1.97-1.97a.75.75 0 00-1.06 1.06l2.5 2.5a.75.75 0 001.06 0l4.5-4.5z" clip-rule="evenodd"/></svg> Tested on real notifications</span></div>
+        <p class="parser-desc">Real-notification starter for HSBC credit-card charges and DuitNow funds received.</p>
+
+        <div class="parser-meta">
+          <div class="meta-row">
+            <span class="meta-label">Rules:</span>
+            <span>2 patterns</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Android:</span>
+            <span class="meta-val">my.com.hsbc.hsbcmalaysia</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">iOS:</span>
+            <span class="meta-val">HSBC Malaysia</span>
+          </div>
+        </div>
+
+        
+      <div class="sample-preview">
+        <div class="sample-tag">Example Notification</div>
+        
+        <div class="sample-body">MYR950.00 was charged to your credit card ending 1681 at MYDIN MART on 21/09/25. Pls call HSBC if you did not authorise.</div>
+      </div>
+      </div>
+
+      <div class="card-actions">
+        <button type="button" class="btn btn-primary" onclick="copyParserJson('hsbc', this)">
+          <svg class="icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M7 3.5A1.5 1.5 0 018.5 2h7A1.5 1.5 0 0117 3.5v9a1.5 1.5 0 01-1.5 1.5h-7A1.5 1.5 0 017 12.5v-9zM8.5 3a.5.5 0 00-.5.5v9a.5.5 0 00.5.5h7a.5.5 0 00.5-.5v-9a.5.5 0 00-.5-.5h-7z"/><path d="M4.5 6A1.5 1.5 0 003 7.5v9A1.5 1.5 0 004.5 18h7a1.5 1.5 0 001.5-1.5v-1a.5.5 0 00-1 0v1a.5.5 0 01-.5.5h-7a.5.5 0 01-.5-.5v-9a.5.5 0 01.5-.5h1a.5.5 0 000-1h-1z"/></svg> Copy JSON
+        </button>
+        <a href="parsers/hsbc.json" download class="btn" title="Download hsbc.json">
+          <svg class="icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M10.75 2.75a.75.75 0 00-1.5 0v8.69L6.53 8.72a.75.75 0 00-1.06 1.06l4 4a.75.75 0 001.06 0l4-4a.75.75 0 10-1.06-1.06l-2.72 2.72V2.75z"/><path d="M3.5 14.75a.75.75 0 01.75-.75h11.5a.75.75 0 010 1.5H4.25a.75.75 0 01-.75-.75z"/></svg> .json
+        </a>
+        <a href="parsers/hsbc.html" class="btn btn-link">
+          Rules <svg class="icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="parser-card" data-name="Maybank2u and MAE" data-packages="com.maybank2u.life MAE Maybank2u" data-tested="true">
+      <div class="card-top">
+        <div class="card-header-line">
+          <h2 class="parser-name"><a href="parsers/mae.html">Maybank2u and MAE</a></h2>
+          <span class="badge badge-version">v2</span>
+        </div>
+        <div style="margin-bottom: 10px;"><span class="badge badge-tested"><svg class="icon icon-status" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 1.75a.75.75 0 01.375.1l6 3.5a.75.75 0 01.375.65v4.5a10.5 10.5 0 01-5.733 9.35.75.75 0 01-.764 0A10.5 10.5 0 014.25 10.5v-4.5a.75.75 0 01.375-.65l6-3.5a.75.75 0 01.375-.1zm4.03 6.47a.75.75 0 00-1.06-1.06L9 11.19l-1.97-1.97a.75.75 0 00-1.06 1.06l2.5 2.5a.75.75 0 001.06 0l4.5-4.5z" clip-rule="evenodd"/></svg> Tested on real notifications</span></div>
+        <p class="parser-desc">Real-notification starter for Maybank2u card, transfer, Scan &amp; Pay and funds-received alerts.</p>
+
+        <div class="parser-meta">
+          <div class="meta-row">
+            <span class="meta-label">Rules:</span>
+            <span>7 patterns</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Android:</span>
+            <span class="meta-val">com.maybank2u.life</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">iOS:</span>
+            <span class="meta-val">MAE, Maybank2u</span>
+          </div>
+        </div>
+
+        
+      <div class="sample-preview">
+        <div class="sample-tag">Example Notification</div>
+        <div class="sample-title">Maybank2u: Card Transaction</div>
+        <div class="sample-body">You&#39;ve just spent RM 15.46 at CAFE LANGIT with your Maybank Debit Card Visa ending 7828. View your receipt now.</div>
+      </div>
+      </div>
+
+      <div class="card-actions">
+        <button type="button" class="btn btn-primary" onclick="copyParserJson('mae', this)">
+          <svg class="icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M7 3.5A1.5 1.5 0 018.5 2h7A1.5 1.5 0 0117 3.5v9a1.5 1.5 0 01-1.5 1.5h-7A1.5 1.5 0 017 12.5v-9zM8.5 3a.5.5 0 00-.5.5v9a.5.5 0 00.5.5h7a.5.5 0 00.5-.5v-9a.5.5 0 00-.5-.5h-7z"/><path d="M4.5 6A1.5 1.5 0 003 7.5v9A1.5 1.5 0 004.5 18h7a1.5 1.5 0 001.5-1.5v-1a.5.5 0 00-1 0v1a.5.5 0 01-.5.5h-7a.5.5 0 01-.5-.5v-9a.5.5 0 01.5-.5h1a.5.5 0 000-1h-1z"/></svg> Copy JSON
+        </button>
+        <a href="parsers/mae.json" download class="btn" title="Download mae.json">
+          <svg class="icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M10.75 2.75a.75.75 0 00-1.5 0v8.69L6.53 8.72a.75.75 0 00-1.06 1.06l4 4a.75.75 0 001.06 0l4-4a.75.75 0 10-1.06-1.06l-2.72 2.72V2.75z"/><path d="M3.5 14.75a.75.75 0 01.75-.75h11.5a.75.75 0 010 1.5H4.25a.75.75 0 01-.75-.75z"/></svg> .json
+        </a>
+        <a href="parsers/mae.html" class="btn btn-link">
+          Rules <svg class="icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+        </a>
+      </div>
+    </article>
+
+    <article class="parser-card" data-name="Touch &#39;n Go eWallet" data-packages="my.com.tngdigital.ewallet TNG eWallet Touch &#39;n Go eWallet" data-tested="true">
+      <div class="card-top">
+        <div class="card-header-line">
+          <h2 class="parser-name"><a href="parsers/touchngo.html">Touch &#39;n Go eWallet</a></h2>
+          <span class="badge badge-version">v2</span>
+        </div>
+        <div style="margin-bottom: 10px;"><span class="badge badge-tested"><svg class="icon icon-status" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 1.75a.75.75 0 01.375.1l6 3.5a.75.75 0 01.375.65v4.5a10.5 10.5 0 01-5.733 9.35.75.75 0 01-.764 0A10.5 10.5 0 014.25 10.5v-4.5a.75.75 0 01.375-.65l6-3.5a.75.75 0 01.375-.1zm4.03 6.47a.75.75 0 00-1.06-1.06L9 11.19l-1.97-1.97a.75.75 0 00-1.06 1.06l2.5 2.5a.75.75 0 001.06 0l4.5-4.5z" clip-rule="evenodd"/></svg> Tested on real notifications</span></div>
+        <p class="parser-desc">Real-notification starter for TNG transfers, payments, tolls, parking and informational alerts.</p>
+
+        <div class="parser-meta">
+          <div class="meta-row">
+            <span class="meta-label">Rules:</span>
+            <span>10 patterns</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Android:</span>
+            <span class="meta-val">my.com.tngdigital.ewallet</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">iOS:</span>
+            <span class="meta-val">TNG eWallet, Touch &#39;n Go eWallet</span>
+          </div>
+        </div>
+
+        
+      <div class="sample-preview">
+        <div class="sample-tag">Example Notification</div>
+        <div class="sample-title">Successful Toll Payment</div>
+        <div class="sample-body">RM 2.62 was deducted via RFID for toll payment on 17-Nov-2025 09:42</div>
+      </div>
+      </div>
+
+      <div class="card-actions">
+        <button type="button" class="btn btn-primary" onclick="copyParserJson('touchngo', this)">
+          <svg class="icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M7 3.5A1.5 1.5 0 018.5 2h7A1.5 1.5 0 0117 3.5v9a1.5 1.5 0 01-1.5 1.5h-7A1.5 1.5 0 017 12.5v-9zM8.5 3a.5.5 0 00-.5.5v9a.5.5 0 00.5.5h7a.5.5 0 00.5-.5v-9a.5.5 0 00-.5-.5h-7z"/><path d="M4.5 6A1.5 1.5 0 003 7.5v9A1.5 1.5 0 004.5 18h7a1.5 1.5 0 001.5-1.5v-1a.5.5 0 00-1 0v1a.5.5 0 01-.5.5h-7a.5.5 0 01-.5-.5v-9a.5.5 0 01.5-.5h1a.5.5 0 000-1h-1z"/></svg> Copy JSON
+        </button>
+        <a href="parsers/touchngo.json" download class="btn" title="Download touchngo.json">
+          <svg class="icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M10.75 2.75a.75.75 0 00-1.5 0v8.69L6.53 8.72a.75.75 0 00-1.06 1.06l4 4a.75.75 0 001.06 0l4-4a.75.75 0 10-1.06-1.06l-2.72 2.72V2.75z"/><path d="M3.5 14.75a.75.75 0 01.75-.75h11.5a.75.75 0 010 1.5H4.25a.75.75 0 01-.75-.75z"/></svg> .json
+        </a>
+        <a href="parsers/touchngo.html" class="btn btn-link">
+          Rules <svg class="icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+        </a>
+      </div>
+    </article>
+    </div>
+  </main>
+
+  
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p><strong>PayPing Lite</strong> &mdash; Zero network permissions, privacy-first ringgit voice alerts.</p>
+        <p class="footer-subtext">Community bank parsers run entirely offline on your device.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Library</a>
+        <a href="guide.html">Parser Guide (EN)</a>
+        <a href="guide-ms.html">Panduan Parser (MS)</a>
+        <a href="https://github.com/jongoz79/payping-lite-public" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/json" id="parser-json-hsbc">
+{
+  "schemaVersion": 1,
+  "id": "hsbc",
+  "name": "HSBC Malaysia",
+  "version": 1,
+  "author": "PayPing community",
+  "description": "Real-notification starter for HSBC credit-card charges and DuitNow funds received.",
+  "androidPackages": ["my.com.hsbc.hsbcmalaysia"],
+  "iosAppNames": ["HSBC Malaysia"],
+  "rules": [
+    {
+      "id": "hsbc.card-charged.v1",
+      "priority": 200,
+      "match": { "body": "was charged to your (?:supp )?credit card" },
+      "direction": "out",
+      "extract": {
+        "amount": "(?<currency>RM|MYR|IDR|NZD|AUD|SGD|USD|JPY|THB|EUR|GBP|JP¥|NZ\\$|US\\$|S\\$|A\\$|¥|£|€|\\$|[A-Z]{3})\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "at (?<counterparty>.+?) on \\d"
+      }
+    },
+    {
+      "id": "hsbc.funds-received.v1",
+      "priority": 190,
+      "match": { "body": "You've received .* in your A/C" },
+      "direction": "in",
+      "extract": {
+        "amount": "You've received (?<currency>RM|MYR|IDR|NZD|AUD|SGD|USD|JPY|THB|EUR|GBP|JP¥|NZ\\$|US\\$|S\\$|A\\$|¥|£|€|\\$|[A-Z]{3})\\s?(?<amount>[\\d,]+\\.?\\d{0,2})"
+      }
+    }
+  ]
+}
+
+</script>
+<script type="application/json" id="parser-json-mae">
+{
+  "schemaVersion": 1,
+  "id": "mae",
+  "name": "Maybank2u and MAE",
+  "version": 2,
+  "author": "PayPing community",
+  "description": "Real-notification starter for Maybank2u card, transfer, Scan & Pay and funds-received alerts.",
+  "androidPackages": ["com.maybank2u.life"],
+  "iosAppNames": ["MAE", "Maybank2u"],
+  "rules": [
+    {
+      "id": "mae.sent-title.v1",
+      "priority": 400,
+      "match": { "title": "^Maybank2u: Card Transaction$" },
+      "direction": "out",
+      "extract": {
+        "amount": "(?<currency>RM|MYR|IDR|NZD|AUD|SGD|USD|JPY|THB|EUR|GBP|JP¥|NZ\\$|US\\$|S\\$|A\\$|¥|£|€|\\$|[A-Z]{3})\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "at (?<counterparty>.+?) with your"
+      }
+    },
+    {
+      "id": "mae.transfer-named-account.v1",
+      "priority": 395,
+      "match": { "title": "^Maybank2u: Transfer$", "body": "loan account ending|to [A-Z]+'s " },
+      "direction": "out",
+      "extract": {
+        "amount": "(?<currency>RM|MYR|IDR|NZD|AUD|SGD|USD|JPY|THB|EUR|GBP|JP¥|NZ\\$|US\\$|S\\$|A\\$|¥|£|€|\\$|[A-Z]{3})\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "(?:You've transferred|Your transfer of|You've paid) [A-Z$¥£€]{1,3}\\s?[\\d,.]+ to (?:the |)(?<counterparty>.+?)(?:'s .*account ending| account ending)",
+        "reference": "REF:\\s?(?<reference>[A-Z0-9]+)"
+      }
+    },
+    {
+      "id": "mae.transfer.v1",
+      "priority": 390,
+      "match": { "title": "^Maybank2u: Transfer$" },
+      "direction": "out",
+      "extract": {
+        "amount": "(?<currency>RM|MYR|IDR|NZD|AUD|SGD|USD|JPY|THB|EUR|GBP|JP¥|NZ\\$|US\\$|S\\$|A\\$|¥|£|€|\\$|[A-Z]{3})\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "(?:You've transferred|Your transfer of|You've paid) [A-Z$¥£€]{1,3}\\s?[\\d,.]+ to (?:the |)(?<counterparty>.+?)(?: 's |\\. | ).*account ending",
+        "reference": "REF:\\s?(?<reference>[A-Z0-9]+)"
+      }
+    },
+    {
+      "id": "mae.scanpay-received.v1",
+      "priority": 380,
+      "match": { "title": "^Maybank2u: Scan & Pay$", "body": "You've received" },
+      "direction": "in",
+      "extract": {
+        "amount": "(?<currency>RM|MYR|IDR|NZD|AUD|SGD|USD|JPY|THB|EUR|GBP|JP¥|NZ\\$|US\\$|S\\$|A\\$|¥|£|€|\\$|[A-Z]{3})\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "from (?<counterparty>.+?):"
+      }
+    },
+    {
+      "id": "mae.sent-body.v1",
+      "priority": 370,
+      "match": {
+        "title": "^Maybank2u: Scan & Pay$",
+        "body": "Successful payment of|You've transferred|You have successfully paid"
+      },
+      "direction": "out",
+      "extract": {
+        "amount": "(?<currency>RM|MYR|IDR|NZD|AUD|SGD|USD|JPY|THB|EUR|GBP|JP¥|NZ\\$|US\\$|S\\$|A\\$|¥|£|€|\\$|[A-Z]{3})\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "(?:Successful payment of|You've transferred|You have successfully paid) [A-Z$¥£€]{1,3}\\s?[\\d,.]+ to (?<counterparty>.+?)(?:\\s?\\.\\s?REF|:| on \\d)",
+        "reference": "REF:\\s?(?<reference>[A-Z0-9]+)"
+      }
+    },
+    {
+      "id": "mae.received-title.v1",
+      "priority": 360,
+      "match": { "title": "^Maybank2u: Funds Received$", "body": "You.ve just received" },
+      "direction": "in",
+      "extract": {
+        "amount": "(?<currency>RM|MYR|IDR|NZD|AUD|SGD|USD|JPY|THB|EUR|GBP|JP¥|NZ\\$|US\\$|S\\$|A\\$|¥|£|€|\\$|[A-Z]{3})\\s?(?<amount>[\\d,]+\\.?\\d{0,2})"
+      }
+    },
+    {
+      "id": "mae.unmatched.v1",
+      "priority": -100,
+      "match": { "title": ".*" },
+      "direction": "info",
+      "confidence": "none"
+    }
+  ]
+}
+
+</script>
+<script type="application/json" id="parser-json-touchngo">
+{
+  "schemaVersion": 1,
+  "id": "touchngo",
+  "name": "Touch 'n Go eWallet",
+  "version": 2,
+  "author": "PayPing community",
+  "description": "Real-notification starter for TNG transfers, payments, tolls, parking and informational alerts.",
+  "androidPackages": ["my.com.tngdigital.ewallet"],
+  "iosAppNames": ["TNG eWallet", "Touch 'n Go eWallet"],
+  "rules": [
+    {
+      "id": "touchngo.cashin-dup.v1",
+      "priority": 400,
+      "match": { "title": "Cash In Successful" },
+      "direction": "info"
+    },
+    {
+      "id": "touchngo.non-money.v1",
+      "priority": 390,
+      "match": {
+        "title": "points!$|^Travel eSIM purchase successful$|^Payment to |^Mobile prepaid top up$|^LPR parking payment is successful$"
+      },
+      "direction": "info",
+      "confidence": "none"
+    },
+    {
+      "id": "touchngo.kaching-review.v1",
+      "priority": 380,
+      "match": { "title": "^Ka-ching! Incoming Money", "body": "received from" },
+      "direction": "info",
+      "confidence": "none"
+    },
+    {
+      "id": "touchngo.toll.v1",
+      "priority": 370,
+      "match": { "title": "^Successful Toll Payment$" },
+      "direction": "out",
+      "extract": {
+        "amount": "(?:RM|MYR)\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": { "pattern": "(?<counterparty>Toll)", "source": "title" }
+      }
+    },
+    {
+      "id": "touchngo.received-title.v1",
+      "priority": 360,
+      "match": { "title": "^You.*received money" },
+      "direction": "in",
+      "extract": {
+        "amount": "(?:RM|MYR)\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "^(?:.*received from |(?=.* has transferred))(?<counterparty>.+?)(?: has transferred| for|\\.|$)"
+      }
+    },
+    {
+      "id": "touchngo.sent-title.v1",
+      "priority": 350,
+      "match": { "title": "^Payment To:|^DuitNow Payment to " },
+      "direction": "out",
+      "extract": {
+        "amount": "(?:RM|MYR)\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": { "pattern": "^(?:Payment To:|DuitNow Payment to )\\s?(?<counterparty>.+)$", "source": "title" }
+      }
+    },
+    {
+      "id": "touchngo.parking.v1",
+      "priority": 340,
+      "match": { "title": "^Parking Payment Successful" },
+      "direction": "out",
+      "extract": {
+        "amount": "(?:RM|MYR)\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "paid for (?<counterparty>Parking.*?)(?:\\.|$)"
+      }
+    },
+    {
+      "id": "touchngo.received-body.v1",
+      "priority": 330,
+      "match": { "body": "received from|has transferred" },
+      "direction": "in",
+      "extract": {
+        "amount": "(?:RM|MYR)\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "^(?:.*received from |(?=.* has transferred))(?<counterparty>.+?)(?: has transferred| for|\\.|$)"
+      }
+    },
+    {
+      "id": "touchngo.sent-body.v1",
+      "priority": 320,
+      "match": {
+        "body": "you have paid|has been deducted|deducted from your|successfully transferred|toll payment|parking"
+      },
+      "direction": "out",
+      "extract": {
+        "amount": "(?:RM|MYR)\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "(?:transferred (?:RM|MYR)\\s?[\\d,.]+ to|transferred to|paid (?:RM|MYR)\\s?[\\d,.]+ (?:to|at|for)|paid (?:to|at|for)|at)\\s?(?<counterparty>.+?)(?:\\.(?= (?:REF|Merchant)\\b|$)|$)"
+      }
+    },
+    {
+      "id": "touchngo.unmatched.v1",
+      "priority": -100,
+      "match": { "title": ".*" },
+      "direction": "info",
+      "confidence": "none"
+    }
+  ]
+}
+
+</script>
+  <script src="script.js"></script>
+</body>
 </html>
