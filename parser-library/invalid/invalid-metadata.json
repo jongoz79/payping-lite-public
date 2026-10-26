@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 2,
+  "id": "Touch NGo",
+  "name": "Touch 'n Go eWallet",
+  "version": 0,
+  "androidPackages": [],
+  "iosAppNames": [],
+  "rules": [
+    {
+      "id": "touchngo.cashin-dup.v1",
+      "priority": 300,
+      "match": { "title": "Cash In Successful" },
+      "direction": "info"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "name": "received title and reference",
+    "platform": "android",
+    "sourceApp": "com.rhbgroup.rhbmobilebanking",
+    "title": "Transfer received",
+    "body": "RM 100.00 from AHMAD BIN ALI. Ref: RHB12345",
+    "synthetic": true,
+    "expect": { "ruleId": "rhb.received-title.v1", "direction": "in", "amountMinor": 10000, "counterparty": "AHMAD BIN ALI", "reference": "RHB12345", "confidence": "high" }
+  },
+  {
+    "name": "received body",
+    "platform": "ios",
+    "sourceApp": "RHB Mobile Banking",
+    "title": "Account update",
+    "body": "RM 25.50 credited to your account from XYZ COMPANY.",
+    "synthetic": true,
+    "expect": { "ruleId": "rhb.received-body.v1", "direction": "in", "amountMinor": 2550, "counterparty": "XYZ COMPANY", "confidence": "high" }
+  },
+  {
+    "name": "sent title",
+    "platform": "android",
+    "sourceApp": "com.rhbgroup.rhbmobilebanking",
+    "title": "Transfer successful",
+    "body": "RM 42.00 to JOHN DOE. Ref No: RHB98765",
+    "synthetic": true,
+    "expect": { "ruleId": "rhb.sent-title.v1", "direction": "out", "amountMinor": 4200, "counterparty": "JOHN DOE", "reference": "RHB98765", "confidence": "high" }
+  },
+  {
+    "name": "sent body",
+    "platform": "android",
+    "sourceApp": "com.rhbgroup.rhbmobilebanking",
+    "title": "Account update",
+    "body": "Payment successful. RM 8.50 paid to COFFEE SHOP.",
+    "synthetic": true,
+    "expect": { "ruleId": "rhb.sent-body.v1", "direction": "out", "amountMinor": 850, "counterparty": "COFFEE SHOP", "confidence": "high" }
+  },
+  {
+    "name": "marketing amount is ignored",
+    "platform": "android",
+    "sourceApp": "com.rhbgroup.rhbmobilebanking",
+    "title": "Special Offer",
+    "body": "Enjoy RM 20.00 cashback with our partners.",
+    "synthetic": true,
+    "expect": { "ruleId": null, "direction": "info", "amountMinor": null, "confidence": "none" }
+  },
+  {
+    "name": "OTP is ignored",
+    "platform": "android",
+    "sourceApp": "com.rhbgroup.rhbmobilebanking",
+    "title": "Security code",
+    "body": "Your one-time password is 827361. Do not share it.",
+    "synthetic": true,
+    "expect": { "ruleId": null, "direction": "info", "amountMinor": null, "confidence": "none" }
+  }
+]

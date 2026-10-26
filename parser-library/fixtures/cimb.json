@@ -1,0 +1,55 @@
+[
+  {
+    "name": "received title",
+    "platform": "android",
+    "sourceApp": "com.cimb.cimbocto",
+    "title": "Transfer Received",
+    "body": "RM 75.25 received from SITI AMINAH on 03-Nov-2025.",
+    "synthetic": true,
+    "expect": { "ruleId": "cimb.received-title.v1", "direction": "in", "amountMinor": 7525, "counterparty": "SITI AMINAH", "confidence": "high" }
+  },
+  {
+    "name": "received body",
+    "platform": "ios",
+    "sourceApp": "CIMB OCTO",
+    "title": "Account update",
+    "body": "RM 40.00 credited to your account from ABC SDN BHD. Reference No: CIMB123",
+    "synthetic": true,
+    "expect": { "ruleId": "cimb.received-body.v1", "direction": "in", "amountMinor": 4000, "counterparty": "ABC SDN BHD", "reference": "CIMB123", "confidence": "high" }
+  },
+  {
+    "name": "sent title",
+    "platform": "android",
+    "sourceApp": "com.cimb.cimbocto",
+    "title": "Payment Successful",
+    "body": "RM 18.90 paid to MYDIN on 03-Nov-2025.",
+    "synthetic": true,
+    "expect": { "ruleId": "cimb.sent-title.v1", "direction": "out", "amountMinor": 1890, "counterparty": "MYDIN", "confidence": "high" }
+  },
+  {
+    "name": "DuitNow account payment",
+    "platform": "android",
+    "sourceApp": "com.cimb.cimbocto",
+    "title": "CIMB OCTO MY",
+    "body": "DuitNow to Acct RM 1.00 to KAMAL ARIFFIN BI/Touch n Go on 03-Nov-2025, 15:44:44. Call the no at the back of your card for queries.",
+    "expect": { "ruleId": "cimb.sent-body.v1", "direction": "out", "amountMinor": 100, "counterparty": "KAMAL ARIFFIN BI/Touch n Go", "confidence": "high" }
+  },
+  {
+    "name": "marketing amount is ignored",
+    "platform": "android",
+    "sourceApp": "com.cimb.cimbocto",
+    "title": "Special Offer",
+    "body": "Enjoy RM 20.00 cashback with our partners.",
+    "synthetic": true,
+    "expect": { "ruleId": null, "direction": "info", "amountMinor": null, "confidence": "none" }
+  },
+  {
+    "name": "OTP is ignored",
+    "platform": "android",
+    "sourceApp": "com.cimb.cimbocto",
+    "title": "Security code",
+    "body": "Your one-time password is 827361. Do not share it.",
+    "synthetic": true,
+    "expect": { "ruleId": null, "direction": "info", "amountMinor": null, "confidence": "none" }
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "google-wallet",
+  "name": "Google Wallet",
+  "version": 1,
+  "author": "PayPing community",
+  "description": "Real-notification starter for Google Wallet card payments, refunds, declines and receipts.",
+  "androidPackages": ["com.google.android.apps.walletnfcrel"],
+  "iosAppNames": ["Google Wallet"],
+  "rules": [
+    {
+      "id": "google-wallet.refund.v1",
+      "priority": 300,
+      "match": { "body": "was refunded" },
+      "direction": "in",
+      "extract": {
+        "amount": "^-(?<currency>RM|MYR|IDR|NZD|AUD|SGD|USD|JPY|THB|EUR|GBP|JP¥|NZ\\$|US\\$|S\\$|A\\$|¥|£|€|\\$|[A-Z]{3})\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": { "pattern": "^(?<counterparty>.+)$", "source": "title" }
+      }
+    },
+    {
+      "id": "google-wallet.payment.v1",
+      "priority": 200,
+      "match": { "body": " with " },
+      "direction": "out",
+      "extract": {
+        "amount": "^(?<currency>RM|MYR|IDR|NZD|AUD|SGD|USD|JPY|THB|EUR|GBP|JP¥|NZ\\$|US\\$|S\\$|A\\$|¥|£|€|\\$|[A-Z]{3})\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": { "pattern": "^(?<counterparty>.+)$", "source": "title" }
+      }
+    },
+    {
+      "id": "google-wallet.unmatched.v1",
+      "priority": -100,
+      "match": { "title": ".*" },
+      "direction": "info",
+      "confidence": "none"
+    }
+  ]
+}

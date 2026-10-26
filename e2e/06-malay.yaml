@@ -1,0 +1,12 @@
+appId: com.paypingmy.app
+---
+- launchApp
+- tapOn: "Settings"
+- scrollUntilVisible:
+    element: "Language"
+- assertVisible: "Language"
+- tapOn: "Bahasa Melayu"
+- tapOn: "Hari Ini"
+- assertVisible: "DITERIMA HARI INI"
+- assertVisible: "Bank"
+- assertVisible: "Tetapan"

@@ -1,0 +1,56 @@
+[
+  {
+    "name": "received title",
+    "platform": "android",
+    "sourceApp": "com.pbb.mypb",
+    "title": "Funds received",
+    "body": "RM 300.00 from PUBLIC ENTERPRISE. Ref: PBB12345",
+    "synthetic": true,
+    "expect": { "ruleId": "mypb.received-title.v1", "direction": "in", "amountMinor": 30000, "counterparty": "PUBLIC ENTERPRISE", "reference": "PBB12345", "confidence": "high" }
+  },
+  {
+    "name": "received body",
+    "platform": "ios",
+    "sourceApp": "MyPB",
+    "title": "Account update",
+    "body": "Amount RM 90.00 has been credited to your account XXXX from ALI BIN ABU.",
+    "synthetic": true,
+    "expect": { "ruleId": "mypb.received-body.v1", "direction": "in", "amountMinor": 9000, "counterparty": "ALI BIN ABU", "confidence": "high" }
+  },
+  {
+    "name": "sent title",
+    "platform": "android",
+    "sourceApp": "com.pbb.mypb",
+    "title": "Transfer successful",
+    "body": "RM 15.00 transferred to SUPPLIER CO LTD. Ref: PBB54321",
+    "synthetic": true,
+    "expect": { "ruleId": "mypb.sent-title.v1", "direction": "out", "amountMinor": 1500, "counterparty": "SUPPLIER CO LTD", "reference": "PBB54321", "confidence": "high" }
+  },
+  {
+    "name": "sent body",
+    "platform": "android",
+    "sourceApp": "com.pbb.mypb",
+    "title": "Account update",
+    "body": "Payment successful. RM 22.40 paid to UTILITY COMPANY.",
+    "synthetic": true,
+    "expect": { "ruleId": "mypb.sent-body.v1", "direction": "out", "amountMinor": 2240, "counterparty": "UTILITY COMPANY", "confidence": "high" }
+  },
+  {
+    "name": "marketing amount is ignored",
+    "platform": "android",
+    "sourceApp": "com.pbb.mypb",
+    "title": "Special Offer",
+    "body": "Enjoy RM 20.00 cashback with our partners.",
+    "synthetic": true,
+    "expect": { "ruleId": null, "direction": "info", "amountMinor": null, "confidence": "none" }
+  },
+  {
+    "name": "OTP is ignored",
+    "platform": "android",
+    "sourceApp": "com.pbb.mypb",
+    "title": "Security code",
+    "body": "Your one-time password is 827361. Do not share it.",
+    "synthetic": true,
+    "expect": { "ruleId": null, "direction": "info", "amountMinor": null, "confidence": "none" }
+  }
+]

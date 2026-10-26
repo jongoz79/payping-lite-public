@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "hsbc",
+  "name": "HSBC Malaysia",
+  "version": 1,
+  "author": "PayPing community",
+  "description": "Real-notification starter for HSBC credit-card charges and DuitNow funds received.",
+  "androidPackages": ["my.com.hsbc.hsbcmalaysia"],
+  "iosAppNames": ["HSBC Malaysia"],
+  "rules": [
+    {
+      "id": "hsbc.card-charged.v1",
+      "priority": 200,
+      "match": { "body": "was charged to your (?:supp )?credit card" },
+      "direction": "out",
+      "extract": {
+        "amount": "(?<currency>RM|MYR|IDR|NZD|AUD|SGD|USD|JPY|THB|EUR|GBP|JP¥|NZ\\$|US\\$|S\\$|A\\$|¥|£|€|\\$|[A-Z]{3})\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "at (?<counterparty>.+?) on \\d"
+      }
+    },
+    {
+      "id": "hsbc.funds-received.v1",
+      "priority": 190,
+      "match": { "body": "You've received .* in your A/C" },
+      "direction": "in",
+      "extract": {
+        "amount": "You've received (?<currency>RM|MYR|IDR|NZD|AUD|SGD|USD|JPY|THB|EUR|GBP|JP¥|NZ\\$|US\\$|S\\$|A\\$|¥|£|€|\\$|[A-Z]{3})\\s?(?<amount>[\\d,]+\\.?\\d{0,2})"
+      }
+    }
+  ]
+}

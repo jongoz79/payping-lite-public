@@ -1,0 +1,15 @@
+{
+  "amountPatterns": [
+    "RM\\s*(?<value>[\\d.]+)",
+    "(?<!RM)(?<amount>[\\d.]+)",
+    "(",
+    "(.*)*RM(?<amount>[\\d.]+)"
+  ],
+  "debitKeywords": ["paid", ""],
+  "creditKeywords": ["received"],
+  "counterpartyPatterns": {
+    "in": ["from (?<name>.+)"],
+    "out": ["to (?<counterparty>.+)"]
+  },
+  "referencePatterns": []
+}

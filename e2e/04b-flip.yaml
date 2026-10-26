@@ -1,0 +1,20 @@
+appId: com.paypingmy.app
+---
+- launchApp
+- assertVisible: 'Today'
+- assertVisible:
+    id: 'today-total-received'
+    text: '+RM 9.50'
+- assertVisible:
+    id: 'today-total-paid'
+    text: '−RM 0.00'
+- assertVisible: 'CHECK UNCONFIRMED PAYMENTS (1)'
+- assertVisible: 'You received RM 9.50 from E2E Customer'
+- tapOn: 'Flip to OUT'
+- assertVisible:
+    id: 'today-total-received'
+    text: '+RM 9.50'
+- assertVisible:
+    id: 'today-total-paid'
+    text: '−RM 9.50'
+- assertNotVisible: 'CHECK UNCONFIRMED PAYMENTS (1)'

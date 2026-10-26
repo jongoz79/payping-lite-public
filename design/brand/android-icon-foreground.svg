@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+
+    <mask id="coin-rm-mask">
+      <!-- White base keeps the full coin disc -->
+      <rect width="1024" height="1024" fill="#FFFFFF"/>
+      
+      <!-- Black cuts out the RM letter silhouettes from the coin -->
+      <g fill="#000000">
+        <!-- Letter R Silhouette -->
+        <path d="
+          M 308 426
+          H 372
+          C 392 426 404 438 404 458
+          V 480
+          C 404 500 392 512 372 512
+          H 348
+          V 516
+          L 404 598
+          H 364
+          L 324 538
+          H 346
+          V 598
+          H 308
+          Z
+        "/>
+        <!-- Letter M Silhouette -->
+        <path d="
+          M 416 426
+          H 448
+          L 464 506
+          L 480 426
+          H 512
+          V 598
+          H 480
+          V 490
+          L 468 546
+          H 460
+          L 448 490
+          V 598
+          H 416
+          Z
+        "/>
+      </g>
+      
+      <!-- White restores the inner counter of R so it remains part of the coin -->
+      <g fill="#FFFFFF">
+        <path d="
+          M 346 458
+          H 368
+          C 374 458 376 462 376 469
+          V 469
+          C 376 476 374 480 368 480
+          H 346
+          Z
+        "/>
+      </g>
+    </mask>
+
+  </defs>
+  <g fill="#FFFFFF">
+
+    <!-- Coin with RM Monogram cutout -->
+    <circle cx="410" cy="512" r="165" fill="#FFFFFF" mask="url(#coin-rm-mask)"/>
+    
+    <!-- Sound Ping Arc 1: r=245, stroke 50 -->
+    <path d="M 592 348 A 245 245 0 0 1 592 676" fill="none" stroke="#FFFFFF" stroke-width="50" stroke-linecap="round"/>
+    
+    <!-- Sound Ping Arc 2: r=345, stroke 50 -->
+    <path d="M 681 299 A 345 345 0 0 1 681 725" fill="none" stroke="#FFFFFF" stroke-width="50" stroke-linecap="round"/>
+
+  </g>
+</svg>

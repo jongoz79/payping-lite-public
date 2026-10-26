@@ -1,0 +1,806 @@
+[
+  {
+    "name": "real ewallet #0: Successful Toll Payment",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Successful Toll Payment",
+    "body": "RM 2.62 was deducted via RFID for toll payment on 17-Nov-2025 09:42",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 262,
+      "counterparty": "Toll"
+    }
+  },
+  {
+    "name": "real ewallet #1: Successful Toll Payment",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Successful Toll Payment",
+    "body": "RM 2.21 was deducted via RFID for toll payment on 17-Nov-2025 09:45",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 221,
+      "counterparty": "Toll"
+    }
+  },
+  {
+    "name": "real ewallet #2: Successful Toll Payment",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Successful Toll Payment",
+    "body": "RM 1.26 was deducted via RFID for toll payment on 17-Nov-2025 09:54",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 126,
+      "counterparty": "Toll"
+    }
+  },
+  {
+    "name": "real ewallet #21: DuitNow Payment",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "DuitNow Payment",
+    "body": "You have paid RM85.87 to WEI JIE TAN",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 8587,
+      "counterparty": "WEI JIE TAN"
+    }
+  },
+  {
+    "name": "real ewallet #22: DuitNow Payment",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "DuitNow Payment",
+    "body": "You have paid RM17.71 to MEI LING HASSAN",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1771,
+      "counterparty": "MEI LING HASSAN"
+    }
+  },
+  {
+    "name": "real ewallet #23: DuitNow Payment",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "DuitNow Payment",
+    "body": "You have paid RM5.17 to SITI WONG",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 517,
+      "counterparty": "SITI WONG"
+    }
+  },
+  {
+    "name": "real ewallet #24: Transfer Successful.",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Transfer Successful.",
+    "body": "RM 11.77 has been successfully transferred to HAFIZ ONG",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1177,
+      "counterparty": "HAFIZ ONG"
+    }
+  },
+  {
+    "name": "real ewallet #25: Transfer Successful.",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Transfer Successful.",
+    "body": "RM 48.79 has been successfully transferred to SITI ONG",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 4879,
+      "counterparty": "SITI ONG"
+    }
+  },
+  {
+    "name": "real ewallet #26: Transfer Successful.",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Transfer Successful.",
+    "body": "RM 8.44 has been successfully transferred to NURUL ONG",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 844,
+      "counterparty": "NURUL ONG"
+    }
+  },
+  {
+    "name": "real ewallet #27: You’ve received money!",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "You’ve received money!",
+    "body": "NURUL ONG has transferred RM 0.81 to you. Tap here to check the transaction details.",
+    "real": true,
+    "expect": {
+      "direction": "in",
+      "confidence": "high",
+      "amountMinor": 81,
+      "counterparty": "NURUL ONG"
+    }
+  },
+  {
+    "name": "real ewallet #28: You’ve received money!",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "You’ve received money!",
+    "body": "AINA TAN has transferred RM 1.68 to you. Tap here to check the transaction details.",
+    "real": true,
+    "expect": {
+      "direction": "in",
+      "confidence": "high",
+      "amountMinor": 168,
+      "counterparty": "AINA TAN"
+    }
+  },
+  {
+    "name": "real ewallet #29: You’ve received money!",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "You’ve received money!",
+    "body": "AINA LIM has transferred RM 12.72 to you. Tap here to check the transaction details.",
+    "real": true,
+    "expect": {
+      "direction": "in",
+      "confidence": "high",
+      "amountMinor": 1272,
+      "counterparty": "AINA LIM"
+    }
+  },
+  {
+    "name": "real ewallet #36: Parking Payment Successful ",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Parking Payment Successful ",
+    "body": "RM 2.69 paid for Parking at BOOKXCESS.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 269,
+      "counterparty": "Parking at BOOKXCESS"
+    }
+  },
+  {
+    "name": "real ewallet #37: Parking Payment Successful ",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Parking Payment Successful ",
+    "body": "RM 5.29 paid for Parking at KEDAI RUNCIT MAJU.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 529,
+      "counterparty": "Parking at KEDAI RUNCIT MAJU"
+    }
+  },
+  {
+    "name": "real ewallet #38: Parking Payment Successful ",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Parking Payment Successful ",
+    "body": "RM 3.22 paid for Parking at KEDAI RUNCIT MAJU.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 322,
+      "counterparty": "Parking at KEDAI RUNCIT MAJU"
+    }
+  },
+  {
+    "name": "real ewallet #87: You've just earned 15 points!",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "You've just earned 15 points!",
+    "body": "You've received 15 points from your transaction! Use them now to redeem great rewards.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real ewallet #88: You've just earned 44 points!",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "You've just earned 44 points!",
+    "body": "You've received 44 points from your transaction! Use them now to redeem great rewards.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real ewallet #89: You've just earned 2 points!",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "You've just earned 2 points!",
+    "body": "You've received 2 points from your transaction! Use them now to redeem great rewards.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real ewallet #108: ALIPAY+ PAYMENT",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "ALIPAY+ PAYMENT",
+    "body": "You have paid RM34.24 at BOOKXCESS",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 3424,
+      "counterparty": "BOOKXCESS"
+    }
+  },
+  {
+    "name": "real ewallet #109: ALIPAY+ PAYMENT",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "ALIPAY+ PAYMENT",
+    "body": "You have paid RM9.74 at PETRON STESEN",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 974,
+      "counterparty": "PETRON STESEN"
+    }
+  },
+  {
+    "name": "real ewallet #110: ALIPAY+ PAYMENT",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "ALIPAY+ PAYMENT",
+    "body": "You have paid RM18.51 at FARMASI SIHAT",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1851,
+      "counterparty": "FARMASI SIHAT"
+    }
+  },
+  {
+    "name": "real ewallet #114: Payment To: FARID SUBRAMANIAM",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Payment To: FARID SUBRAMANIAM",
+    "body": "FARID SUBRAMANIAM: RM1.70 has been deducted from your TNG e-wallet. Merchant Reference No. 5fO5fc31",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 170,
+      "counterparty": "FARID SUBRAMANIAM"
+    }
+  },
+  {
+    "name": "real ewallet #115: Payment To: MEI LING ISMAIL",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Payment To: MEI LING ISMAIL",
+    "body": "MEI LING ISMAIL: RM1.81 has been deducted from your TNG e-wallet. Merchant Reference No. 1gc4d5Qe",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 181,
+      "counterparty": "MEI LING ISMAIL"
+    }
+  },
+  {
+    "name": "real ewallet #116: Payment To: KUMAR WONG",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Payment To: KUMAR WONG",
+    "body": "KUMAR WONG: RM2.16 has been deducted from your TNG e-wallet. Merchant Reference No. kjPgc4f9",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 216,
+      "counterparty": "KUMAR WONG"
+    }
+  },
+  {
+    "name": "real ewallet #117: DuitNow Transfer is successful!",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "DuitNow Transfer is successful!",
+    "body": "You have successfully transferred RM 9.36 to KUMAR ISMAIL",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 936,
+      "counterparty": "KUMAR ISMAIL"
+    }
+  },
+  {
+    "name": "real ewallet #118: DuitNow Transfer is successful!",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "DuitNow Transfer is successful!",
+    "body": "You have successfully transferred RM 1.18 to HAFIZ ISMAIL",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 118,
+      "counterparty": "HAFIZ ISMAIL"
+    }
+  },
+  {
+    "name": "real ewallet #119: DuitNow Transfer is successful!",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "DuitNow Transfer is successful!",
+    "body": "You have successfully transferred RM 0.82 to KUMAR LEE",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 82,
+      "counterparty": "KUMAR LEE"
+    }
+  },
+  {
+    "name": "real ewallet #180: Parking Payment Successful ",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Parking Payment Successful ",
+    "body": "RM 5.17 paid for Parking at FARMASI SIHAT.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 517,
+      "counterparty": "Parking at FARMASI SIHAT"
+    }
+  },
+  {
+    "name": "real ewallet #181: Parking Payment Successful ",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Parking Payment Successful ",
+    "body": "RM 2.76 paid for Parking at KEDAI RUNCIT MAJU.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 276,
+      "counterparty": "Parking at KEDAI RUNCIT MAJU"
+    }
+  },
+  {
+    "name": "real ewallet #182: Parking Payment Successful ",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Parking Payment Successful ",
+    "body": "RM 0.80 paid for Parking at GROCER TOWN.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 80,
+      "counterparty": "Parking at GROCER TOWN"
+    }
+  },
+  {
+    "name": "real ewallet #186: Payment To: SITI LEE",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Payment To: SITI LEE",
+    "body": "SITI LEE: RM2.18 has been deducted from your TNG e-wallet. Merchant Reference No. 0j03j8ch",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 218,
+      "counterparty": "SITI LEE"
+    }
+  },
+  {
+    "name": "real ewallet #187: Payment To: KUMAR ONG",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Payment To: KUMAR ONG",
+    "body": "KUMAR ONG: RM1.86 has been deducted from your TNG e-wallet. Merchant Reference No. 5eLi1489",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 186,
+      "counterparty": "KUMAR ONG"
+    }
+  },
+  {
+    "name": "real ewallet #188: Payment To: HAFIZ WONG",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Payment To: HAFIZ WONG",
+    "body": "HAFIZ WONG: RM7.22 has been deducted from your TNG e-wallet. Merchant Reference No. kO5daP0O",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 722,
+      "counterparty": "HAFIZ WONG"
+    }
+  },
+  {
+    "name": "real ewallet #237: Parking Payment Successful ",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Parking Payment Successful ",
+    "body": "RM 3.12 paid for Parking at Lot 12, Jalan Contoh.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 312,
+      "counterparty": "Parking at Lot 12, Jalan Contoh"
+    }
+  },
+  {
+    "name": "real ewallet #238: Parking Payment Successful ",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Parking Payment Successful ",
+    "body": "RM 4.33 paid for Parking at PETRON STESEN.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 433,
+      "counterparty": "Parking at PETRON STESEN"
+    }
+  },
+  {
+    "name": "real ewallet #239: DuitNow Payment",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "DuitNow Payment",
+    "body": "You have paid RM11.11 to KUMAR SUBRAMANIAM 6.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1111,
+      "counterparty": "KUMAR SUBRAMANIAM 6"
+    }
+  },
+  {
+    "name": "real ewallet #240: DuitNow Payment",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "DuitNow Payment",
+    "body": "You have paid RM71.53 to SITI SUBRAMANIAM 12.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 7153,
+      "counterparty": "SITI SUBRAMANIAM 12"
+    }
+  },
+  {
+    "name": "real ewallet #245: Parking Payment Successful ",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Parking Payment Successful ",
+    "body": "RM 12.14 paid for Parking at MYDIN MART.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1214,
+      "counterparty": "Parking at MYDIN MART"
+    }
+  },
+  {
+    "name": "real ewallet #246: Parking Payment Successful ",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Parking Payment Successful ",
+    "body": "RM 7.93 paid for Parking at MYDIN MART.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 793,
+      "counterparty": "Parking at MYDIN MART"
+    }
+  },
+  {
+    "name": "real ewallet #267: Travel eSIM purchase successful",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Travel eSIM purchase successful",
+    "body": "Your Singapore eSIM is ready. Tap to view your QR code and installation guide.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real ewallet #268: Payment to HAFIZ SUBRAMANIAM",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Payment to HAFIZ SUBRAMANIAM",
+    "body": "Tap here to view and approve your transaction.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real ewallet #290: DuitNow Payment",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "DuitNow Payment",
+    "body": "You have paid RM5.28 to SITI LEE (TTDI).",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 528,
+      "counterparty": "SITI LEE (TTDI)"
+    }
+  },
+  {
+    "name": "real ewallet #291: DuitNow Payment",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "DuitNow Payment",
+    "body": "You have paid RM5.51 to KUMAR ABDULLAH (2).",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 551,
+      "counterparty": "KUMAR ABDULLAH (2)"
+    }
+  },
+  {
+    "name": "real ewallet #292: Mobile prepaid top up",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Mobile prepaid top up",
+    "body": "RM10.80 deducted from your TNG eWallet. If you did not receive your top up within 30 minutes, please call Careline at NASI KANDAR ALI",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real ewallet #296: Payment To: DANIEL TAN",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Payment To: DANIEL TAN",
+    "body": "DANIEL TAN: RM2.56 has been deducted from your TNG e-wallet. Merchant Reference No. Mk3k1bPc",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 256,
+      "counterparty": "DANIEL TAN"
+    }
+  },
+  {
+    "name": "real ewallet #297: DuitNow Payment",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "DuitNow Payment",
+    "body": "You have paid RM97.68 to SITI RAHMAN(P) SITI RAHMAN.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 9768,
+      "counterparty": "SITI RAHMAN(P) SITI RAHMAN"
+    }
+  },
+  {
+    "name": "real ewallet #305: Payment To: NURUL RAHMAN",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Payment To: NURUL RAHMAN",
+    "body": "NURUL RAHMAN: RM10.71 has been deducted from your TNG e-wallet. Merchant Reference No. hQ7c61ib",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1071,
+      "counterparty": "NURUL RAHMAN"
+    }
+  },
+  {
+    "name": "real ewallet #306: Payment To: 99 SPEEDMART",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Payment To: 99 SPEEDMART",
+    "body": "99 SPEEDMART: RM36.79 has been deducted from your TNG eWallet. Merchant Reference No. fg0cci3g9N0355",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 3679,
+      "counterparty": "99 SPEEDMART"
+    }
+  },
+  {
+    "name": "real ewallet #307: Payment To: RAVI ABDULLAH",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Payment To: RAVI ABDULLAH",
+    "body": "RAVI ABDULLAH: RM2.48 has been deducted from your TNG e-wallet. Merchant Reference No. j85d1Nhi",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 248,
+      "counterparty": "RAVI ABDULLAH"
+    }
+  },
+  {
+    "name": "real ewallet #312: Transfer Successful.",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Transfer Successful.",
+    "body": "RM 15.94 has been successfully transferred to HAFIZ LEE",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1594,
+      "counterparty": "HAFIZ LEE"
+    }
+  },
+  {
+    "name": "real ewallet #313: Payment To: MEI LING ISMAIL",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Payment To: MEI LING ISMAIL",
+    "body": "MEI LING ISMAIL: RM11.41 has been deducted from your TNG e-wallet. Merchant Reference No. 7Q33h50g",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1141,
+      "counterparty": "MEI LING ISMAIL"
+    }
+  },
+  {
+    "name": "real ewallet #318: Payment To: FARID LEE",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Payment To: FARID LEE",
+    "body": "FARID LEE: RM1.56 has been deducted from your TNG e-wallet. Merchant Reference No. c2dMdahf",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 156,
+      "counterparty": "FARID LEE"
+    }
+  },
+  {
+    "name": "real ewallet #323: Ka-ching! Incoming Money.",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Ka-ching! Incoming Money.",
+    "body": "RM 79.09 received from FARID HASSAN for FARID HASSAN.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real ewallet #326: LPR parking payment is successful",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "LPR parking payment is successful",
+    "body": "RM6.48 has been deducted from your eWallet for parking fee on 07-Aug-2026 14:35.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real ewallet #333: Payment To: SITI TAN & ENTERPRISE",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Payment To: SITI TAN & ENTERPRISE",
+    "body": "SITI TAN & ENTERPRISE: RM44.25 has been deducted from your TNG e-wallet. Merchant Reference No. iib6Lbc4",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 4425,
+      "counterparty": "SITI TAN & ENTERPRISE"
+    }
+  },
+  {
+    "name": "real ewallet #334: Payment To: Guardian Health And Beauty S",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Payment To: Guardian Health And Beauty Sdn. Bhd.",
+    "body": "Guardian Health And Beauty Sdn. Bhd.: RM75.59 has been deducted from your TNG eWallet. Merchant Reference No. Nj2g903a",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 7559,
+      "counterparty": "Guardian Health And Beauty Sdn. Bhd"
+    }
+  },
+  {
+    "name": "real ewallet #336: DuitNow Payment",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "DuitNow Payment",
+    "body": "You have paid RM56.32 to MEI LING HASSAN & MEI LING HASSAN.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 5632,
+      "counterparty": "MEI LING HASSAN & MEI LING HASSAN"
+    }
+  },
+  {
+    "name": "real ewallet #338: DuitNow Payment",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "DuitNow Payment",
+    "body": "You have paid RM10.23 to KUMAR ISMAIL 1 (Sec14).",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1023,
+      "counterparty": "KUMAR ISMAIL 1 (Sec14)"
+    }
+  }
+]

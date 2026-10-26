@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "id": "mae",
+  "name": "Maybank2u and MAE",
+  "version": 2,
+  "author": "PayPing community",
+  "description": "Real-notification starter for Maybank2u card, transfer, Scan & Pay and funds-received alerts.",
+  "androidPackages": ["com.maybank2u.life"],
+  "iosAppNames": ["MAE", "Maybank2u"],
+  "rules": [
+    {
+      "id": "mae.sent-title.v1",
+      "priority": 400,
+      "match": { "title": "^Maybank2u: Card Transaction$" },
+      "direction": "out",
+      "extract": {
+        "amount": "(?<currency>RM|MYR|IDR|NZD|AUD|SGD|USD|JPY|THB|EUR|GBP|JP¥|NZ\\$|US\\$|S\\$|A\\$|¥|£|€|\\$|[A-Z]{3})\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "at (?<counterparty>.+?) with your"
+      }
+    },
+    {
+      "id": "mae.transfer-named-account.v1",
+      "priority": 395,
+      "match": { "title": "^Maybank2u: Transfer$", "body": "loan account ending|to [A-Z]+'s " },
+      "direction": "out",
+      "extract": {
+        "amount": "(?<currency>RM|MYR|IDR|NZD|AUD|SGD|USD|JPY|THB|EUR|GBP|JP¥|NZ\\$|US\\$|S\\$|A\\$|¥|£|€|\\$|[A-Z]{3})\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "(?:You've transferred|Your transfer of|You've paid) [A-Z$¥£€]{1,3}\\s?[\\d,.]+ to (?:the |)(?<counterparty>.+?)(?:'s .*account ending| account ending)",
+        "reference": "REF:\\s?(?<reference>[A-Z0-9]+)"
+      }
+    },
+    {
+      "id": "mae.transfer.v1",
+      "priority": 390,
+      "match": { "title": "^Maybank2u: Transfer$" },
+      "direction": "out",
+      "extract": {
+        "amount": "(?<currency>RM|MYR|IDR|NZD|AUD|SGD|USD|JPY|THB|EUR|GBP|JP¥|NZ\\$|US\\$|S\\$|A\\$|¥|£|€|\\$|[A-Z]{3})\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "(?:You've transferred|Your transfer of|You've paid) [A-Z$¥£€]{1,3}\\s?[\\d,.]+ to (?:the |)(?<counterparty>.+?)(?: 's |\\. | ).*account ending",
+        "reference": "REF:\\s?(?<reference>[A-Z0-9]+)"
+      }
+    },
+    {
+      "id": "mae.scanpay-received.v1",
+      "priority": 380,
+      "match": { "title": "^Maybank2u: Scan & Pay$", "body": "You've received" },
+      "direction": "in",
+      "extract": {
+        "amount": "(?<currency>RM|MYR|IDR|NZD|AUD|SGD|USD|JPY|THB|EUR|GBP|JP¥|NZ\\$|US\\$|S\\$|A\\$|¥|£|€|\\$|[A-Z]{3})\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "from (?<counterparty>.+?):"
+      }
+    },
+    {
+      "id": "mae.sent-body.v1",
+      "priority": 370,
+      "match": {
+        "title": "^Maybank2u: Scan & Pay$",
+        "body": "Successful payment of|You've transferred|You have successfully paid"
+      },
+      "direction": "out",
+      "extract": {
+        "amount": "(?<currency>RM|MYR|IDR|NZD|AUD|SGD|USD|JPY|THB|EUR|GBP|JP¥|NZ\\$|US\\$|S\\$|A\\$|¥|£|€|\\$|[A-Z]{3})\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "(?:Successful payment of|You've transferred|You have successfully paid) [A-Z$¥£€]{1,3}\\s?[\\d,.]+ to (?<counterparty>.+?)(?:\\s?\\.\\s?REF|:| on \\d)",
+        "reference": "REF:\\s?(?<reference>[A-Z0-9]+)"
+      }
+    },
+    {
+      "id": "mae.received-title.v1",
+      "priority": 360,
+      "match": { "title": "^Maybank2u: Funds Received$", "body": "You.ve just received" },
+      "direction": "in",
+      "extract": {
+        "amount": "(?<currency>RM|MYR|IDR|NZD|AUD|SGD|USD|JPY|THB|EUR|GBP|JP¥|NZ\\$|US\\$|S\\$|A\\$|¥|£|€|\\$|[A-Z]{3})\\s?(?<amount>[\\d,]+\\.?\\d{0,2})"
+      }
+    },
+    {
+      "id": "mae.unmatched.v1",
+      "priority": -100,
+      "match": { "title": ".*" },
+      "direction": "info",
+      "confidence": "none"
+    }
+  ]
+}

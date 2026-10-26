@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "nested",
+  "name": "Nested quantifier examples",
+  "version": 1,
+  "androidPackages": [],
+  "iosAppNames": [],
+  "rules": [
+    {
+      "id": "nested.title.v1",
+      "priority": 300,
+      "match": { "title": "(a+)+" },
+      "direction": "info"
+    },
+    {
+      "id": "nested.body.v1",
+      "priority": 200,
+      "match": { "body": "(?:x+|y)+" },
+      "direction": "info"
+    },
+    {
+      "id": "nested.amount.v1",
+      "priority": 100,
+      "match": { "title": "Payment" },
+      "direction": "out",
+      "extract": {
+        "amount": "(\\w+\\s?)*RM(?<amount>\\d+)"
+      }
+    }
+  ]
+}

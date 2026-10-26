@@ -1,0 +1,16 @@
+plugins {
+  id 'com.android.application' version '9.2.1'
+}
+
+android {
+  namespace 'com.paypingmy.e2e.notifier'
+  compileSdk 36
+
+  defaultConfig {
+    applicationId 'com.paypingmy.e2e.notifier'
+    minSdk 24
+    targetSdk 36
+    versionCode 1
+    versionName '1.0'
+  }
+}

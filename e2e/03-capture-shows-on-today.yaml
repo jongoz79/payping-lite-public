@@ -1,0 +1,7 @@
+appId: com.paypingmy.app
+---
+- launchApp
+- assertVisible: "Today"
+- assertVisible: "+RM 12.50"
+- assertVisible: "E2E Customer"
+- assertVisible: "Latest confirmed payment"

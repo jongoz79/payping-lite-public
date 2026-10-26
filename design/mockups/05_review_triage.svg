@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="820" viewBox="0 0 400 820" fill="none">
+  <!-- Device Frame (Material 3 Dark) -->
+  <rect width="400" height="820" rx="36" fill="#121212" stroke="#2D2D2D" stroke-width="8"/>
+  
+  <!-- Status Bar -->
+  <text x="32" y="40" fill="#F8FAFC" font-family="-apple-system, Roboto, sans-serif" font-size="13" font-weight="600">09:41</text>
+  <text x="330" y="40" fill="#F8FAFC" font-family="-apple-system, Roboto, sans-serif" font-size="12" font-weight="600">5G 98%</text>
+
+  <!-- Screen Header -->
+  <text x="20" y="76" fill="#F8FAFC" font-family="-apple-system, Roboto, sans-serif" font-size="20" font-weight="700">Review Queue (2)</text>
+  <text x="380" y="76" text-anchor="end" fill="#94A3B8" font-family="sans-serif" font-size="13">Ignore All</text>
+
+  <!-- Explanatory Subtitle -->
+  <text x="20" y="100" fill="#94A3B8" font-family="-apple-system, sans-serif" font-size="13">Confirm unverified notifications to add them to your totals.</text>
+
+  <!-- Review Card 1 (Generic Fallback Match) -->
+  <g transform="translate(20, 116)">
+    <rect width="360" height="218" rx="8" fill="#1E1E1E" stroke="#2D2D2D"/>
+    
+    <rect x="12" y="12" width="24" height="24" rx="6" fill="#047857"/>
+    <text x="24" y="28" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="800">BI</text>
+    
+    <text x="44" y="28" fill="#F8FAFC" font-family="-apple-system, sans-serif" font-size="13" font-weight="600">Bank Islam (Unmatched App)</text>
+    <text x="344" y="28" text-anchor="end" fill="#64748B" font-family="sans-serif" font-size="11">10m ago</text>
+
+    <!-- Raw text block prominently shown -->
+    <rect x="12" y="46" width="336" height="48" rx="6" fill="#282828"/>
+    <text x="20" y="66" fill="#CBD5E1" font-family="monospace" font-size="11">"DuitNow Transfer RM 25.00 from</text>
+    <text x="20" y="82" fill="#CBD5E1" font-family="monospace" font-size="11">SITI AISHAH successful"</text>
+
+    <!-- Detection Note -->
+    <text x="12" y="112" fill="#94A3B8" font-family="sans-serif" font-size="12">
+      Detected: <tspan fill="#10B981" font-weight="700">+RM 25.00</tspan> (Generic fallback match)
+    </text>
+
+    <!-- Fast Triage Actions -->
+    <g transform="translate(12, 126)">
+      <rect width="180" height="38" rx="6" fill="#2563EB"/>
+      <text x="90" y="24" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="13" font-weight="600">Confirm In (+RM 25)</text>
+
+      <rect x="190" y="0" width="70" height="38" rx="6" fill="#282828"/>
+      <text x="225" y="24" text-anchor="middle" fill="#CBD5E1" font-family="sans-serif" font-size="12">Edit ✏️</text>
+
+      <rect x="268" y="0" width="68" height="38" rx="6" fill="#282828"/>
+      <text x="302" y="24" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="12">Ignore</text>
+    </g>
+
+    <!-- Prominent "Create parser from this" -->
+    <text x="12" y="196" fill="#3B82F6" font-family="sans-serif" font-size="12" font-weight="600">+ Create parser from this notification</text>
+  </g>
+
+  <!-- Review Card 2 (Unclear Direction) -->
+  <g transform="translate(20, 346)">
+    <rect width="360" height="186" rx="8" fill="#1E1E1E" stroke="#2D2D2D"/>
+    
+    <rect x="12" y="12" width="24" height="24" rx="6" fill="#0066CC"/>
+    <text x="24" y="28" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="800">TNG</text>
+    
+    <text x="44" y="28" fill="#F8FAFC" font-family="-apple-system, sans-serif" font-size="13" font-weight="600">Touch 'n Go eWallet</text>
+    <text x="344" y="28" text-anchor="end" fill="#64748B" font-family="sans-serif" font-size="11">1h ago</text>
+
+    <!-- Raw text block -->
+    <rect x="12" y="46" width="336" height="42" rx="6" fill="#282828"/>
+    <text x="20" y="68" fill="#CBD5E1" font-family="monospace" font-size="11">"Cash In Successful: Added RM 50.00 to wallet"</text>
+
+    <!-- Detection Note -->
+    <text x="12" y="108" fill="#94A3B8" font-family="sans-serif" font-size="12">
+      Detected: RM 50.00 • Direction unclear
+    </text>
+
+    <!-- Triage Buttons -->
+    <g transform="translate(12, 122)">
+      <rect width="110" height="38" rx="6" fill="#282828"/>
+      <text x="55" y="24" text-anchor="middle" fill="#10B981" font-family="sans-serif" font-size="12" font-weight="600">Confirm In</text>
+
+      <rect x="118" y="0" width="110" height="38" rx="6" fill="#282828"/>
+      <text x="173" y="24" text-anchor="middle" fill="#F87171" font-family="sans-serif" font-size="12" font-weight="600">Confirm Out</text>
+
+      <rect x="236" y="0" width="100" height="38" rx="6" fill="#282828"/>
+      <text x="286" y="24" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="12">Ignore</text>
+    </g>
+  </g>
+
+  <!-- Bottom 5-Tab Bar -->
+  <g transform="translate(0, 746)">
+    <rect width="400" height="74" fill="#1E1E1E" stroke="#2D2D2D"/>
+    
+    <text x="40" y="36" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="11">Today</text>
+    <text x="120" y="36" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="11">History</text>
+    <text x="200" y="36" text-anchor="middle" fill="#3B82F6" font-family="sans-serif" font-size="11" font-weight="700">Review</text>
+    <circle cx="218" cy="22" r="6" fill="#EF4444"/>
+    <text x="218" y="25" text-anchor="middle" fill="#FFFFFF" font-size="8" font-weight="800">2</text>
+    <text x="280" y="36" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="11">Parsers</text>
+    <text x="360" y="36" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="11">Settings</text>
+  </g>
+</svg>

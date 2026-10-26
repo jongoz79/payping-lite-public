@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — PayPing Lite</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --card-bg: #f8fafc;
+      --border: #e2e8f0;
+      --accent: #059669;
+      --code-bg: #f1f5f9;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f172a;
+        --text: #f8fafc;
+        --text-muted: #94a3b8;
+        --card-bg: #1e293b;
+        --border: #334155;
+        --accent: #10b981;
+        --code-bg: #111827;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    header {
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #000;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    .meta {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 32px 0 12px;
+      color: var(--text);
+    }
+    p {
+      margin-bottom: 16px;
+      color: var(--text-muted);
+    }
+    ul, ol {
+      margin: 0 0 16px 24px;
+      color: var(--text-muted);
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .highlight-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 24px 0;
+    }
+    .highlight-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <span class="badge">100% ON-DEVICE &bull; GPL-3.0</span>
+      <h1>Privacy Policy for PayPing Lite</h1>
+      <div class="meta">Effective Date: October 26, 2026 &bull; Application ID: com.paypingmy.app</div>
+    </header>
+
+    <div class="highlight-card">
+      <h3>The Core Principle</h3>
+      <p style="margin-bottom: 0;">
+        PayPing Lite is an on-device utility. We operate <strong>zero cloud servers</strong>, require <strong>no account or login</strong>, show <strong>no advertisements</strong>, and include <strong>zero third-party tracking or analytics SDKs</strong>. Your notification content, customer names, and sales totals stay strictly on your phone.
+      </p>
+    </div>
+
+    <h2>1. Information We Do Not Collect</h2>
+    <ul>
+      <li><strong>Personal Information:</strong> We do not collect or request names, email addresses, phone numbers, or account credentials.</li>
+      <li><strong>Network Traffic:</strong> PayPing Lite makes <strong>zero network requests</strong> across its entire lifecycle. It does not communicate with any servers.</li>
+      <li><strong>Tracking & Analytics:</strong> There are no third-party analytics SDKs (such as Firebase, Google Analytics, Sentry, or Facebook SDK).</li>
+      <li><strong>Advertising Identifiers:</strong> We do not collect device advertising IDs (AAID/IDFA).</li>
+    </ul>
+
+    <h2>2. How Your Notifications Are Handled</h2>
+    <p>To announce payment notifications aloud and calculate daily totals, PayPing Lite uses your device's native notification access systems:</p>
+    <ul>
+      <li><strong>User-Controlled Filtering:</strong> PayPing Lite only reads alerts from the specific banking and e-wallet applications that you explicitly choose in the app.</li>
+      <li><strong>Local In-Memory Parsing:</strong> Notification text is processed locally in memory using regular expression rules (parsers) to extract the amount and customer name.</li>
+      <li><strong>On-Device SQLite Storage:</strong> Parsed results and raw notification payloads are stored solely in a local database file (<code>payping.db</code>) inside the application's private sandbox.</li>
+      <li><strong>Text-to-Speech Output:</strong> Announcements are generated locally using your device's native speech engine (such as Google Speech Services on Android or Siri Voice on iOS). No voice data leaves your phone.</li>
+    </ul>
+
+    <h2>3. How to Delete Your Data</h2>
+    <p>Because all data is stored locally on your device, you have complete control over its retention:</p>
+    <ul>
+      <li><strong>In-App Deletion:</strong> Delete a single payment from its detail screen, or go to <strong>Settings &rarr; Data &amp; Privacy</strong> and tap <strong>Delete Transaction History Only</strong> or <strong>Reset Entire App Database</strong> to wipe your local data immediately.</li>
+      <li><strong>System Clear / Uninstall:</strong> You can clear app storage in your Android settings (<em>Settings &rarr; Apps &rarr; PayPing Lite &rarr; Clear Storage</em>), or simply uninstall the application. Uninstalling permanently and irreversibly deletes the local database.</li>
+      <li><strong>CSV Export:</strong> You can export your transaction history to a CSV file at any time via the standard system share sheet.</li>
+    </ul>
+
+    <h2>4. Open Source Verification</h2>
+    <p>
+      PayPing Lite is free software released under the <strong>GNU General Public License v3.0 or later (GPL-3.0-or-later)</strong>. The full source code is publicly accessible for independent security and privacy audit on GitHub:
+    </p>
+    <p>
+      <a href="https://github.com/jongoz79/payping-lite-public" target="_blank" rel="noopener">https://github.com/jongoz79/payping-lite-public</a>
+    </p>
+
+    <h2>5. Contact Us</h2>
+    <p>
+      If you have questions, feedback, or bug reports regarding this privacy policy or our open-source codebase, please open an issue on our GitHub repository:
+    </p>
+    <p>
+      <a href="https://github.com/jongoz79/payping-lite-public/issues" target="_blank" rel="noopener">https://github.com/jongoz79/payping-lite-public/issues</a>
+    </p>
+
+    <footer>
+      PayPing Lite &bull; Free, Open-Source Offline Payment Announcer &bull; GPL-3.0
+    </footer>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,452 @@
+[
+  {
+    "name": "received from sender",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Payment Notification",
+    "body": "You have received RM 50.00 from JOHN DOE ENTERPRISE.",
+    "expect": {
+      "ruleId": null,
+      "direction": "in",
+      "amountMinor": 5000,
+      "counterparty": "JOHN DOE ENTERPRISE",
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "paid to recipient",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Payment Successful",
+    "body": "You have paid RM 25.50 to RESTAURANT ABC SDN BHD on 03-Nov-2025.",
+    "expect": {
+      "ruleId": null,
+      "direction": "out",
+      "amountMinor": 2550,
+      "counterparty": "RESTAURANT ABC SDN BHD",
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "deducted for payment",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Transaction Alert",
+    "body": "RM 100.00 has been deducted from your account for payment to UTILITIES COMPANY.",
+    "expect": {
+      "ruleId": null,
+      "direction": "out",
+      "amountMinor": 10000,
+      "counterparty": "UTILITIES COMPANY",
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "transferred to you",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Money Received",
+    "body": "RM 200.00 has been transferred to you from AHMAD BIN ABDULLAH.",
+    "expect": {
+      "ruleId": null,
+      "direction": "in",
+      "amountMinor": 20000,
+      "counterparty": "AHMAD BIN ABDULLAH",
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "recipient before time",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Payment",
+    "body": "Transfer RM 15.00 to MERCHANT NAME SDN BHD at 15:00.",
+    "expect": {
+      "ruleId": null,
+      "direction": "out",
+      "amountMinor": 1500,
+      "counterparty": "MERCHANT NAME SDN BHD",
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "merchant after at",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Purchase",
+    "body": "Payment of RM 8.50 at COFFEE SHOP OUTLET.",
+    "expect": {
+      "ruleId": null,
+      "direction": "out",
+      "amountMinor": 850,
+      "counterparty": "COFFEE SHOP OUTLET",
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "transaction reference",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Transfer Completed",
+    "body": "RM 75.00 transferred to SUPPLIER CO LTD. Transaction No: TXN123456.",
+    "expect": {
+      "ruleId": null,
+      "direction": "out",
+      "amountMinor": 7500,
+      "counterparty": "SUPPLIER CO LTD",
+      "reference": "TXN123456",
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "amount after currency code",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Money Received",
+    "body": "2,500.50 MYR received from ABC COMPANY.",
+    "synthetic": true,
+    "expect": {
+      "ruleId": null,
+      "direction": "in",
+      "amountMinor": 250050,
+      "counterparty": "ABC COMPANY",
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "Bahasa Malaysia credit",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Wang diterima",
+    "body": "RM 12.30 telah dikreditkan kepada anda.",
+    "synthetic": true,
+    "expect": {
+      "ruleId": null,
+      "direction": "in",
+      "amountMinor": 1230,
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "NFKC and whitespace normalisation",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Money   Received",
+    "body": "ＲＭ 10.00\nreceived from   ALI.",
+    "synthetic": true,
+    "expect": {
+      "ruleId": null,
+      "direction": "in",
+      "amountMinor": 1000,
+      "counterparty": "ALI",
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "Malay counterparty after daripada",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Wang diterima",
+    "body": "Anda telah menerima RM 30.00 daripada MOHD FAIZAL.",
+    "synthetic": true,
+    "expect": {
+      "ruleId": null,
+      "direction": "in",
+      "amountMinor": 3000,
+      "counterparty": "MOHD FAIZAL",
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "Malay counterparty after kepada",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Pembayaran",
+    "body": "Anda telah membayar RM 25.00 kepada KEDAI SERBAGUNA.",
+    "synthetic": true,
+    "expect": {
+      "ruleId": null,
+      "direction": "out",
+      "amountMinor": 2500,
+      "counterparty": "KEDAI SERBAGUNA",
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "Malay counterparty after ke",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Pembayaran",
+    "body": "RM 7.50 dibayar ke PASAR MINI.",
+    "synthetic": true,
+    "expect": {
+      "ruleId": null,
+      "direction": "out",
+      "amountMinor": 750,
+      "counterparty": "PASAR MINI",
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "zero amount is not money",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Money Received",
+    "body": "You've received RM 0.00 from X.",
+    "synthetic": true,
+    "expect": {
+      "ruleId": null,
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "a minus sign never overrides a received keyword",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Money Received",
+    "body": "You've received RM -5.00 from X.",
+    "synthetic": true,
+    "expect": {
+      "ruleId": null,
+      "direction": "in",
+      "amountMinor": 500,
+      "counterparty": "X",
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "a minus sign never turns a payment into money received",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Payment Successful",
+    "body": "You've paid -RM 8.00 to X.",
+    "synthetic": true,
+    "expect": {
+      "ruleId": null,
+      "direction": "out",
+      "amountMinor": 800,
+      "counterparty": "X",
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "marketing amount is ignored",
+    "platform": "android",
+    "sourceApp": "com.bank.app",
+    "title": "Special Offer",
+    "body": "Get RM 10.00 cashback with our partners!",
+    "synthetic": true,
+    "expect": {
+      "ruleId": null,
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "OTP amount is ignored",
+    "platform": "android",
+    "sourceApp": "com.bank.app",
+    "title": "Security Alert",
+    "body": "Use code 827361 to authorise your RM 25.00 transaction. Do not share it.",
+    "synthetic": true,
+    "expect": {
+      "ruleId": null,
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "keywords without amount are not logged",
+    "platform": "android",
+    "sourceApp": "com.bank.app",
+    "title": "Transfer Completed",
+    "body": "Your transfer was successful.",
+    "synthetic": true,
+    "expect": {
+      "ruleId": null,
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "dash separator before amount is not a minus sign",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Payment Successful - RM12.00",
+    "body": "Paid to KEDAI ABC",
+    "synthetic": true,
+    "expect": {
+      "ruleId": null,
+      "direction": "out",
+      "amountMinor": 1200,
+      "counterparty": "KEDAI ABC",
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "spent with a minus sign is money out",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Card transaction",
+    "body": "Spent -RM15.20 at GRAB",
+    "synthetic": true,
+    "expect": {
+      "ruleId": null,
+      "direction": "out",
+      "amountMinor": 1520,
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "bare minus amount without keywords is money out",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Transaction alert",
+    "body": "-RM 8.00 at 7-ELEVEN",
+    "synthetic": true,
+    "expect": {
+      "ruleId": null,
+      "direction": "out",
+      "amountMinor": 800,
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "you paid is money out",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Boost",
+    "body": "You paid RM10.00 to Mamak Bistro",
+    "synthetic": true,
+    "expect": {
+      "ruleId": null,
+      "direction": "out",
+      "amountMinor": 1000,
+      "counterparty": "Mamak Bistro",
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "you sent is money out",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "GXBank",
+    "body": "You sent RM20.00 to AHMAD",
+    "synthetic": true,
+    "expect": {
+      "ruleId": null,
+      "direction": "out",
+      "amountMinor": 2000,
+      "counterparty": "AHMAD",
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "payment received from wins over payment of",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Payment received",
+    "body": "Payment of RM20.00 received from AHMAD",
+    "synthetic": true,
+    "expect": {
+      "ruleId": null,
+      "direction": "in",
+      "amountMinor": 2000,
+      "counterparty": "AHMAD",
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "refunded minus amount is money in",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "ZUS COFFEE",
+    "body": "-RM19.10 was refunded to your card",
+    "synthetic": true,
+    "expect": {
+      "ruleId": null,
+      "direction": "in",
+      "amountMinor": 1910,
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "transferred to you wins over transferred to",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Transfer",
+    "body": "RM50.00 has been transferred to you by ALI",
+    "synthetic": true,
+    "expect": {
+      "ruleId": null,
+      "direction": "in",
+      "amountMinor": 5000,
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "payee stops before 'is successful'",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Payment Successful",
+    "body": "Payment of RM 23.90 to ZUS Coffee is successful",
+    "synthetic": true,
+    "expect": {
+      "ruleId": null,
+      "direction": "out",
+      "amountMinor": 2390,
+      "counterparty": "ZUS Coffee",
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "payee stops before 'was'",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Transfer",
+    "body": "RM 15.00 transferred to Kedai Pak Mat was completed",
+    "synthetic": true,
+    "expect": {
+      "ruleId": null,
+      "direction": "out",
+      "amountMinor": 1500,
+      "counterparty": "Kedai Pak Mat",
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "payer stops before 'has'",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Money in",
+    "body": "You received RM 45.00 from Ahmad Ali has been credited",
+    "synthetic": true,
+    "expect": {
+      "ruleId": null,
+      "direction": "in",
+      "amountMinor": 4500,
+      "counterparty": "Ahmad Ali",
+      "confidence": "low"
+    }
+  },
+  {
+    "name": "Malay payee stops before berjaya",
+    "platform": "android",
+    "sourceApp": "com.unknown.app",
+    "title": "Bayaran",
+    "body": "Anda membayar RM 8.00 kepada Gerai Kak Yah berjaya",
+    "synthetic": true,
+    "expect": {
+      "ruleId": null,
+      "direction": "out",
+      "amountMinor": 800,
+      "counterparty": "Gerai Kak Yah",
+      "confidence": "low"
+    }
+  }
+]

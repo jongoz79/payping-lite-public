@@ -1,0 +1,32 @@
+{
+  "_note": "Shared fictional data for the A/B prototypes. Every variant must render exactly this data so the comparison is fair. Names are invented; formats copy real Malaysian bank notifications.",
+  "user": { "language": "en", "ttsOn": true, "watchedApps": ["TNG eWallet", "MAE", "HSBC MY", "Google Wallet"] },
+  "today": "2026-10-25",
+  "payments": [
+    { "id": 1,  "time": "07:09", "app": "MAE",           "dir": "out", "amount": 629.75, "payee": "MAXIS-AUTO",            "status": "logged",  "raw": "You've just spent RM 629.75 at MAXIS-AUTO 2375810146 Kuala Lumpur MYS with your MasterCard ending 3684." },
+    { "id": 2,  "time": "08:12", "app": "TNG eWallet",   "dir": "in",  "amount": 4.00,   "payee": "Imraan Corner",         "status": "logged",  "raw": "RM 4.00 received from IMRAAN CORNER." },
+    { "id": 3,  "time": "08:13", "app": "TNG eWallet",   "dir": "in",  "amount": 12.50,  "payee": "Siti Aminah",           "status": "logged",  "raw": "RM 12.50 received from SITI AMINAH." },
+    { "id": 4,  "time": "08:40", "app": "Google Wallet", "dir": "out", "amount": 3.60,   "payee": "Rapid Rail KJL",        "status": "logged",  "raw": "MYR3.60 with Maybank Mastercard" },
+    { "id": 5,  "time": "09:25", "app": "MAE",           "dir": "out", "amount": 75.00,  "payee": "Plasticity PLT",        "status": "logged",  "raw": "You've transferred RM 75.00 to PLASTICITY PLT 's CIMB BANK BERHAD account ending ****7578. REF: 188969330M" },
+    { "id": 6,  "time": "10:02", "app": "TNG eWallet",   "dir": "in",  "amount": 8.20,   "payee": "Tan Wei Ming",          "status": "logged",  "raw": "RM 8.20 received from TAN WEI MING." },
+    { "id": 7,  "time": "10:05", "app": "TNG eWallet",   "dir": "in",  "amount": 8.20,   "payee": "Tan Wei Ming",          "status": "logged",  "raw": "RM 8.20 received from TAN WEI MING." },
+    { "id": 8,  "time": "11:31", "app": "HSBC MY",       "dir": "out", "amount": 110.90, "payee": "Village Park Restoran", "status": "logged",  "raw": "RM110.90 was charged to your credit card ending 3306 at VILLAGE PARK RESTORAN on 25/10/26." },
+    { "id": 9,  "time": "12:47", "app": "TNG eWallet",   "dir": "out", "amount": 3.50,   "payee": "Toll",                  "status": "logged",  "raw": "RM 3.50 was deducted via RFID for toll payment on 25-Oct-2026 12:47" },
+    { "id": 10, "time": "13:15", "app": "MAE",           "dir": "in",  "amount": 250.00, "payee": "Nurul Huda",            "status": "logged",  "raw": "You've received RM 250.00 from NURUL HUDA. REF: 77120034" },
+    { "id": 11, "time": "13:58", "app": "TNG eWallet",   "dir": "in",  "amount": 15.00,  "payee": null,                    "status": "check",   "raw": "Ka-ching! Incoming money RM 15.00", "why": "Low confidence: no payee found" },
+    { "id": 12, "time": "14:20", "app": "Boost",         "dir": "in",  "amount": 42.00,  "payee": "Kedai Runcit Pak Mat",  "status": "check",   "raw": "Payment of RM42.00 to Kedai Runcit Pak Mat successful", "why": "Wrong direction: the generic rule guessed money IN, it was a payment OUT. The user must be able to flip this in one tap." },
+    { "id": 13, "time": "15:02", "app": "Shopee",        "dir": null,  "amount": null,   "payee": null,                    "status": "unknown", "raw": "Your ShopeePay payment of RM 23.90 to ZUS Coffee is successful", "why": "App has no Bank Rule yet. Offer 'Teach PayPing this format'." }
+  ],
+  "rules": [
+    { "name": "Touch 'n Go eWallet", "apps": ["TNG eWallet"], "version": 3, "source": "Imported from paypinglite site", "matchedToday": 7 },
+    { "name": "Maybank2u / MAE",     "apps": ["MAE"],         "version": 2, "source": "Imported",                         "matchedToday": 3 },
+    { "name": "HSBC Malaysia",       "apps": ["HSBC MY"],     "version": 1, "source": "Imported",                         "matchedToday": 1 },
+    { "name": "Google Wallet",       "apps": ["Google Wallet"], "version": 1, "source": "Imported",                       "matchedToday": 1 },
+    { "name": "Generic (built in, editable)", "apps": ["any app without a rule"], "version": 1, "source": "Bundled",     "matchedToday": 1 }
+  ],
+  "tts": {
+    "_note": "NEW short format: sign + amount, app, payee. Nothing else.",
+    "en": ["Plus 4 ringgit, TNG eWallet, Imraan Corner", "Minus 629 ringgit 75 sen, MAE, Maxis-Auto"],
+    "ms": ["Tambah 4 ringgit, TNG eWallet, Imraan Corner", "Tolak 629 ringgit 75 sen, MAE, Maxis-Auto"]
+  }
+}

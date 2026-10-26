@@ -1,0 +1,400 @@
+[
+  {
+    "name": "real hsbcmalaysia #9: MYR950.00 was charged to your credit car",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "",
+    "body": "MYR950.00 was charged to your credit card ending 1681 at MYDIN MART on 21/09/25. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 95000,
+      "counterparty": "MYDIN MART"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #10: MYR30.00 was charged to your credit card",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "",
+    "body": "MYR30.00 was charged to your credit card ending 4233 at MYDIN MART on 22/09/25. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 3000,
+      "counterparty": "MYDIN MART"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #11: MYR1830.00 was charged to your credit ca",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "",
+    "body": "MYR1830.00 was charged to your credit card ending 8784 at KOPITIAM 88 on 23/09/25. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 183000,
+      "counterparty": "KOPITIAM 88"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #63: MYR116.40 was charged to your credit car",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "",
+    "body": "MYR116.40 was charged to your credit card ending 9135 at FARMASI SIHAT on 16/10/25. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 11640,
+      "counterparty": "FARMASI SIHAT"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #64: MYR136.55 was charged to your credit car",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "",
+    "body": "MYR136.55 was charged to your credit card ending 6197 at NASI KANDAR ALI on 22/10/25. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 13655,
+      "counterparty": "NASI KANDAR ALI"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #65: MYR130.15 was charged to your credit car",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "",
+    "body": "MYR130.15 was charged to your credit card ending 7192 at PETRON STESEN on 09/11/25. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 13015,
+      "counterparty": "PETRON STESEN"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #132: MYR105.28 was charged to your credit car",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "",
+    "body": "MYR105.28 was charged to your credit card ending 5570 at PETRON STESEN on 30/11/25. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 10528,
+      "counterparty": "PETRON STESEN"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #133: MYR5499.00 was charged to your credit ca",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "",
+    "body": "MYR5499.00 was charged to your credit card ending 6828 at GROCER TOWN on 01/01/26. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 549900,
+      "counterparty": "GROCER TOWN"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #134: USD10.98 was charged to your credit card",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "",
+    "body": "USD10.98 was charged to your credit card ending 1833 at KEDAI RUNCIT MAJU on 01/01/26. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1098,
+      "currency": "USD",
+      "counterparty": "KEDAI RUNCIT MAJU"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #150: MYR80.00 was charged to your credit card",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "",
+    "body": "MYR80.00 was charged to your credit card ending 8638 at FARMASI SIHAT on 10/10/25. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 8000,
+      "counterparty": "FARMASI SIHAT"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #151: IDR30400.00 was charged to your credit c",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "",
+    "body": "IDR30400.00 was charged to your credit card ending 9839 at KEDAI RUNCIT MAJU on 25/12/25. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 3040000,
+      "currency": "IDR",
+      "counterparty": "KEDAI RUNCIT MAJU"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #152: MYR50.00 was charged to your credit card",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "",
+    "body": "MYR50.00 was charged to your credit card ending 9284 at BOOKXCESS on 06/06/26. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 5000,
+      "counterparty": "BOOKXCESS"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #183: MYR17.00 was charged to your credit card",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "",
+    "body": "MYR17.00 was charged to your credit card ending 8596 at KOPITIAM 88 on 24/12/25. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1700,
+      "counterparty": "KOPITIAM 88"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #184: MYR40.00 was charged to your credit card",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "",
+    "body": "MYR40.00 was charged to your credit card ending 5796 at GROCER TOWN on 31/12/25. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 4000,
+      "counterparty": "GROCER TOWN"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #185: USD47.00 was charged to your credit card",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "",
+    "body": "USD47.00 was charged to your credit card ending 5395 at PETRON STESEN on 03/02/26. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 4700,
+      "currency": "USD",
+      "counterparty": "PETRON STESEN"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #195: SGD1.80 was charged to your credit card ",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "",
+    "body": "SGD1.80 was charged to your credit card ending 1821 at KEDAI RUNCIT MAJU on 16/03/26. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 180,
+      "currency": "SGD",
+      "counterparty": "KEDAI RUNCIT MAJU"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #196: MYR5499.00 was charged to your credit ca",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "",
+    "body": "MYR5499.00 was charged to your credit card ending 0989 at NASI KANDAR ALI on 02/05/26. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 549900,
+      "counterparty": "NASI KANDAR ALI"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #197: MYR699.00 was charged to your credit car",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "",
+    "body": "MYR699.00 was charged to your credit card ending 3527 at RESTORAN SELERA on 07/06/26. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 69900,
+      "counterparty": "RESTORAN SELERA"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #259: SGD31.72 was charged to your credit card",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "",
+    "body": "SGD31.72 was charged to your credit card ending 0959 at KEDAI RUNCIT MAJU on 08/06/26. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 3172,
+      "currency": "SGD",
+      "counterparty": "KEDAI RUNCIT MAJU"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #260: SGD34.71 was charged to your credit card",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "",
+    "body": "SGD34.71 was charged to your credit card ending 6089 at RESTORAN SELERA on 09/06/26. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 3471,
+      "currency": "SGD",
+      "counterparty": "RESTORAN SELERA"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #263: Credit Card Transaction",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "Credit Card Transaction",
+    "body": "MYR5980.00 was charged to your supp credit card ending 9709 at MYDIN MART on 13/10/26. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 598000,
+      "counterparty": "MYDIN MART"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #264: Credit Card Transaction",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "Credit Card Transaction",
+    "body": "MYR7980.00 was charged to your supp credit card ending 0708 at FARMASI SIHAT on 13/10/26. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 798000,
+      "counterparty": "FARMASI SIHAT"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #265: DuitNow Transfer-Funds Received",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "DuitNow Transfer-Funds Received",
+    "body": "13OCT2026: You've received MYR 0.01 in your A/C ending 2789",
+    "real": true,
+    "expect": {
+      "direction": "in",
+      "confidence": "high",
+      "amountMinor": 1
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #266: DuitNow Transfer-Funds Received",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "DuitNow Transfer-Funds Received",
+    "body": "13OCT2026: You've received MYR 0.02 in your A/C ending 0389",
+    "real": true,
+    "expect": {
+      "direction": "in",
+      "confidence": "high",
+      "amountMinor": 2
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #286: MYR2233.00 was charged to your credit ca",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "",
+    "body": "MYR2233.00 was charged to your credit card ending 4334 at BOOKXCESS on 27/09/25. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 223300,
+      "counterparty": "BOOKXCESS"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #289: MYR50.00 was charged to your credit card",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "",
+    "body": "MYR50.00 was charged to your credit card ending 5327 at RESTORAN SELERA on 09/11/25. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 5000,
+      "counterparty": "RESTORAN SELERA"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #311: SGD1.80 was charged to your credit card ",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "",
+    "body": "SGD1.80 was charged to your credit card ending 7290 at CAFE LANGIT on 19/03/26. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 180,
+      "currency": "SGD",
+      "counterparty": "CAFE LANGIT"
+    }
+  },
+  {
+    "name": "real hsbcmalaysia #319: USD49.99 was charged to your supp credit",
+    "platform": "android",
+    "sourceApp": "my.com.hsbc.hsbcmalaysia",
+    "title": "",
+    "body": "USD49.99 was charged to your supp credit card ending 0300 at KOPITIAM 88 on 12/05/26. Pls call HSBC if you did not authorise.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 4999,
+      "currency": "USD",
+      "counterparty": "KOPITIAM 88"
+    }
+  }
+]

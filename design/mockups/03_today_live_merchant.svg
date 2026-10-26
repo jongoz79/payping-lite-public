@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="820" viewBox="0 0 400 820" fill="none">
+  <!-- Device Frame (Material 3 Dark) -->
+  <rect width="400" height="820" rx="36" fill="#121212" stroke="#2D2D2D" stroke-width="8"/>
+  
+  <!-- Status Bar -->
+  <text x="32" y="40" fill="#F8FAFC" font-family="-apple-system, Roboto, sans-serif" font-size="13" font-weight="600">09:41</text>
+  <text x="330" y="40" fill="#F8FAFC" font-family="-apple-system, Roboto, sans-serif" font-size="12" font-weight="600">5G 98%</text>
+
+  <!-- Screen Header -->
+  <text x="20" y="76" fill="#F8FAFC" font-family="-apple-system, Roboto, sans-serif" font-size="20" font-weight="700">PayPing Lite</text>
+  
+  <!-- Plain Text Listener Health Line (No colored banner card!) -->
+  <g transform="translate(20, 94)">
+    <circle cx="4" cy="4" r="4" fill="#10B981"/>
+    <text x="14" y="8" fill="#94A3B8" font-family="-apple-system, Roboto, sans-serif" font-size="13">Listening to 3 apps</text>
+  </g>
+
+  <!-- Merchant Hero Card (Plain Tool Aesthetic - No side border) -->
+  <g transform="translate(20, 114)">
+    <rect width="360" height="130" rx="12" fill="#1E1E1E" stroke="#2D2D2D"/>
+    
+    <text x="16" y="26" fill="#64748B" font-family="-apple-system, Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="0.8">TOTAL RECEIVED TODAY</text>
+    
+    <!-- Big 42pt Glanceable Tabular Figure with Color ONLY on text -->
+    <text x="16" y="74" fill="#10B981" font-family="-apple-system, Roboto, sans-serif" font-size="42" font-weight="800" letter-spacing="-1">
+      <tspan fill="#64748B" font-size="24" font-weight="700">RM </tspan>384.50
+    </text>
+
+    <!-- Sub-stats Row -->
+    <line x1="16" y1="92" x2="344" y2="92" stroke="#2D2D2D"/>
+    <text x="16" y="112" fill="#94A3B8" font-family="-apple-system, Roboto, sans-serif" font-size="12">
+      28 payments  •  Paid out: RM 42.00  •  <tspan fill="#F59E0B">1 needs review</tspan>
+    </text>
+  </g>
+
+  <!-- Latest Payment Spotlight Card (Tool Style - No left border accent) -->
+  <g transform="translate(20, 256)">
+    <rect width="360" height="154" rx="12" fill="#1E1E1E" stroke="#2D2D2D"/>
+
+    <!-- App Launcher Icon & Label -->
+    <rect x="16" y="16" width="24" height="24" rx="6" fill="#0066CC"/>
+    <text x="28" y="32" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="10" font-weight="800">TNG</text>
+    <text x="46" y="32" fill="#F8FAFC" font-family="-apple-system, Roboto, sans-serif" font-size="13" font-weight="600">Touch 'n Go eWallet</text>
+    
+    <text x="344" y="32" text-anchor="end" fill="#64748B" font-family="-apple-system, Roboto, sans-serif" font-size="12">Just now</text>
+
+    <!-- Large Amount (Color strictly on text) -->
+    <text x="16" y="76" fill="#10B981" font-family="-apple-system, Roboto, sans-serif" font-size="32" font-weight="800">+RM 18.50</text>
+    
+    <!-- Counterparty Name -->
+    <text x="16" y="104" fill="#F8FAFC" font-family="-apple-system, Roboto, sans-serif" font-size="16" font-weight="600">MOHD FAIZAL BIN ABDULLAH</text>
+    
+    <!-- Ref & Replay Action -->
+    <text x="16" y="130" fill="#64748B" font-family="-apple-system, sans-serif" font-size="12">Ref: TNG992817203 • Spoken aloud</text>
+    <text x="344" y="130" text-anchor="end" fill="#3B82F6" font-family="-apple-system, sans-serif" font-size="12" font-weight="600">Replay [🔊]</text>
+  </g>
+
+  <!-- Section Label -->
+  <text x="20" y="434" fill="#64748B" font-family="-apple-system, Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="0.8">TODAY'S PAYMENTS</text>
+
+  <!-- Feed Item 1 (MAE) -->
+  <g transform="translate(20, 446)">
+    <rect width="360" height="58" rx="8" fill="#1E1E1E" stroke="#2D2D2D"/>
+    <rect x="12" y="14" width="24" height="24" rx="6" fill="#B45309"/>
+    <text x="24" y="30" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="800">MAE</text>
+    
+    <text x="44" y="28" fill="#F8FAFC" font-family="-apple-system, sans-serif" font-size="13" font-weight="600">Sarah Tan Mei Ling</text>
+    <text x="44" y="44" fill="#64748B" font-family="-apple-system, sans-serif" font-size="11">12:44 PM • DuitNow QR</text>
+    
+    <text x="344" y="36" text-anchor="end" fill="#10B981" font-family="-apple-system, sans-serif" font-size="16" font-weight="700">+RM 6.00</text>
+  </g>
+
+  <!-- Feed Item 2 (CIMB) -->
+  <g transform="translate(20, 510)">
+    <rect width="360" height="58" rx="8" fill="#1E1E1E" stroke="#2D2D2D"/>
+    <rect x="12" y="14" width="24" height="24" rx="6" fill="#991B1B"/>
+    <text x="24" y="30" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="800">CIMB</text>
+    
+    <text x="44" y="28" fill="#F8FAFC" font-family="-apple-system, sans-serif" font-size="13" font-weight="600">Wong Kok Leong</text>
+    <text x="44" y="44" fill="#64748B" font-family="-apple-system, sans-serif" font-size="11">12:31 PM • Transfer</text>
+    
+    <text x="344" y="36" text-anchor="end" fill="#10B981" font-family="-apple-system, sans-serif" font-size="16" font-weight="700">+RM 25.00</text>
+  </g>
+
+  <!-- Feed Item 3 (Paid out) -->
+  <g transform="translate(20, 574)">
+    <rect width="360" height="58" rx="8" fill="#1E1E1E" stroke="#2D2D2D"/>
+    <rect x="12" y="14" width="24" height="24" rx="6" fill="#0066CC"/>
+    <text x="24" y="30" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="800">TNG</text>
+    
+    <text x="44" y="28" fill="#F8FAFC" font-family="-apple-system, sans-serif" font-size="13" font-weight="600">GrabFood Supplier</text>
+    <text x="44" y="44" fill="#64748B" font-family="-apple-system, sans-serif" font-size="11">11:15 AM • Money Out</text>
+    
+    <text x="344" y="36" text-anchor="end" fill="#F87171" font-family="-apple-system, sans-serif" font-size="16" font-weight="700">-RM 42.00</text>
+  </g>
+
+  <!-- Bottom 5-Tab Bar -->
+  <g transform="translate(0, 746)">
+    <rect width="400" height="74" fill="#1E1E1E" stroke="#2D2D2D"/>
+    
+    <!-- Tab 1: Today (Active) -->
+    <text x="40" y="36" text-anchor="middle" fill="#3B82F6" font-family="sans-serif" font-size="11" font-weight="700">Today</text>
+    
+    <!-- Tab 2: History -->
+    <text x="120" y="36" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="11">History</text>
+
+    <!-- Tab 3: Review -->
+    <text x="200" y="36" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="11">Review</text>
+    <circle cx="218" cy="22" r="6" fill="#EF4444"/>
+    <text x="218" y="25" text-anchor="middle" fill="#FFFFFF" font-size="8" font-weight="800">1</text>
+
+    <!-- Tab 4: Parsers (New First-Class Tab) -->
+    <text x="280" y="36" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="11">Parsers</text>
+
+    <!-- Tab 5: Settings -->
+    <text x="360" y="36" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="11">Settings</text>
+  </g>
+</svg>

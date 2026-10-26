@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "id": "cimb",
+  "name": "CIMB OCTO",
+  "version": 1,
+  "description": "Synthetic starter patterns; not yet validated against real notifications.",
+  "androidPackages": ["com.cimb.cimbocto"],
+  "iosAppNames": ["CIMB OCTO"],
+  "rules": [
+    {
+      "id": "cimb.received-title.v1",
+      "priority": 200,
+      "match": { "title": "transfer received|money received|funds received|incoming" },
+      "direction": "in",
+      "extract": {
+        "amount": "-?\\s?(?:RM|MYR)\\s?-?\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "(?:received from|from) (?<counterparty>.+?)(?: on| via| ref|\\.|$)",
+        "reference": "(?:ref(?:erence)?|transaction)\\s?(?:no|number)?:?\\s?(?<reference>[A-Z0-9]+)"
+      }
+    },
+    {
+      "id": "cimb.received-body.v1",
+      "priority": 190,
+      "match": { "body": "received from|credited to your account|transferred to you" },
+      "direction": "in",
+      "extract": {
+        "amount": "-?\\s?(?:RM|MYR)\\s?-?\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "(?:received from|from) (?<counterparty>.+?)(?: on| via| ref|\\.|$)",
+        "reference": "(?:ref(?:erence)?|transaction)\\s?(?:no|number)?:?\\s?(?<reference>[A-Z0-9]+)"
+      }
+    },
+    {
+      "id": "cimb.sent-title.v1",
+      "priority": 180,
+      "match": { "title": "transfer successful|payment successful|transaction completed" },
+      "direction": "out",
+      "extract": {
+        "amount": "-?\\s?(?:RM|MYR)\\s?-?\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "(?:to Acct RM[\\d,. ]+ to|(?:transferred|paid) to|to) (?<counterparty>.+?)(?: on\\b| ref\\b|\\.|$)",
+        "reference": "(?:ref(?:erence)?|transaction)\\s?(?:no|number)?:?\\s?(?<reference>[A-Z0-9]+)"
+      }
+    },
+    {
+      "id": "cimb.sent-body.v1",
+      "priority": 170,
+      "match": { "body": "transferred to|debited from your account|paid to|duitnow to acct" },
+      "direction": "out",
+      "extract": {
+        "amount": "-?\\s?(?:RM|MYR)\\s?-?\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "(?:to Acct RM[\\d,. ]+ to|(?:transferred|paid) to|to) (?<counterparty>.+?)(?: on\\b| ref\\b|\\.|$)",
+        "reference": "(?:ref(?:erence)?|transaction)\\s?(?:no|number)?:?\\s?(?<reference>[A-Z0-9]+)"
+      }
+    }
+  ]
+}

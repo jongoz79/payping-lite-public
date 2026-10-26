@@ -1,0 +1,40 @@
+plugins {
+  id 'com.android.library'
+  id 'expo-module-gradle-plugin'
+}
+
+group = 'expo.modules.paypingcapture'
+version = '0.1.0'
+
+android {
+  namespace "expo.modules.paypingcapture"
+  defaultConfig {
+    testInstrumentationRunner "expo.modules.paypingcapture.CaptureDatabaseInstrumentation"
+    versionCode 1
+    versionName "0.1.0"
+  }
+  lintOptions {
+    abortOnError false
+  }
+}
+
+// Only the editable generic starter is bundled. Community parsers are test inputs only.
+def rulesRoot = file(providers.gradleProperty('paypingRulesDir').getOrElse("${projectDir}/../../../parser-library"))
+if (!new File(rulesRoot, 'generic.default.json').isFile()) {
+  throw new GradleException("Generic starter is missing at ${rulesRoot}. Set -PpaypingRulesDir to the parser-library directory.")
+}
+def generatedRules = layout.buildDirectory.dir('generated/paypingAssets')
+tasks.register('bundlePaypingGeneric', Sync) {
+  from(rulesRoot) { include 'generic.default.json'; into 'payping' }
+  into(generatedRules)
+}
+android.sourceSets.main.assets.srcDir(generatedRules.get().asFile)
+tasks.named('preBuild').configure { dependsOn 'bundlePaypingGeneric' }
+android.testOptions.unitTests.all {
+  systemProperty 'payping.rules', rulesRoot.absolutePath
+  testLogging { events 'passed', 'failed'; showStandardStreams = true }
+}
+dependencies {
+  testImplementation 'junit:junit:4.13.2'
+  testImplementation 'org.json:json:20240303'
+}

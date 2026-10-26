@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Make PayPing Understand Your Bank &mdash; Parser Guide</title>
+  <meta name="description" content="Complete guide to creating, testing, and contributing bank notification parsers for PayPing Lite.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <svg viewBox="0 0 32 32" width="28" height="28" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="#059669"/><text x="16" y="21" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="-0.5">RM</text></svg>
+        <span class="brand-text">PayPing <span class="brand-sub">Parser Library</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link ">Parsers</a>
+        <a href="guide.html" class="nav-link active">Guide (EN)</a>
+        <a href="guide-ms.html" class="nav-link ">Panduan (MS)</a>
+        <a href="https://github.com/jongoz79/payping-lite-public/issues/new?template=parser.md" target="_blank" rel="noopener" class="nav-link nav-link-external">
+          Contribute <svg class="icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container guide-content">
+    <div class="lang-switch">
+      <a href="guide.html" class="active">English</a>
+      <a href="guide-ms.html">Bahasa Melayu</a>
+    </div>
+
+    <article class="guide-prose">
+      <h1>How to Make PayPing Understand Your Bank</h1>
+      <p>
+        PayPing Lite runs completely offline. It never connects to the internet and never sends your notifications to any cloud server. To turn incoming bank and e-wallet notifications into instant spoken ringgit announcements, PayPing uses <strong>deterministic regular expression parsers</strong>.
+      </p>
+      <p>
+        You have two ways to add support for a new bank or e-wallet:
+      </p>
+      <ol>
+        <li><strong>In-app visual generator (recommended):</strong> Tap a notification on your phone and let PayPing generate the rule automatically.</li>
+        <li><strong>JSON definition (power users &amp; community contributors):</strong> Write portable regex rules that can be shared in the library.</li>
+      </ol>
+
+      <h2>1. The In-App Guided Flow</h2>
+      <p>
+        Whenever PayPing Lite receives a notification from a banking app that it doesn't recognize yet, it places it safely in the <strong>Needs Review</strong> queue without guessing or making mistakes.
+      </p>
+      <ol>
+        <li>Open <strong>PayPing Lite</strong> and switch to the <strong>Needs Review</strong> tab.</li>
+        <li>Tap the notification you want PayPing to learn.</li>
+        <li>Select <strong>"Create parser from this notification"</strong>.</li>
+        <li>
+          <strong>Highlight the amount:</strong> The app displays the notification text. Simply tap or drag across the amount (e.g. <code>RM 45.20</code>). PayPing automatically generates the corresponding extraction pattern.
+        </li>
+        <li>
+          <strong>Choose the direction:</strong>
+          <ul>
+            <li><strong>Money In:</strong> DuitNow transfers received, QR payments received, salary or cash deposits.</li>
+            <li><strong>Money Out:</strong> Debit card transactions, QR payments sent, bill payments.</li>
+            <li><strong>Info (Ignore):</strong> OTP codes, promotional alerts, login notices.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Test against recent history:</strong> PayPing tests the generated rule against other recent notifications from the same app to verify that it matches accurately without false positives.
+        </li>
+        <li>Tap <strong>Save Parser</strong>. The app immediately parses matching future notifications and speaks them aloud.</li>
+      </ol>
+
+      <h2>2. The Parser JSON Schema</h2>
+      <p>
+        Every parser in the library is a single self-contained JSON document conforming to <code>schemaVersion: 1</code>.
+      </p>
+      <pre><code>{
+  "schemaVersion": 1,
+  "id": "mybank",
+  "name": "My Bank Malaysia",
+  "version": 1,
+  "author": "Community Contributor",
+  "description": "Parser for My Bank transfer received and card charge notifications.",
+  "androidPackages": ["com.mybank.app"],
+  "iosAppNames": ["My Bank Mobile"],
+  "rules": [
+    {
+      "id": "mybank.received.v1",
+      "priority": 200,
+      "match": {
+        "title": "money received|duitnow received",
+        "body": "transferred to your account"
+      },
+      "direction": "in",
+      "confidence": "high",
+      "extract": {
+        "amount": "(?:RM|MYR)\s*(?<amount>[\d,]+\.?\d{0,2})",
+        "counterparty": "from\s+(?<counterparty>.+?)(?:\s+on|\.|$)",
+        "reference": "ref(?:erence)?:?\s*(?<reference>[A-Z0-9]+)"
+      }
+    }
+  ]
+}</code></pre>
+
+      <h3>Key Rule Fields</h3>
+      <ul>
+        <li>
+          <code>id</code>: A unique dotted identifier following <code>&lt;bank-id&gt;.&lt;rule-name&gt;.v&lt;version&gt;</code> (e.g., <code>hsbc.card-charged.v1</code>).
+        </li>
+        <li>
+          <code>priority</code>: An integer (e.g. <code>200</code>). Higher priority rules are evaluated first. Put specific rules (like specific card alerts) higher than broad generic rules.
+        </li>
+        <li>
+          <code>match</code>: An object with optional <code>title</code> and <code>body</code> regex patterns. If both are specified, <strong>both must match</strong>. Matches are evaluated case-insensitively.
+        </li>
+        <li>
+          <code>direction</code>: <code>"in"</code> (money received), <code>"out"</code> (money spent), or <code>"info"</code> (non-financial notifications like OTPs or rewards).
+        </li>
+        <li>
+          <code>confidence</code>: <code>"high"</code> for verified transactions that should be logged and spoken; <code>"none"</code> for notifications that must not be recorded as financial transactions.
+        </li>
+        <li>
+          <code>extract</code>: Patterns containing named capture groups:
+          <ul>
+            <li><code>(?&lt;amount&gt;...)</code>: The transaction figure (digits, commas, and decimals).</li>
+            <li><code>(?&lt;currency&gt;...)</code>: Optional currency indicator (defaults to <code>MYR</code> if omitted).</li>
+            <li><code>(?&lt;counterparty&gt;...)</code>: Merchant name or sender/recipient name.</li>
+            <li><code>(?&lt;reference&gt;...)</code>: Transaction ID or reference number.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>3. Strict Rules for Safe Regular Expressions</h2>
+      <p>
+        Because PayPing Lite runs in the background on mobile devices (Android Hermes/V8 and iOS JavaScriptCore/Swift), regex execution must be <strong>100% predictable, cross-platform, and fast</strong>:
+      </p>
+
+      <div style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 18px; margin: 20px 0;">
+        <h4 style="color: #b91c1c; margin-bottom: 8px; font-weight: 700;">Engine Safety Guardrails</h4>
+        <ul style="margin-bottom: 0;">
+          <li>
+            <strong>NO Lookbehind (Forbidden):</strong> Positive lookbehind <code>(?&lt;=...)</code> and negative lookbehind <code>(?&lt;!...)</code> are strictly prohibited. Different regex engines handle lookbehinds inconsistently and can cause fatal crashes on older mobile runtimes. Use non-capturing prefix groups <code>(?:prefix)</code> with named capture groups instead.
+          </li>
+          <li>
+            <strong>NO Nested Quantifiers (Catastrophic Backtracking):</strong> Never nest quantifiers like <code>(a+)+</code> or <code>(.*)*</code>. In hostile or unexpected inputs, this causes exponential backtracking (ReDoS) that freezes the app.
+          </li>
+          <li>
+            <strong>50ms Execution Budget:</strong> Any regex evaluation that exceeds 50 milliseconds is terminated automatically by the PayPing parser runtime.
+          </li>
+          <li>
+            <strong>4,000 Character Cap:</strong> Input notification titles and bodies longer than 4,000 characters are safely truncated before parsing.
+          </li>
+          <li>
+            <strong>Named Capture Syntax:</strong> Always use standard <code>(?&lt;name&gt;...)</code> named group syntax.
+          </li>
+        </ul>
+      </div>
+
+      <h2>4. Real Worked Examples</h2>
+
+      <h3>Example A: Money In (DuitNow Funds Received)</h3>
+      <p><strong>Notification Body:</strong> <code>You've received RM 120.00 in your A/C from AHMAD BIN ALI on 24/10/2026.</code></p>
+      <pre><code>{
+  "id": "sample.duitnow-in.v1",
+  "priority": 200,
+  "match": {
+    "body": "You've received .* in your A/C"
+  },
+  "direction": "in",
+  "confidence": "high",
+  "extract": {
+    "amount": "You've received\s+(?<currency>RM|MYR)?\s*(?<amount>[\d,]+\.?\d{0,2})",
+    "counterparty": "from\s+(?<counterparty>.+?)(?:\s+on|\.|$)"
+  }
+}</code></pre>
+      <p><em>Result:</em> Direction is <strong>in</strong>, amount is <strong>12000</strong> minor units (RM 120.00), counterparty is <strong>AHMAD BIN ALI</strong>.</p>
+
+      <h3>Example B: Money Out (Credit Card Purchase)</h3>
+      <p><strong>Notification Body:</strong> <code>MYR950.00 was charged to your credit card ending 1681 at MYDIN MART on 21/09/25.</code></p>
+      <pre><code>{
+  "id": "hsbc.card-charged.v1",
+  "priority": 200,
+  "match": {
+    "body": "was charged to your (?:supp )?credit card"
+  },
+  "direction": "out",
+  "confidence": "high",
+  "extract": {
+    "amount": "(?<currency>RM|MYR)\s*(?<amount>[\d,]+\.?\d{0,2})",
+    "counterparty": "at (?<counterparty>.+?) on \d"
+  }
+}</code></pre>
+      <p><em>Result:</em> Direction is <strong>out</strong>, amount is <strong>95000</strong> minor units (RM 950.00), counterparty is <strong>MYDIN MART</strong>.</p>
+
+      <h3>Example C: Negative Filter (Ignore Promotional Alerts)</h3>
+      <p><strong>Notification Body:</strong> <code>Special Offer! Enjoy RM 20.00 cashback with our partners when you spend today.</code></p>
+      <pre><code>{
+  "id": "sample.promo-filter.v1",
+  "priority": 300,
+  "match": {
+    "body": "cashback with our partners|discount voucher|enjoy up to"
+  },
+  "direction": "info",
+  "confidence": "none"
+}</code></pre>
+      <p><em>Result:</em> Direction is <strong>info</strong> with confidence <strong>none</strong>. PayPing Lite ignores this notification completely and avoids announcing marketing text.</p>
+
+      <h2>5. How to Submit New Parsers or Real Samples</h2>
+      <p>
+        Help expand the community library! We welcome parser additions and real notification samples:
+      </p>
+      <ol>
+        <li>
+          <strong>Anonymise everything:</strong> Replace personal names with fake names (e.g. "SITI AMINAH"), mask account numbers (e.g. "ending 1234"), and jitter transaction amounts.
+        </li>
+        <li>
+          Open our <a href="https://github.com/jongoz79/payping-lite-public/issues/new?template=parser.md" target="_blank" rel="noopener">GitHub Parser Submission Template</a>.
+        </li>
+        <li>Fill out the bank name, package ID, and sample notification text.</li>
+        <li>Our maintainers will review, write tests in <code>parser-library/fixtures-real</code>, and publish the update in the next library release.</li>
+      </ol>
+    </article>
+  </main>
+
+  
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p><strong>PayPing Lite</strong> &mdash; Zero network permissions, privacy-first ringgit voice alerts.</p>
+        <p class="footer-subtext">Community bank parsers run entirely offline on your device.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Library</a>
+        <a href="guide.html">Parser Guide (EN)</a>
+        <a href="guide-ms.html">Panduan Parser (MS)</a>
+        <a href="https://github.com/jongoz79/payping-lite-public" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

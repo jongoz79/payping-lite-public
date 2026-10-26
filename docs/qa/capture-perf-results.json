@@ -1,0 +1,102 @@
+{
+  "burst": {
+    "mode": "burst",
+    "posted": 300,
+    "captured": 300,
+    "completed": 300,
+    "timeouts": 0,
+    "latencySamples": 300,
+    "avgMs": 251.14666666666668,
+    "p95Ms": 322,
+    "maxMs": 425,
+    "shedding": [],
+    "workerBefore": "11044",
+    "workerAfter": "11044",
+    "workerFailures": 0,
+    "delivered": 300,
+    "workerDeaths": [],
+    "ttsCounts": [
+      1,
+      58,
+      146,
+      95
+    ],
+    "ttsStarted": 4,
+    "ttsCompleted": 4,
+    "commandIncludingCleanupSeconds": 62.74172538200219,
+    "postingSeconds": 13
+  },
+  "paced": {
+    "mode": "paced",
+    "posted": 100,
+    "captured": 100,
+    "completed": 100,
+    "timeouts": 0,
+    "latencySamples": 100,
+    "avgMs": 234.71,
+    "p95Ms": 256,
+    "maxMs": 305,
+    "shedding": [],
+    "workerBefore": "11044",
+    "workerAfter": "11044",
+    "workerFailures": 0,
+    "delivered": 100,
+    "workerDeaths": [],
+    "ttsCounts": [
+      1,
+      11,
+      21,
+      25,
+      25,
+      17
+    ],
+    "ttsStarted": 6,
+    "ttsCompleted": 5,
+    "postingSeconds": 19.829024769998796
+  },
+  "restart": {
+    "posted": 60,
+    "killAfterPosted": 21,
+    "oldCapturePID": "9347",
+    "newCapturePID": "15362",
+    "pendingBeforeKill": 15,
+    "recovered": 15,
+    "remaining": [],
+    "pendingIDs": [
+      "01a16fc8-adca-7bec-b38d-d39bb1d8d59b",
+      "01a16fc8-ae07-73aa-9d1a-4475afd97e16",
+      "01a16fc8-ae28-7f95-a0bd-8b923ff79038",
+      "01a16fc8-ae6c-72ab-9ca9-816114e418ce",
+      "01a16fc8-aea8-718c-b29b-e93c0cd1dac7",
+      "01a16fc8-af0b-7859-8224-94c001e12160",
+      "01a16fc8-af17-7a9c-8a3c-bd2a33093822",
+      "01a16fc8-af52-7fb3-82b9-4df99fc5e5ee",
+      "01a16fc8-af9f-7acf-87c1-2f3cf2435751",
+      "01a16fc8-affb-7a11-912c-8b38cd2df515",
+      "01a16fc8-b092-76c3-b183-ccea9f1709cb",
+      "01a16fc8-b0a4-76be-921f-41b747b73bf4",
+      "01a16fc8-b0a8-788c-bd25-f1ea88b06093",
+      "01a16fc8-b0d0-7ef7-8cba-ffa1ce9e3e91",
+      "01a16fc8-b0fd-7b49-870a-cd55c2739ed8"
+    ],
+    "newRows": 16,
+    "newRowsCompleted": 16,
+    "delivered": 16
+  },
+  "device": {
+    "serial": "emulator-5554",
+    "sdk": 36,
+    "abi": "x86_64"
+  },
+  "setup": {
+    "parser": "TNG starter copied for Shell QA",
+    "ttsEnabled": true,
+    "uiProcessAbsent": true,
+    "osEnqueueLimitDuringControlledProof": 1000,
+    "originalOsEnqueueSetting": "unset (Android default)",
+    "osEnqueueSettingRestored": true,
+    "burstPostingSeconds": 13,
+    "latencyMethod": "posted_at to native parse completion, nearest-rank p95",
+    "databaseCopy": "database + WAL + SHM; PRAGMA quick_check=ok"
+  }
+}

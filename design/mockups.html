@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PayPing Lite v2 — Native UX Mockup Suite</title>
+  <style>
+    :root {
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      
+      /* Neutral light theme */
+      --light-bg: #f8fafc;
+      --light-surface: #ffffff;
+      --light-subtle: #f1f5f9;
+      --light-border: #e2e8f0;
+      --light-text-p: #0f172a;
+      --light-text-s: #475569;
+      --light-text-m: #94a3b8;
+      
+      /* Neutral dark theme (Material 3 style) */
+      --dark-bg: #121212;
+      --dark-surface: #1e1e1e;
+      --dark-subtle: #282828;
+      --dark-border: #2d2d2d;
+      --dark-text-p: #f8fafc;
+      --dark-text-s: #94a3b8;
+      --dark-text-m: #64748b;
+
+      /* Direction Colors - used strictly on text */
+      --money-in-light: #059669;
+      --money-in-dark: #10b981;
+      --money-out-light: #dc2626;
+      --money-out-dark: #f87171;
+      --accent: #2563eb;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-sans);
+      background-color: #0b0f17;
+      color: #f8fafc;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Control Bar */
+    header {
+      background: #161e2e;
+      border-bottom: 1px solid #243247;
+      padding: 10px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .brand-title {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .brand-tag {
+      font-size: 11px;
+      background: #243247;
+      color: #94a3b8;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .controls-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-pill {
+      background: #1e293b;
+      color: #f8fafc;
+      border: 1px solid #334155;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-pill:hover { background: #334155; }
+    .btn-pill.active {
+      background: #2563eb;
+      border-color: #3b82f6;
+      color: white;
+    }
+
+    /* Workspace */
+    .workspace {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 320px;
+      background: #0f172a;
+      border-right: 1px solid #1e293b;
+      padding: 16px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .sidebar-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #64748b;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .nav-item {
+      padding: 9px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: #cbd5e1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-item:hover { background: #1e293b; color: white; }
+    .nav-item.active {
+      background: #2563eb;
+      color: white;
+      font-weight: 600;
+    }
+    .nav-badge {
+      font-size: 11px;
+      background: rgba(0,0,0,0.3);
+      padding: 1px 6px;
+      border-radius: 4px;
+    }
+
+    .spec-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 6px;
+      padding: 12px;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #cbd5e1;
+    }
+    .spec-card strong { color: white; display: block; margin-bottom: 4px; }
+
+    /* Stage */
+    .stage {
+      flex: 1;
+      background: #06090e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      overflow-y: auto;
+    }
+
+    /* Device Frame */
+    .device-frame {
+      width: 380px;
+      height: 800px;
+      border-radius: 36px;
+      border: 8px solid #243247;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .device-frame.theme-dark {
+      background: var(--dark-bg);
+      color: var(--dark-text-p);
+    }
+    .device-frame.theme-light {
+      background: var(--light-bg);
+      color: var(--light-text-p);
+    }
+
+    /* Status Bar */
+    .device-status-bar {
+      height: 38px;
+      padding: 8px 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 600;
+      z-index: 40;
+    }
+    .theme-light .device-status-bar { color: #000; }
+    .theme-dark .device-status-bar { color: #fff; }
+
+    /* Screen Container */
+    .device-screen-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      padding-bottom: 16px;
+    }
+
+    /* Bottom Tab Bar */
+    .device-tab-bar {
+      height: 64px;
+      border-top: 1px solid;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding-bottom: 8px;
+      z-index: 40;
+    }
+    .theme-light .device-tab-bar {
+      background: #ffffff;
+      border-color: #e2e8f0;
+    }
+    .theme-dark .device-tab-bar {
+      background: #1e1e1e;
+      border-color: #2d2d2d;
+    }
+    .tab-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+      cursor: pointer;
+      position: relative;
+      flex: 1;
+      padding: 6px 0;
+    }
+    .tab-icon-svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+    }
+    .tab-label {
+      font-size: 11px;
+      font-weight: 500;
+      color: #94a3b8;
+    }
+    .tab-item.active .tab-label {
+      color: #2563eb;
+      font-weight: 700;
+    }
+    .tab-item.active .tab-icon-svg {
+      stroke: #2563eb;
+    }
+    .tab-badge {
+      position: absolute;
+      top: 4px;
+      right: 18px;
+      background: #ef4444;
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 0 4px;
+      border-radius: 8px;
+    }
+
+    /* Screen Elements */
+    .screen-header {
+      padding: 14px 16px 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .screen-title {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    /* Plain Text Health Line */
+    .health-status-line {
+      padding: 0 16px 10px;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #64748b;
+    }
+    .theme-dark .health-status-line { color: #94a3b8; }
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+    .status-dot.active { background: #10b981; }
+
+    /* Merchant Hero Card */
+    .merchant-hero-card {
+      margin: 0 16px 12px;
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid;
+    }
+    .theme-light .merchant-hero-card {
+      background: #ffffff;
+      border-color: #e2e8f0;
+    }
+    .theme-dark .merchant-hero-card {
+      background: #1e1e1e;
+      border-color: #2d2d2d;
+    }
+    .hero-eyebrow {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      font-weight: 700;
+      color: #64748b;
+      margin-bottom: 2px;
+    }
+    .hero-amount {
+      font-size: 40px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      font-variant-numeric: tabular-nums;
+      margin: 4px 0 6px;
+    }
+    .theme-light .hero-amount { color: var(--money-in-light); }
+    .theme-dark .hero-amount { color: var(--money-in-dark); }
+    
+    .hero-stats {
+      font-size: 13px;
+      color: #64748b;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .theme-dark .hero-stats { color: #94a3b8; }
+
+    /* Spotlight Card */
+    .spotlight-card {
+      margin: 0 16px 12px;
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid;
+    }
+    .theme-light .spotlight-card {
+      background: #ffffff;
+      border-color: #e2e8f0;
+    }
+    .theme-dark .spotlight-card {
+      background: #1e1e1e;
+      border-color: #2d2d2d;
+    }
+    .spotlight-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+    .app-icon-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .launcher-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      background: #334155;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      color: white;
+      font-weight: 700;
+    }
+    .spotlight-amount {
+      font-size: 30px;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      margin-bottom: 2px;
+    }
+    .theme-light .spotlight-amount { color: var(--money-in-light); }
+    .theme-dark .spotlight-amount { color: var(--money-in-dark); }
+    .spotlight-party {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .spotlight-sub {
+      font-size: 12px;
+      color: #64748b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* List Rows */
+    .section-label {
+      padding: 6px 16px 6px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #64748b;
+    }
+    .tx-list {
+      display: flex;
+      flex-direction: column;
+      padding: 0 16px;
+      gap: 6px;
+    }
+    .tx-row {
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+    }
+    .theme-light .tx-row {
+      background: #ffffff;
+      border-color: #e2e8f0;
+    }
+    .theme-dark .tx-row {
+      background: #1e1e1e;
+      border-color: #2d2d2d;
+    }
+    .tx-row-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .tx-amount {
+      font-size: 16px;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+    }
+    .tx-amount.in { color: var(--money-in-light); }
+    .theme-dark .tx-amount.in { color: var(--money-in-dark); }
+    .tx-amount.out { color: var(--money-out-light); }
+    .theme-dark .tx-amount.out { color: var(--money-out-dark); }
+
+    /* Raw Notification Box */
+    .raw-box {
+      margin-top: 6px;
+      padding: 8px 10px;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      line-height: 1.4;
+      background: #f1f5f9;
+      color: #334155;
+    }
+    .theme-dark .raw-box {
+      background: #282828;
+      color: #cbd5e1;
+    }
+    .btn-create-parser {
+      margin-top: 8px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      align-self: flex-start;
+    }
+
+    /* Switch */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 22px;
+    }
+    .switch input { opacity: 0; width: 0; height: 0; }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #64748b;
+      border-radius: 22px;
+      transition: .15s;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      border-radius: 50%;
+      transition: .15s;
+    }
+    input:checked + .slider { background-color: #2563eb; }
+    input:checked + .slider:before { transform: translateX(18px); }
+
+    /* Search input */
+    .search-input {
+      width: calc(100% - 32px);
+      margin: 0 16px 12px;
+      padding: 9px 12px;
+      border-radius: 8px;
+      border: 1px solid;
+      font-size: 13px;
+      outline: none;
+    }
+    .theme-light .search-input {
+      background: #ffffff;
+      border-color: #cbd5e1;
+      color: #0f172a;
+    }
+    .theme-dark .search-input {
+      background: #1e1e1e;
+      border-color: #334155;
+      color: #f8fafc;
+    }
+
+    /* Token tagging */
+    .token-span {
+      display: inline-block;
+      padding: 2px 6px;
+      margin: 2px;
+      border-radius: 4px;
+      background: #e2e8f0;
+      cursor: pointer;
+      font-family: var(--font-mono);
+      font-size: 12px;
+    }
+    .theme-dark .token-span { background: #334155; color: white; }
+    .token-span.selected-amt { background: #10b981; color: black; font-weight: 700; }
+    .token-span.selected-party { background: #3b82f6; color: white; font-weight: 700; }
+
+    /* Troubleshooting Card */
+    .troubleshooting-card {
+      margin: 0 16px 12px;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #475569;
+      background: #1e1e1e;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+    .theme-light .troubleshooting-card {
+      background: #f8fafc;
+      border-color: #cbd5e1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header>
+    <div class="brand-title">
+      <span>PayPing Lite</span>
+      <span class="brand-tag">v2.1 SPECIFICATION</span>
+    </div>
+
+    <div class="controls-group">
+      <button class="btn-pill" id="btn-theme" onclick="toggleTheme()">☀️ Light Mode</button>
+      <button class="btn-pill" onclick="speakDemo()">🔊 Test Voice (Ducking)</button>
+    </div>
+  </header>
+
+  <!-- Workspace -->
+  <div class="workspace">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div>
+        <div class="sidebar-title">Core Screens (5 Tabs)</div>
+        <ul class="nav-list">
+          <li class="nav-item active" id="nav-today" onclick="switchScreen('today')">
+            <span>1. Today / Live</span>
+            <span class="nav-badge">Glanceable</span>
+          </li>
+          <li class="nav-item" id="nav-history" onclick="switchScreen('history')">
+            <span>2. History</span>
+            <span class="nav-badge">Audit</span>
+          </li>
+          <li class="nav-item" id="nav-review" onclick="switchScreen('review')">
+            <span>3. Review Queue</span>
+            <span class="nav-badge">2 Pending</span>
+          </li>
+          <li class="nav-item" id="nav-parsers" onclick="switchScreen('parsers')">
+            <span>4. Parsers Tab</span>
+            <span class="nav-badge">User-Owned</span>
+          </li>
+          <li class="nav-item" id="nav-settings" onclick="switchScreen('settings')">
+            <span>5. Settings</span>
+            <span class="nav-badge">Decisions</span>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="sidebar-title">Key Workflows</div>
+        <ul class="nav-list">
+          <li class="nav-item" id="nav-create-parser" onclick="switchScreen('create-parser')">
+            <span>Guided Parser Generator</span>
+            <span class="nav-badge">Tap Tokens</span>
+          </li>
+          <li class="nav-item" id="nav-app-picker" onclick="switchScreen('app-picker')">
+            <span>Installed Apps Picker</span>
+            <span class="nav-badge">System Apps</span>
+          </li>
+          <li class="nav-item" id="nav-onboard-android" onclick="switchScreen('onboard-android')">
+            <span>Android Onboarding</span>
+          </li>
+          <li class="nav-item" id="nav-onboard-ios" onclick="switchScreen('onboard-ios')">
+            <span>iOS Shortcuts Setup</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="spec-card">
+        <strong>1. Audio Ducking (On by Default)</strong>
+        TTS requests transient audio focus ducking (<code>USAGE_ASSISTANCE_SONIFICATION</code>) so stall music or radio dips by ~70% and restores immediately.
+      </div>
+
+      <div class="spec-card">
+        <strong>2. Review Clean-up (7/30/90 Days)</strong>
+        Setting <code>review_autoclean_days</code> marks old unreviewed captures as 'ignored'. Rows are never deleted from SQLite.
+      </div>
+
+      <div class="spec-card">
+        <strong>3. Restricted Settings Guide</strong>
+        The 4-step Android 13+ guide is permanently visible in Troubleshooting and Onboarding.
+      </div>
+    </aside>
+
+    <!-- Stage -->
+    <main class="stage">
+      <div class="device-frame theme-dark" id="device">
+        <!-- Status Bar -->
+        <div class="device-status-bar">
+          <span>09:41</span>
+          <span>5G &nbsp; 98%</span>
+        </div>
+
+        <!-- Dynamic Screen Content -->
+        <div class="device-screen-content" id="screen-container">
+          <!-- Injected via JS -->
+        </div>
+
+        <!-- 5 Tabs Bar -->
+        <nav class="device-tab-bar" id="device-tabs">
+          <div class="tab-item active" id="tab-today" onclick="switchScreen('today')">
+            <svg class="tab-icon-svg" viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+            <span class="tab-label">Today</span>
+          </div>
+          <div class="tab-item" id="tab-history" onclick="switchScreen('history')">
+            <svg class="tab-icon-svg" viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16zm1-13h-2v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+            <span class="tab-label">History</span>
+          </div>
+          <div class="tab-item" id="tab-review" onclick="switchScreen('review')">
+            <svg class="tab-icon-svg" viewBox="0 0 24 24"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+            <span class="tab-label">Review</span>
+            <span class="tab-badge" id="tab-review-count">2</span>
+          </div>
+          <div class="tab-item" id="tab-parsers" onclick="switchScreen('parsers')">
+            <svg class="tab-icon-svg" viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+            <span class="tab-label">Parsers</span>
+          </div>
+          <div class="tab-item" id="tab-settings" onclick="switchScreen('settings')">
+            <svg class="tab-icon-svg" viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 00.12-.61l-1.92-3.32a.488.488 0 00-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 00-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 00-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+            <span class="tab-label">Settings</span>
+          </div>
+        </nav>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    let currentScreen = 'today';
+    let currentTheme = 'dark';
+    let reviewCount = 2;
+    let todayTotal = 384.50;
+    let autocleanDays = '30';
+    let ttsDuck = true;
+
+    function toggleTheme() {
+      const device = document.getElementById('device');
+      const btn = document.getElementById('btn-theme');
+      if (currentTheme === 'dark') {
+        currentTheme = 'light';
+        device.classList.remove('theme-dark');
+        device.classList.add('theme-light');
+        btn.innerHTML = '🌙 Dark Mode';
+      } else {
+        currentTheme = 'dark';
+        device.classList.remove('theme-light');
+        device.classList.add('theme-dark');
+        btn.innerHTML = '☀️ Light Mode';
+      }
+      renderScreen();
+    }
+
+    function switchScreen(screen) {
+      currentScreen = screen;
+      document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+      const activeNav = document.getElementById('nav-' + screen);
+      if (activeNav) activeNav.classList.add('active');
+
+      document.querySelectorAll('.tab-item').forEach(el => el.classList.remove('active'));
+      const activeTab = document.getElementById('tab-' + screen);
+      if (activeTab) activeTab.classList.add('active');
+
+      const tabs = document.getElementById('device-tabs');
+      if (screen.startsWith('onboard') || screen === 'app-picker' || screen === 'create-parser') {
+        tabs.style.display = 'none';
+      } else {
+        tabs.style.display = 'flex';
+      }
+
+      renderScreen();
+    }
+
+    function renderScreen() {
+      const c = document.getElementById('screen-container');
+      if (currentScreen === 'today') c.innerHTML = getTodayHTML();
+      else if (currentScreen === 'history') c.innerHTML = getHistoryHTML();
+      else if (currentScreen === 'review') c.innerHTML = getReviewHTML();
+      else if (currentScreen === 'parsers') c.innerHTML = getParsersHTML();
+      else if (currentScreen === 'settings') c.innerHTML = getSettingsHTML();
+      else if (currentScreen === 'app-picker') c.innerHTML = getAppPickerHTML();
+      else if (currentScreen === 'create-parser') c.innerHTML = getCreateParserHTML();
+      else if (currentScreen === 'onboard-android') c.innerHTML = getOnboardAndroidHTML();
+      else if (currentScreen === 'onboard-ios') c.innerHTML = getOnboardIosHTML();
+    }
+
+    function getTodayHTML() {
+      return `
+        <div class="screen-header">
+          <span class="screen-title">PayPing Lite</span>
+        </div>
+
+        <div class="health-status-line">
+          <span class="status-dot active"></span>
+          <span>Listening to 3 apps</span>
+        </div>
+
+        <div class="merchant-hero-card">
+          <div class="hero-eyebrow">Total Received Today</div>
+          <div class="hero-amount">+RM ${todayTotal.toFixed(2)}</div>
+          <div class="hero-stats">
+            <span>28 payments</span>
+            <span>•</span>
+            <span>Paid out: RM 42.00</span>
+            ${reviewCount > 0 ? `<span>•</span><span style="color: #f59e0b; cursor: pointer;" onclick="switchScreen('review')">${reviewCount} needs review</span>` : ''}
+          </div>
+        </div>
+
+        <div class="spotlight-card">
+          <div class="spotlight-header">
+            <div class="app-icon-row">
+              <div class="launcher-icon">TNG</div>
+              <span>Touch 'n Go eWallet</span>
+            </div>
+            <span style="font-size: 12px; color: #64748b;">Just now</span>
+          </div>
+          <div class="spotlight-amount">+RM 18.50</div>
+          <div class="spotlight-party">MOHD FAIZAL BIN ABDULLAH</div>
+          <div class="spotlight-sub">
+            <span>Ref: TNG992817203</span>
+            <span style="cursor: pointer; color: #3b82f6;" onclick="speakDemo()">🔊 Replay</span>
+          </div>
+        </div>
+
+        <div class="section-label">Today's Payments</div>
+        <div class="tx-list">
+          <div class="tx-row">
+            <div class="tx-row-top">
+              <div class="app-icon-row">
+                <div class="launcher-icon" style="background: #b45309;">MAE</div>
+                <span>Sarah Tan Mei Ling</span>
+              </div>
+              <span class="tx-amount in">+RM 6.00</span>
+            </div>
+            <div style="font-size: 11px; color: #64748b; margin-left: 32px;">12:44 PM • DuitNow QR</div>
+          </div>
+
+          <div class="tx-row">
+            <div class="tx-row-top">
+              <div class="app-icon-row">
+                <div class="launcher-icon" style="background: #991b1b;">CIMB</div>
+                <span>Wong Kok Leong</span>
+              </div>
+              <span class="tx-amount in">+RM 25.00</span>
+            </div>
+            <div style="font-size: 11px; color: #64748b; margin-left: 32px;">12:31 PM • Transfer</div>
+          </div>
+        </div>
+      `;
+    }
+
+    function getHistoryHTML() {
+      return `
+        <div class="screen-header">
+          <span class="screen-title">History</span>
+          <span style="font-size: 13px; color: #3b82f6; cursor: pointer;" onclick="alert('Exporting CSV...')">Export CSV</span>
+        </div>
+
+        <input type="text" class="search-input" placeholder="Search customer, ref, or amount...">
+
+        <div class="section-label">Today — Saturday, 24 Oct (+RM 384.50)</div>
+        <div class="tx-list">
+          <div class="tx-row">
+            <div class="tx-row-top">
+              <div class="app-icon-row">
+                <div class="launcher-icon">TNG</div>
+                <span>Mohd Faizal Bin Abdullah</span>
+              </div>
+              <span class="tx-amount in">+RM 18.50</span>
+            </div>
+            <div style="font-size: 11px; color: #64748b; margin-left: 32px;">08:45 PM • Touch 'n Go eWallet</div>
+
+            <div class="raw-box">
+              <strong>Raw notification:</strong><br>
+              Title: You've received money!<br>
+              Body: RM 18.50 from MOHD FAIZAL BIN ABDULLAH. Ref: TNG992817203
+            </div>
+
+            <button class="btn-create-parser" onclick="switchScreen('create-parser')">
+              <svg style="width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16m8-8H4"/></svg>
+              Create parser from this notification
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    function getReviewHTML() {
+      if (reviewCount === 0) {
+        return `
+          <div class="screen-header"><span class="screen-title">Review</span></div>
+          <div style="text-align: center; padding: 60px 20px; color: #64748b;">
+            <div style="font-size: 32px; margin-bottom: 8px;">✓</div>
+            <strong>No notifications need review</strong>
+            <p style="font-size: 13px; margin-top: 4px;">All captured notifications were handled by active parsers.</p>
+          </div>
+        `;
+      }
+
+      return `
+        <div class="screen-header">
+          <span class="screen-title">Review Queue (${reviewCount})</span>
+          <span style="font-size: 12px; color: #64748b; cursor: pointer;" onclick="clearReview()">Ignore All</span>
+        </div>
+
+        <div style="padding: 0 16px 8px; font-size: 13px; color: #64748b;">
+          Unverified notifications. Confirm them to add them to your totals.
+        </div>
+
+        <div class="tx-list">
+          <div class="tx-row" id="rev-card-1">
+            <div class="tx-row-top">
+              <div class="app-icon-row">
+                <div class="launcher-icon" style="background: #047857;">BI</div>
+                <span>Bank Islam (Unmatched App)</span>
+              </div>
+              <span style="font-size: 12px; color: #64748b;">10m ago</span>
+            </div>
+
+            <div class="raw-box">
+              "DuitNow Transfer RM 25.00 from SITI AISHAH successful"
+            </div>
+            
+            <div style="font-size: 13px; font-weight: 600; margin-top: 4px;">
+              Detected: <span class="tx-amount in">+RM 25.00</span> (Generic fallback match)
+            </div>
+
+            <div style="display: flex; gap: 8px; margin-top: 8px;">
+              <button class="btn-pill active" style="flex: 1;" onclick="confirmReview(1, 25.00)">Confirm In (+RM 25)</button>
+              <button class="btn-pill" style="flex: 1;" onclick="confirmReview(1, 0)">Ignore</button>
+            </div>
+
+            <button class="btn-create-parser" style="margin-top: 8px;" onclick="switchScreen('create-parser')">
+              Create parser from this notification
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    function getParsersHTML() {
+      return `
+        <div class="screen-header">
+          <span class="screen-title">Parsers</span>
+          <button class="btn-pill" style="font-size: 12px;" onclick="alert('Import: 1. Paste JSON, 2. Open .json File')">+ Import</button>
+        </div>
+
+        <div style="padding: 0 16px 12px; font-size: 13px; color: #64748b;">
+          Parsers tell PayPing Lite how to extract amounts and customer names from your notifications.
+        </div>
+
+        <div class="section-label">Active Parsers (2)</div>
+        <div class="tx-list">
+          <div class="tx-row">
+            <div class="tx-row-top">
+              <div>
+                <strong style="font-size: 14px;">Touch 'n Go eWallet</strong>
+                <div style="font-size: 12px; color: #64748b;">my.com.tngdigital.ewallet • 3 rules</div>
+              </div>
+              <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+            </div>
+            <div style="font-size: 11px; color: #64748b; margin-top: 4px;">Last matched: 12 mins ago</div>
+            <div style="display: flex; gap: 12px; margin-top: 8px; font-size: 12px;">
+              <span style="color: #3b82f6; cursor: pointer;">Edit</span>
+              <span style="color: #3b82f6; cursor: pointer;">Test against captures</span>
+              <span style="color: #3b82f6; cursor: pointer;">Share .json</span>
+              <span style="color: #3b82f6; cursor: pointer;" onclick="alert('Re-parsing past captures...')">Re-parse history</span>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function getCreateParserHTML() {
+      return `
+        <div class="screen-header">
+          <span style="font-size: 14px; color: #3b82f6; cursor: pointer;" onclick="switchScreen('history')">← Cancel</span>
+          <span class="screen-title" style="font-size: 16px;">Create Parser</span>
+          <span style="font-size: 14px; color: #3b82f6; font-weight: 700; cursor: pointer;" onclick="alert('Parser generated and saved! Re-parse prompted.')">Save</span>
+        </div>
+
+        <div style="padding: 0 16px 12px; font-size: 13px; color: #64748b;">
+          Tap on words in the raw notification below to teach PayPing Lite where the amount and customer name are.
+        </div>
+
+        <div style="margin: 0 16px 14px; padding: 14px; border-radius: 8px; border: 1px solid #334155; background: #1e1e1e;">
+          <div style="font-size: 11px; text-transform: uppercase; color: #94a3b8; font-weight: 700; margin-bottom: 8px;">RAW NOTIFICATION TEXT (TAP TO TAG)</div>
+          
+          <div style="line-height: 2;">
+            <span class="token-span">You've</span>
+            <span class="token-span">received</span>
+            <span class="token-span">money!</span>
+            <span class="token-span">RM</span>
+            <span class="token-span selected-amt" title="Tagged as Amount">18.50</span>
+            <span class="token-span">from</span>
+            <span class="token-span selected-party" title="Tagged as Counterparty">MOHD FAIZAL BIN ABDULLAH</span>
+            <span class="token-span">Ref:</span>
+            <span class="token-span">TNG992817203</span>
+          </div>
+        </div>
+      `;
+    }
+
+    function getAppPickerHTML() {
+      return `
+        <div class="screen-header">
+          <span style="font-size: 14px; color: #3b82f6; cursor: pointer;" onclick="switchScreen('settings')">← Done</span>
+          <span class="screen-title" style="font-size: 16px;">Captured Apps</span>
+          <span></span>
+        </div>
+
+        <input type="text" class="search-input" placeholder="Search installed apps...">
+
+        <div class="section-label">Selected Apps (3)</div>
+        <div class="tx-list">
+          <div class="tx-row" style="flex-direction: row; justify-content: space-between; align-items: center;">
+            <div class="app-icon-row">
+              <div class="launcher-icon">TNG</div>
+              <div>
+                <div style="font-size: 14px; font-weight: 600;">Touch 'n Go eWallet</div>
+                <div style="font-size: 11px; color: #64748b;">my.com.tngdigital.ewallet</div>
+              </div>
+            </div>
+            <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+          </div>
+        </div>
+      `;
+    }
+
+    function getSettingsHTML() {
+      return `
+        <div class="screen-header"><span class="screen-title">Settings</span></div>
+
+        <div class="section-label">Capture</div>
+        <div class="tx-list">
+          <div class="tx-row" style="flex-direction: row; justify-content: space-between; align-items: center; cursor: pointer;" onclick="switchScreen('app-picker')">
+            <div>
+              <div style="font-size: 14px; font-weight: 600;">Captured Apps</div>
+              <div style="font-size: 12px; color: #64748b;">3 apps selected</div>
+            </div>
+            <span style="color: #64748b;">›</span>
+          </div>
+        </div>
+
+        <!-- Voice & Audio with Ducking Decision -->
+        <div class="section-label" style="margin-top: 14px;">Voice (TTS)</div>
+        <div class="tx-list">
+          <div class="tx-row" style="flex-direction: row; justify-content: space-between; align-items: center;">
+            <div>
+              <div style="font-size: 14px; font-weight: 600;">Speak Payments Aloud</div>
+              <div style="font-size: 12px; color: #64748b;">Announce incoming transfers</div>
+            </div>
+            <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+          </div>
+
+          <div class="tx-row" style="flex-direction: row; justify-content: space-between; align-items: center;">
+            <div>
+              <div style="font-size: 14px; font-weight: 600;">Duck Background Audio (On by default)</div>
+              <div style="font-size: 12px; color: #64748b;">Lowers music or radio volume during alerts</div>
+            </div>
+            <label class="switch"><input type="checkbox" ${ttsDuck ? 'checked' : ''} onchange="ttsDuck = this.checked"><span class="slider"></span></label>
+          </div>
+
+          <div class="tx-row" style="cursor: pointer;" onclick="speakDemo()">
+            <span style="font-size: 13px; color: #3b82f6; font-weight: 600;">🔊 Test Voice Alert</span>
+          </div>
+        </div>
+
+        <!-- Review Queue Auto-clean Decision -->
+        <div class="section-label" style="margin-top: 14px;">Review Queue</div>
+        <div class="tx-list">
+          <div class="tx-row">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <div style="font-size: 14px; font-weight: 600;">Auto-clean Old Notifications</div>
+                <div style="font-size: 12px; color: #64748b;">Marks unreviewed captures as 'ignored'. Rows are never deleted.</div>
+              </div>
+              <select style="background: #282828; color: white; border: 1px solid #334155; border-radius: 4px; padding: 4px 8px; font-size: 12px;" onchange="autocleanDays = this.value">
+                <option value="off" ${autocleanDays === 'off' ? 'selected' : ''}>Off</option>
+                <option value="7" ${autocleanDays === '7' ? 'selected' : ''}>7 Days</option>
+                <option value="30" ${autocleanDays === '30' ? 'selected' : ''}>30 Days</option>
+                <option value="90" ${autocleanDays === '90' ? 'selected' : ''}>90 Days</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Permanently Visible Troubleshooting Section -->
+        <div class="section-label" style="margin-top: 14px;">Troubleshooting</div>
+        <div class="troubleshooting-card">
+          <strong style="color: #f8fafc; font-size: 13px;">Android 13+ Restricted Settings Guide</strong>
+          <p style="color: #94a3b8; margin: 4px 0 8px;">If Notification Access is greyed out with "Restricted setting":</p>
+          <ol style="margin-left: 18px; color: #cbd5e1; display: flex; flex-direction: column; gap: 4px;">
+            <li>Open Android Settings → Apps → PayPing Lite.</li>
+            <li>Tap the three dots (⋮) in the top-right corner.</li>
+            <li>Tap "Allow restricted settings" and enter your device PIN.</li>
+            <li>Return here and toggle Notification Access ON.</li>
+          </ol>
+        </div>
+
+        <div class="section-label" style="margin-top: 14px;">Data</div>
+        <div class="tx-list">
+          <div class="tx-row" style="cursor: pointer;" onclick="alert('Exporting CSV...')">
+            <div style="font-size: 14px; font-weight: 600;">Export CSV</div>
+            <div style="font-size: 12px; color: #64748b;">Share via WhatsApp, Drive, or Files</div>
+          </div>
+
+          <div class="tx-row" style="cursor: pointer;" onclick="confirm('Clear all SQLite transaction history?')">
+            <div style="font-size: 14px; font-weight: 600; color: #ef4444;">Delete All Transaction Data</div>
+          </div>
+        </div>
+
+        <div style="text-align: center; padding: 20px; font-size: 11px; color: #64748b;">
+          PayPing Lite v3.0.0 • GPL-3.0 License<br>
+          Zero network calls. 100% on-device.
+        </div>
+      `;
+    }
+
+    function getOnboardAndroidHTML() {
+      return `
+        <div style="padding: 24px 16px;">
+          <h2 style="font-size: 20px; font-weight: 800; margin-bottom: 8px;">Hear Payments Aloud</h2>
+          <p style="font-size: 14px; color: #64748b; line-height: 1.5; margin-bottom: 16px;">
+            PayPing Lite announces your incoming bank and e-wallet transfers. 100% on this phone, zero accounts, zero cloud servers.
+          </p>
+
+          <button class="btn-pill active" style="width: 100%; justify-content: center; padding: 12px; margin-bottom: 16px;" onclick="switchScreen('app-picker')">
+            Enable Notification Access
+          </button>
+
+          <!-- Permanently visible troubleshooting in Onboarding -->
+          <div class="troubleshooting-card">
+            <strong style="color: #f8fafc; font-size: 12px;">Troubleshooting: Restricted Settings (Android 13+)</strong>
+            <p style="color: #94a3b8; margin: 4px 0 6px;">If the switch is greyed out with "Restricted setting":</p>
+            <ol style="margin-left: 18px; color: #cbd5e1; display: flex; flex-direction: column; gap: 3px; font-size: 11px;">
+              <li>Open Android Settings → Apps → PayPing Lite.</li>
+              <li>Tap the three dots (⋮) in the top-right corner.</li>
+              <li>Tap "Allow restricted settings" and enter your device PIN.</li>
+              <li>Return here and enable Notification Access.</li>
+            </ol>
+          </div>
+        </div>
+      `;
+    }
+
+    function getOnboardIosHTML() {
+      return `
+        <div style="padding: 24px 16px;">
+          <h2 style="font-size: 20px; font-weight: 800; margin-bottom: 8px;">Setup iOS Shortcuts</h2>
+          <p style="font-size: 14px; color: #64748b; line-height: 1.5; margin-bottom: 20px;">
+            Apple Shortcuts automates notification captures on iPhone.
+          </p>
+
+          <div class="tx-list">
+            <div class="tx-row">
+              <strong>1. Install PayPing Helper Shortcut</strong>
+              <div style="font-size: 12px; color: #64748b;">Adds native App Intent to your device</div>
+            </div>
+            <div class="tx-row">
+              <strong>2. Create Automation in Shortcuts app</strong>
+              <div style="font-size: 12px; color: #64748b;">When I receive notification from: [Your Bank]</div>
+              <div style="font-size: 12px; color: #10b981;">Run Immediately (No prompt)</div>
+            </div>
+          </div>
+
+          <button class="btn-pill active" style="width: 100%; justify-content: center; padding: 12px; margin-top: 20px;" onclick="switchScreen('today')">
+            Open Shortcuts App
+          </button>
+        </div>
+      `;
+    }
+
+    function confirmReview(id, amt) {
+      const card = document.getElementById('rev-card-' + id);
+      if (card) {
+        card.style.opacity = '0.3';
+        setTimeout(() => {
+          card.remove();
+          reviewCount--;
+          if (amt > 0) todayTotal += amt;
+          const badge = document.getElementById('tab-review-count');
+          if (badge) {
+            badge.innerText = reviewCount;
+            badge.style.display = reviewCount > 0 ? 'inline-block' : 'none';
+          }
+          if (reviewCount === 0) renderScreen();
+        }, 150);
+      }
+    }
+
+    function clearReview() {
+      reviewCount = 0;
+      renderScreen();
+    }
+
+    function speakDemo() {
+      if ('speechSynthesis' in window) {
+        const u = new SpeechSynthesisUtterance("Received RM 18.50 from Mohd Faizal");
+        u.lang = 'en-US';
+        u.rate = 1.0;
+        window.speechSynthesis.speak(u);
+      } else {
+        alert("Spoken: Received RM 18.50 from Mohd Faizal");
+      }
+    }
+
+    renderScreen();
+  </script>
+</body>
+</html>

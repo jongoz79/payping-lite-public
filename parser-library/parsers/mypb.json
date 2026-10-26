@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "id": "mypb",
+  "name": "MyPB (Public Bank)",
+  "version": 1,
+  "description": "Synthetic starter patterns; not yet validated against real notifications.",
+  "androidPackages": ["com.pbb.mypb"],
+  "iosAppNames": ["MyPB"],
+  "rules": [
+    {
+      "id": "mypb.received-title.v1",
+      "priority": 200,
+      "match": { "title": "received|credited|incoming" },
+      "direction": "in",
+      "extract": {
+        "amount": "-?\\s?(?:RM|MYR)\\s?-?\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "(?:received from|from) (?<counterparty>.+?)(?: for| on| ref| acc|\\.|$)",
+        "reference": "(?:(?:ref|reference) no\\.?|ref|reference)\\s?:?\\s?(?<reference>[A-Z0-9]+)"
+      }
+    },
+    {
+      "id": "mypb.received-body.v1",
+      "priority": 190,
+      "match": { "body": "received from|credited to your account|transferred to you|funds received" },
+      "direction": "in",
+      "extract": {
+        "amount": "-?\\s?(?:RM|MYR)\\s?-?\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "(?:received from|from) (?<counterparty>.+?)(?: for| on| ref| acc|\\.|$)",
+        "reference": "(?:(?:ref|reference) no\\.?|ref|reference)\\s?:?\\s?(?<reference>[A-Z0-9]+)"
+      }
+    },
+    {
+      "id": "mypb.sent-title.v1",
+      "priority": 180,
+      "match": { "title": "payment|paid|transfer|debit" },
+      "direction": "out",
+      "extract": {
+        "amount": "-?\\s?(?:RM|MYR)\\s?-?\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "(?:(?:paid|transferred) to|payment of RM[\\d,.]+ to|payment to|to) (?<counterparty>.+?)(?: on| ref| successful|\\.|$)",
+        "reference": "(?:(?:ref|reference) no\\.?|ref|reference)\\s?:?\\s?(?<reference>[A-Z0-9]+)"
+      }
+    },
+    {
+      "id": "mypb.sent-body.v1",
+      "priority": 170,
+      "match": { "body": "paid to|transferred to|deducted from|debited from|payment successful|transfer successful" },
+      "direction": "out",
+      "extract": {
+        "amount": "-?\\s?(?:RM|MYR)\\s?-?\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "(?:(?:paid|transferred) to|payment of RM[\\d,.]+ to|payment to|to) (?<counterparty>.+?)(?: on| ref| successful|\\.|$)",
+        "reference": "(?:(?:ref|reference) no\\.?|ref|reference)\\s?:?\\s?(?<reference>[A-Z0-9]+)"
+      }
+    }
+  ]
+}

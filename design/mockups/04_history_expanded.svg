@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="820" viewBox="0 0 400 820" fill="none">
+  <!-- Device Frame (Material 3 Dark) -->
+  <rect width="400" height="820" rx="36" fill="#121212" stroke="#2D2D2D" stroke-width="8"/>
+  
+  <!-- Status Bar -->
+  <text x="32" y="40" fill="#F8FAFC" font-family="-apple-system, Roboto, sans-serif" font-size="13" font-weight="600">09:41</text>
+  <text x="330" y="40" fill="#F8FAFC" font-family="-apple-system, Roboto, sans-serif" font-size="12" font-weight="600">5G 98%</text>
+
+  <!-- Screen Header -->
+  <text x="20" y="76" fill="#F8FAFC" font-family="-apple-system, Roboto, sans-serif" font-size="20" font-weight="700">History</text>
+  <text x="380" y="76" text-anchor="end" fill="#3B82F6" font-family="sans-serif" font-size="13">Export CSV</text>
+
+  <!-- Search Input Box -->
+  <rect x="20" y="94" width="360" height="38" rx="8" fill="#1E1E1E" stroke="#2D2D2D"/>
+  <text x="32" y="118" fill="#64748B" font-family="sans-serif" font-size="13">Search customer, ref, or amount...</text>
+
+  <!-- Date Section Header -->
+  <text x="20" y="156" fill="#64748B" font-family="-apple-system, Roboto, sans-serif" font-size="11" font-weight="700">TODAY — SATURDAY, 24 OCT</text>
+  <text x="380" y="156" text-anchor="end" fill="#10B981" font-family="-apple-system, Roboto, sans-serif" font-size="12" font-weight="700">+RM 384.50 (28)</text>
+
+  <!-- Expanded Row (Showing Raw Text & "Create parser from this") -->
+  <g transform="translate(20, 170)">
+    <rect width="360" height="196" rx="8" fill="#1E1E1E" stroke="#3B82F6"/>
+    
+    <rect x="12" y="12" width="24" height="24" rx="6" fill="#0066CC"/>
+    <text x="24" y="28" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="800">TNG</text>
+    
+    <text x="44" y="24" fill="#F8FAFC" font-family="-apple-system, sans-serif" font-size="13" font-weight="600">Mohd Faizal Bin Abdullah</text>
+    <text x="44" y="40" fill="#64748B" font-family="-apple-system, sans-serif" font-size="11">08:45 PM • Touch 'n Go eWallet</text>
+    
+    <text x="344" y="32" text-anchor="end" fill="#10B981" font-family="-apple-system, sans-serif" font-size="16" font-weight="700">+RM 18.50</text>
+
+    <!-- Raw Notification Payload Box -->
+    <rect x="12" y="52" width="336" height="74" rx="6" fill="#282828"/>
+    <text x="20" y="70" fill="#94A3B8" font-family="-apple-system, sans-serif" font-size="11" font-weight="700">RAW NOTIFICATION TEXT:</text>
+    <text x="20" y="88" fill="#E2E8F0" font-family="monospace" font-size="11">Title: You've received money!</text>
+    <text x="20" y="104" fill="#E2E8F0" font-family="monospace" font-size="11">Body: RM 18.50 from MOHD FAIZAL... Ref: TNG9928</text>
+    <text x="20" y="118" fill="#64748B" font-family="sans-serif" font-size="10">Parsed via generic fallback</text>
+
+    <!-- Prominent "Create parser from this" Action Button -->
+    <g transform="translate(12, 138)">
+      <rect width="230" height="38" rx="6" fill="#2563EB"/>
+      <text x="115" y="24" text-anchor="middle" fill="#FFFFFF" font-family="-apple-system, sans-serif" font-size="12" font-weight="600">+ Create parser from this</text>
+    </g>
+
+    <!-- Secondary Note/Replay Actions -->
+    <text x="264" y="162" fill="#94A3B8" font-family="sans-serif" font-size="12">Edit Note</text>
+    <text x="326" y="162" fill="#94A3B8" font-family="sans-serif" font-size="12">Replay</text>
+  </g>
+
+  <!-- Collapsed Row 2 -->
+  <g transform="translate(20, 376)">
+    <rect width="360" height="58" rx="8" fill="#1E1E1E" stroke="#2D2D2D"/>
+    <rect x="12" y="14" width="24" height="24" rx="6" fill="#B45309"/>
+    <text x="24" y="30" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="800">MAE</text>
+    
+    <text x="44" y="28" fill="#F8FAFC" font-family="-apple-system, sans-serif" font-size="13" font-weight="600">Sarah Tan Mei Ling</text>
+    <text x="44" y="44" fill="#64748B" font-family="-apple-system, sans-serif" font-size="11">07:12 PM • MAE by Maybank2u</text>
+    
+    <text x="344" y="36" text-anchor="end" fill="#10B981" font-family="-apple-system, sans-serif" font-size="16" font-weight="700">+RM 6.00</text>
+  </g>
+
+  <!-- Bottom 5-Tab Bar -->
+  <g transform="translate(0, 746)">
+    <rect width="400" height="74" fill="#1E1E1E" stroke="#2D2D2D"/>
+    
+    <text x="40" y="36" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="11">Today</text>
+    <text x="120" y="36" text-anchor="middle" fill="#3B82F6" font-family="sans-serif" font-size="11" font-weight="700">History</text>
+    <text x="200" y="36" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="11">Review</text>
+    <text x="280" y="36" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="11">Parsers</text>
+    <text x="360" y="36" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="11">Settings</text>
+  </g>
+</svg>

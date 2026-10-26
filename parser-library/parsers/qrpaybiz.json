@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "qrpaybiz",
+  "name": "QRPayBiz (Maybank Quick Merchant)",
+  "version": 1,
+  "description": "Synthetic starter patterns; not yet validated against real notifications.",
+  "androidPackages": ["com.maybank.quickmerchant"],
+  "iosAppNames": ["QRPayBiz", "Maybank Quick Merchant"],
+  "rules": [
+    {
+      "id": "qrpaybiz.received.v1",
+      "priority": 200,
+      "match": { "title": "QRPay Payment Notification|QRPayBiz" },
+      "direction": "in",
+      "extract": {
+        "amount": "-?\\s?(?:RM|MYR)\\s?-?\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "from (?<counterparty>.+?)(?:\\.| Reference|$)",
+        "reference": "Reference No(?:: |:| )(?<reference>[A-Z0-9]+)"
+      }
+    }
+  ]
+}

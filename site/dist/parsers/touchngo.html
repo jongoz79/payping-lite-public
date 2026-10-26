@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Touch &#39;n Go eWallet &mdash; PayPing Lite Parser</title>
+  <meta name="description" content="Parser rules for Touch &#39;n Go eWallet in PayPing Lite.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="brand">
+        <svg viewBox="0 0 32 32" width="28" height="28" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="#059669"/><text x="16" y="21" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="-0.5">RM</text></svg>
+        <span class="brand-text">PayPing <span class="brand-sub">Parser Library</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="../index.html" class="nav-link active">Parsers</a>
+        <a href="../guide.html" class="nav-link ">Guide (EN)</a>
+        <a href="../guide-ms.html" class="nav-link ">Panduan (MS)</a>
+        <a href="https://github.com/jongoz79/payping-lite-public/issues/new?template=parser.md" target="_blank" rel="noopener" class="nav-link nav-link-external">
+          Contribute <svg class="icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="detail-header">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Parsers</a>
+        <span>/</span>
+        <span style="color: var(--color-text);">Touch &#39;n Go eWallet</span>
+      </nav>
+
+      <div class="detail-title-line">
+        <div>
+          <h1 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 6px;">Touch &#39;n Go eWallet</h1>
+          <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+            <span class="badge badge-tested"><svg class="icon icon-status" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 1.75a.75.75 0 01.375.1l6 3.5a.75.75 0 01.375.65v4.5a10.5 10.5 0 01-5.733 9.35.75.75 0 01-.764 0A10.5 10.5 0 014.25 10.5v-4.5a.75.75 0 01.375-.65l6-3.5a.75.75 0 01.375-.1zm4.03 6.47a.75.75 0 00-1.06-1.06L9 11.19l-1.97-1.97a.75.75 0 00-1.06 1.06l2.5 2.5a.75.75 0 001.06 0l4.5-4.5z" clip-rule="evenodd"/></svg> Tested on real notifications</span>
+            <span class="badge badge-version">v2</span>
+            <span style="font-size: 0.85rem; color: var(--color-text-subtle);">By PayPing community</span>
+          </div>
+        </div>
+
+        <div class="detail-actions">
+          <button type="button" class="btn btn-primary" onclick="copyParserJson('touchngo', this)">
+            <svg class="icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M7 3.5A1.5 1.5 0 018.5 2h7A1.5 1.5 0 0117 3.5v9a1.5 1.5 0 01-1.5 1.5h-7A1.5 1.5 0 017 12.5v-9zM8.5 3a.5.5 0 00-.5.5v9a.5.5 0 00.5.5h7a.5.5 0 00.5-.5v-9a.5.5 0 00-.5-.5h-7z"/><path d="M4.5 6A1.5 1.5 0 003 7.5v9A1.5 1.5 0 004.5 18h7a1.5 1.5 0 001.5-1.5v-1a.5.5 0 00-1 0v1a.5.5 0 01-.5.5h-7a.5.5 0 01-.5-.5v-9a.5.5 0 01.5-.5h1a.5.5 0 000-1h-1z"/></svg> Copy JSON
+          </button>
+          <a href="touchngo.json" download class="btn">
+            <svg class="icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M10.75 2.75a.75.75 0 00-1.5 0v8.69L6.53 8.72a.75.75 0 00-1.06 1.06l4 4a.75.75 0 001.06 0l4-4a.75.75 0 10-1.06-1.06l-2.72 2.72V2.75z"/><path d="M3.5 14.75a.75.75 0 01.75-.75h11.5a.75.75 0 010 1.5H4.25a.75.75 0 01-.75-.75z"/></svg> Download .json
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="detail-grid">
+      <div>
+        <section class="detail-section">
+          <h2 class="section-title">Parser Rules (10)</h2>
+          
+      <div class="rule-item">
+        <div class="rule-header">
+          <span class="rule-id">touchngo.cashin-dup.v1</span>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <span style="font-size: 0.8rem; color: var(--color-text-subtle);">Priority: 400</span>
+            <span class="direction-tag dir-info">Non-financial / Info</span>
+          </div>
+        </div>
+
+        
+        <div class="rule-field">
+          <div class="field-label">Match Title:</div>
+          <div class="field-regex">Cash In Successful</div>
+        </div>
+
+        
+
+        
+      </div>
+
+      <div class="rule-item">
+        <div class="rule-header">
+          <span class="rule-id">touchngo.non-money.v1</span>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <span style="font-size: 0.8rem; color: var(--color-text-subtle);">Priority: 390</span>
+            <span class="direction-tag dir-info">Non-financial / Info</span>
+          </div>
+        </div>
+
+        
+        <div class="rule-field">
+          <div class="field-label">Match Title:</div>
+          <div class="field-regex">points!$|^Travel eSIM purchase successful$|^Payment to |^Mobile prepaid top up$|^LPR parking payment is successful$</div>
+        </div>
+
+        
+
+        
+      </div>
+
+      <div class="rule-item">
+        <div class="rule-header">
+          <span class="rule-id">touchngo.kaching-review.v1</span>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <span style="font-size: 0.8rem; color: var(--color-text-subtle);">Priority: 380</span>
+            <span class="direction-tag dir-info">Non-financial / Info</span>
+          </div>
+        </div>
+
+        
+        <div class="rule-field">
+          <div class="field-label">Match Title:</div>
+          <div class="field-regex">^Ka-ching! Incoming Money</div>
+        </div>
+
+        
+        <div class="rule-field">
+          <div class="field-label">Match Body:</div>
+          <div class="field-regex">received from</div>
+        </div>
+
+        
+      </div>
+
+      <div class="rule-item">
+        <div class="rule-header">
+          <span class="rule-id">touchngo.toll.v1</span>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <span style="font-size: 0.8rem; color: var(--color-text-subtle);">Priority: 370</span>
+            <span class="direction-tag dir-out">Money Out</span>
+          </div>
+        </div>
+
+        
+        <div class="rule-field">
+          <div class="field-label">Match Title:</div>
+          <div class="field-regex">^Successful Toll Payment$</div>
+        </div>
+
+        
+
+        
+          <div class="rule-field">
+            <div class="field-label">Extract amount:</div>
+            <div class="field-regex">(?:RM|MYR)\s?(?&lt;amount&gt;[\d,]+\.?\d{0,2})</div>
+          </div>
+          <div class="rule-field">
+            <div class="field-label">Extract counterparty:</div>
+            <div class="field-regex">(?&lt;counterparty&gt;Toll)</div>
+          </div>
+      </div>
+
+      <div class="rule-item">
+        <div class="rule-header">
+          <span class="rule-id">touchngo.received-title.v1</span>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <span style="font-size: 0.8rem; color: var(--color-text-subtle);">Priority: 360</span>
+            <span class="direction-tag dir-in">Money In</span>
+          </div>
+        </div>
+
+        
+        <div class="rule-field">
+          <div class="field-label">Match Title:</div>
+          <div class="field-regex">^You.*received money</div>
+        </div>
+
+        
+
+        
+          <div class="rule-field">
+            <div class="field-label">Extract amount:</div>
+            <div class="field-regex">(?:RM|MYR)\s?(?&lt;amount&gt;[\d,]+\.?\d{0,2})</div>
+          </div>
+          <div class="rule-field">
+            <div class="field-label">Extract counterparty:</div>
+            <div class="field-regex">^(?:.*received from |(?=.* has transferred))(?&lt;counterparty&gt;.+?)(?: has transferred| for|\.|$)</div>
+          </div>
+      </div>
+
+      <div class="rule-item">
+        <div class="rule-header">
+          <span class="rule-id">touchngo.sent-title.v1</span>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <span style="font-size: 0.8rem; color: var(--color-text-subtle);">Priority: 350</span>
+            <span class="direction-tag dir-out">Money Out</span>
+          </div>
+        </div>
+
+        
+        <div class="rule-field">
+          <div class="field-label">Match Title:</div>
+          <div class="field-regex">^Payment To:|^DuitNow Payment to </div>
+        </div>
+
+        
+
+        
+          <div class="rule-field">
+            <div class="field-label">Extract amount:</div>
+            <div class="field-regex">(?:RM|MYR)\s?(?&lt;amount&gt;[\d,]+\.?\d{0,2})</div>
+          </div>
+          <div class="rule-field">
+            <div class="field-label">Extract counterparty:</div>
+            <div class="field-regex">^(?:Payment To:|DuitNow Payment to )\s?(?&lt;counterparty&gt;.+)$</div>
+          </div>
+      </div>
+
+      <div class="rule-item">
+        <div class="rule-header">
+          <span class="rule-id">touchngo.parking.v1</span>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <span style="font-size: 0.8rem; color: var(--color-text-subtle);">Priority: 340</span>
+            <span class="direction-tag dir-out">Money Out</span>
+          </div>
+        </div>
+
+        
+        <div class="rule-field">
+          <div class="field-label">Match Title:</div>
+          <div class="field-regex">^Parking Payment Successful</div>
+        </div>
+
+        
+
+        
+          <div class="rule-field">
+            <div class="field-label">Extract amount:</div>
+            <div class="field-regex">(?:RM|MYR)\s?(?&lt;amount&gt;[\d,]+\.?\d{0,2})</div>
+          </div>
+          <div class="rule-field">
+            <div class="field-label">Extract counterparty:</div>
+            <div class="field-regex">paid for (?&lt;counterparty&gt;Parking.*?)(?:\.|$)</div>
+          </div>
+      </div>
+
+      <div class="rule-item">
+        <div class="rule-header">
+          <span class="rule-id">touchngo.received-body.v1</span>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <span style="font-size: 0.8rem; color: var(--color-text-subtle);">Priority: 330</span>
+            <span class="direction-tag dir-in">Money In</span>
+          </div>
+        </div>
+
+        
+
+        
+        <div class="rule-field">
+          <div class="field-label">Match Body:</div>
+          <div class="field-regex">received from|has transferred</div>
+        </div>
+
+        
+          <div class="rule-field">
+            <div class="field-label">Extract amount:</div>
+            <div class="field-regex">(?:RM|MYR)\s?(?&lt;amount&gt;[\d,]+\.?\d{0,2})</div>
+          </div>
+          <div class="rule-field">
+            <div class="field-label">Extract counterparty:</div>
+            <div class="field-regex">^(?:.*received from |(?=.* has transferred))(?&lt;counterparty&gt;.+?)(?: has transferred| for|\.|$)</div>
+          </div>
+      </div>
+
+      <div class="rule-item">
+        <div class="rule-header">
+          <span class="rule-id">touchngo.sent-body.v1</span>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <span style="font-size: 0.8rem; color: var(--color-text-subtle);">Priority: 320</span>
+            <span class="direction-tag dir-out">Money Out</span>
+          </div>
+        </div>
+
+        
+
+        
+        <div class="rule-field">
+          <div class="field-label">Match Body:</div>
+          <div class="field-regex">you have paid|has been deducted|deducted from your|successfully transferred|toll payment|parking</div>
+        </div>
+
+        
+          <div class="rule-field">
+            <div class="field-label">Extract amount:</div>
+            <div class="field-regex">(?:RM|MYR)\s?(?&lt;amount&gt;[\d,]+\.?\d{0,2})</div>
+          </div>
+          <div class="rule-field">
+            <div class="field-label">Extract counterparty:</div>
+            <div class="field-regex">(?:transferred (?:RM|MYR)\s?[\d,.]+ to|transferred to|paid (?:RM|MYR)\s?[\d,.]+ (?:to|at|for)|paid (?:to|at|for)|at)\s?(?&lt;counterparty&gt;.+?)(?:\.(?= (?:REF|Merchant)\b|$)|$)</div>
+          </div>
+      </div>
+
+      <div class="rule-item">
+        <div class="rule-header">
+          <span class="rule-id">touchngo.unmatched.v1</span>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <span style="font-size: 0.8rem; color: var(--color-text-subtle);">Priority: -100</span>
+            <span class="direction-tag dir-info">Non-financial / Info</span>
+          </div>
+        </div>
+
+        
+        <div class="rule-field">
+          <div class="field-label">Match Title:</div>
+          <div class="field-regex">.*</div>
+        </div>
+
+        
+
+        
+      </div>
+        </section>
+
+        
+      <section class="detail-section">
+        <h2 class="section-title">Tested Sample Notifications</h2>
+        <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 14px;">
+          These real anonymised notification formats were verified against the reference labeller.
+        </p>
+        
+        <div style="background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 14px; margin-bottom: 12px; font-size: 0.88rem;">
+          <div style="font-weight: 600; margin-bottom: 4px; color: var(--color-text);">real ewallet #0: Successful Toll Payment</div>
+          <div style="font-size: 0.82rem; color: var(--color-text-subtle); margin-bottom: 2px;">Title: <span style="color: var(--color-text); font-weight: 500;">Successful Toll Payment</span></div>
+          <div style="font-size: 0.84rem; margin-bottom: 8px;">Body: <span style="color: var(--color-text);">RM 2.62 was deducted via RFID for toll payment on 17-Nov-2025 09:42</span></div>
+          <div style="font-size: 0.8rem; color: var(--color-text-muted); display: flex; gap: 14px; flex-wrap: wrap;">
+            <span>Direction: <strong>out</strong></span>
+            <span>Amount: <strong>RM 2.62</strong></span>
+            <span>Counterparty: <strong>Toll</strong></span>
+            
+          </div>
+        </div>
+
+        <div style="background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 14px; margin-bottom: 12px; font-size: 0.88rem;">
+          <div style="font-weight: 600; margin-bottom: 4px; color: var(--color-text);">real ewallet #1: Successful Toll Payment</div>
+          <div style="font-size: 0.82rem; color: var(--color-text-subtle); margin-bottom: 2px;">Title: <span style="color: var(--color-text); font-weight: 500;">Successful Toll Payment</span></div>
+          <div style="font-size: 0.84rem; margin-bottom: 8px;">Body: <span style="color: var(--color-text);">RM 2.21 was deducted via RFID for toll payment on 17-Nov-2025 09:45</span></div>
+          <div style="font-size: 0.8rem; color: var(--color-text-muted); display: flex; gap: 14px; flex-wrap: wrap;">
+            <span>Direction: <strong>out</strong></span>
+            <span>Amount: <strong>RM 2.21</strong></span>
+            <span>Counterparty: <strong>Toll</strong></span>
+            
+          </div>
+        </div>
+
+        <div style="background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 14px; margin-bottom: 12px; font-size: 0.88rem;">
+          <div style="font-weight: 600; margin-bottom: 4px; color: var(--color-text);">real ewallet #87: You&#39;ve just earned 15 points!</div>
+          <div style="font-size: 0.82rem; color: var(--color-text-subtle); margin-bottom: 2px;">Title: <span style="color: var(--color-text); font-weight: 500;">You&#39;ve just earned 15 points!</span></div>
+          <div style="font-size: 0.84rem; margin-bottom: 8px;">Body: <span style="color: var(--color-text);">You&#39;ve received 15 points from your transaction! Use them now to redeem great rewards.</span></div>
+          <div style="font-size: 0.8rem; color: var(--color-text-muted); display: flex; gap: 14px; flex-wrap: wrap;">
+            <span>Direction: <strong>info</strong></span>
+            
+            
+            
+          </div>
+        </div>
+      </section>
+      </div>
+
+      <div>
+        <div style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 18px; margin-bottom: 24px;">
+          <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 10px;">Supported Apps</h3>
+          <div style="font-size: 0.85rem; margin-bottom: 12px;">
+            <div style="font-weight: 600; color: var(--color-text-subtle); margin-bottom: 2px;">Android Package:</div>
+            <code style="word-break: break-all;">my.com.tngdigital.ewallet</code>
+          </div>
+          <div style="font-size: 0.85rem; margin-bottom: 12px;">
+            <div style="font-weight: 600; color: var(--color-text-subtle); margin-bottom: 2px;">iOS App Name:</div>
+            <code style="word-break: break-all;">TNG eWallet, Touch &#39;n Go eWallet</code>
+          </div>
+          <div style="font-size: 0.85rem;">
+            <div style="font-weight: 600; color: var(--color-text-subtle); margin-bottom: 2px;">Schema Version:</div>
+            <span>1</span>
+          </div>
+        </div>
+
+        <div style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 18px; margin-bottom: 24px;">
+          <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 8px;">How to Import in App</h3>
+          <ol style="font-size: 0.88rem; color: var(--color-text-muted); margin-left: 20px; line-height: 1.5;">
+            <li>Click <strong>Copy JSON</strong> above.</li>
+            <li>Open <strong>PayPing Lite</strong> on your phone.</li>
+            <li>Open the <strong>Bank Rules</strong> tab.</li>
+            <li>Tap <strong>+ Add Bank Rule</strong> and paste.</li>
+          </ol>
+        </div>
+
+        <div style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 18px;">
+          <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 8px;">Report an Issue / New Samples</h3>
+          <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 12px;">
+            If your bank modified their notification phrasing or if this parser missed a transaction, please share an anonymised sample!
+          </p>
+          <a href="https://github.com/jongoz79/payping-lite-public/issues/new?template=parser.md" target="_blank" rel="noopener" class="btn btn-sm" style="width: 100%;">
+            <svg class="icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg> Submit on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <section class="detail-section">
+      <h2 class="section-title">Raw JSON Definition</h2>
+      <div class="code-block-wrapper">
+        <button type="button" class="btn btn-sm code-copy-btn" onclick="copyParserJson('touchngo', this)">
+          <svg class="icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M7 3.5A1.5 1.5 0 018.5 2h7A1.5 1.5 0 0117 3.5v9a1.5 1.5 0 01-1.5 1.5h-7A1.5 1.5 0 017 12.5v-9zM8.5 3a.5.5 0 00-.5.5v9a.5.5 0 00.5.5h7a.5.5 0 00.5-.5v-9a.5.5 0 00-.5-.5h-7z"/><path d="M4.5 6A1.5 1.5 0 003 7.5v9A1.5 1.5 0 004.5 18h7a1.5 1.5 0 001.5-1.5v-1a.5.5 0 00-1 0v1a.5.5 0 01-.5.5h-7a.5.5 0 01-.5-.5v-9a.5.5 0 01.5-.5h1a.5.5 0 000-1h-1z"/></svg> Copy
+        </button>
+        <pre class="code-block"><code id="code-block-touchngo">{
+  &quot;schemaVersion&quot;: 1,
+  &quot;id&quot;: &quot;touchngo&quot;,
+  &quot;name&quot;: &quot;Touch &#39;n Go eWallet&quot;,
+  &quot;version&quot;: 2,
+  &quot;author&quot;: &quot;PayPing community&quot;,
+  &quot;description&quot;: &quot;Real-notification starter for TNG transfers, payments, tolls, parking and informational alerts.&quot;,
+  &quot;androidPackages&quot;: [&quot;my.com.tngdigital.ewallet&quot;],
+  &quot;iosAppNames&quot;: [&quot;TNG eWallet&quot;, &quot;Touch &#39;n Go eWallet&quot;],
+  &quot;rules&quot;: [
+    {
+      &quot;id&quot;: &quot;touchngo.cashin-dup.v1&quot;,
+      &quot;priority&quot;: 400,
+      &quot;match&quot;: { &quot;title&quot;: &quot;Cash In Successful&quot; },
+      &quot;direction&quot;: &quot;info&quot;
+    },
+    {
+      &quot;id&quot;: &quot;touchngo.non-money.v1&quot;,
+      &quot;priority&quot;: 390,
+      &quot;match&quot;: {
+        &quot;title&quot;: &quot;points!$|^Travel eSIM purchase successful$|^Payment to |^Mobile prepaid top up$|^LPR parking payment is successful$&quot;
+      },
+      &quot;direction&quot;: &quot;info&quot;,
+      &quot;confidence&quot;: &quot;none&quot;
+    },
+    {
+      &quot;id&quot;: &quot;touchngo.kaching-review.v1&quot;,
+      &quot;priority&quot;: 380,
+      &quot;match&quot;: { &quot;title&quot;: &quot;^Ka-ching! Incoming Money&quot;, &quot;body&quot;: &quot;received from&quot; },
+      &quot;direction&quot;: &quot;info&quot;,
+      &quot;confidence&quot;: &quot;none&quot;
+    },
+    {
+      &quot;id&quot;: &quot;touchngo.toll.v1&quot;,
+      &quot;priority&quot;: 370,
+      &quot;match&quot;: { &quot;title&quot;: &quot;^Successful Toll Payment$&quot; },
+      &quot;direction&quot;: &quot;out&quot;,
+      &quot;extract&quot;: {
+        &quot;amount&quot;: &quot;(?:RM|MYR)\\s?(?&lt;amount&gt;[\\d,]+\\.?\\d{0,2})&quot;,
+        &quot;counterparty&quot;: { &quot;pattern&quot;: &quot;(?&lt;counterparty&gt;Toll)&quot;, &quot;source&quot;: &quot;title&quot; }
+      }
+    },
+    {
+      &quot;id&quot;: &quot;touchngo.received-title.v1&quot;,
+      &quot;priority&quot;: 360,
+      &quot;match&quot;: { &quot;title&quot;: &quot;^You.*received money&quot; },
+      &quot;direction&quot;: &quot;in&quot;,
+      &quot;extract&quot;: {
+        &quot;amount&quot;: &quot;(?:RM|MYR)\\s?(?&lt;amount&gt;[\\d,]+\\.?\\d{0,2})&quot;,
+        &quot;counterparty&quot;: &quot;^(?:.*received from |(?=.* has transferred))(?&lt;counterparty&gt;.+?)(?: has transferred| for|\\.|$)&quot;
+      }
+    },
+    {
+      &quot;id&quot;: &quot;touchngo.sent-title.v1&quot;,
+      &quot;priority&quot;: 350,
+      &quot;match&quot;: { &quot;title&quot;: &quot;^Payment To:|^DuitNow Payment to &quot; },
+      &quot;direction&quot;: &quot;out&quot;,
+      &quot;extract&quot;: {
+        &quot;amount&quot;: &quot;(?:RM|MYR)\\s?(?&lt;amount&gt;[\\d,]+\\.?\\d{0,2})&quot;,
+        &quot;counterparty&quot;: { &quot;pattern&quot;: &quot;^(?:Payment To:|DuitNow Payment to )\\s?(?&lt;counterparty&gt;.+)$&quot;, &quot;source&quot;: &quot;title&quot; }
+      }
+    },
+    {
+      &quot;id&quot;: &quot;touchngo.parking.v1&quot;,
+      &quot;priority&quot;: 340,
+      &quot;match&quot;: { &quot;title&quot;: &quot;^Parking Payment Successful&quot; },
+      &quot;direction&quot;: &quot;out&quot;,
+      &quot;extract&quot;: {
+        &quot;amount&quot;: &quot;(?:RM|MYR)\\s?(?&lt;amount&gt;[\\d,]+\\.?\\d{0,2})&quot;,
+        &quot;counterparty&quot;: &quot;paid for (?&lt;counterparty&gt;Parking.*?)(?:\\.|$)&quot;
+      }
+    },
+    {
+      &quot;id&quot;: &quot;touchngo.received-body.v1&quot;,
+      &quot;priority&quot;: 330,
+      &quot;match&quot;: { &quot;body&quot;: &quot;received from|has transferred&quot; },
+      &quot;direction&quot;: &quot;in&quot;,
+      &quot;extract&quot;: {
+        &quot;amount&quot;: &quot;(?:RM|MYR)\\s?(?&lt;amount&gt;[\\d,]+\\.?\\d{0,2})&quot;,
+        &quot;counterparty&quot;: &quot;^(?:.*received from |(?=.* has transferred))(?&lt;counterparty&gt;.+?)(?: has transferred| for|\\.|$)&quot;
+      }
+    },
+    {
+      &quot;id&quot;: &quot;touchngo.sent-body.v1&quot;,
+      &quot;priority&quot;: 320,
+      &quot;match&quot;: {
+        &quot;body&quot;: &quot;you have paid|has been deducted|deducted from your|successfully transferred|toll payment|parking&quot;
+      },
+      &quot;direction&quot;: &quot;out&quot;,
+      &quot;extract&quot;: {
+        &quot;amount&quot;: &quot;(?:RM|MYR)\\s?(?&lt;amount&gt;[\\d,]+\\.?\\d{0,2})&quot;,
+        &quot;counterparty&quot;: &quot;(?:transferred (?:RM|MYR)\\s?[\\d,.]+ to|transferred to|paid (?:RM|MYR)\\s?[\\d,.]+ (?:to|at|for)|paid (?:to|at|for)|at)\\s?(?&lt;counterparty&gt;.+?)(?:\\.(?= (?:REF|Merchant)\\b|$)|$)&quot;
+      }
+    },
+    {
+      &quot;id&quot;: &quot;touchngo.unmatched.v1&quot;,
+      &quot;priority&quot;: -100,
+      &quot;match&quot;: { &quot;title&quot;: &quot;.*&quot; },
+      &quot;direction&quot;: &quot;info&quot;,
+      &quot;confidence&quot;: &quot;none&quot;
+    }
+  ]
+}
+</code></pre>
+      </div>
+    </section>
+  </main>
+
+  
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p><strong>PayPing Lite</strong> &mdash; Zero network permissions, privacy-first ringgit voice alerts.</p>
+        <p class="footer-subtext">Community bank parsers run entirely offline on your device.</p>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html">Library</a>
+        <a href="../guide.html">Parser Guide (EN)</a>
+        <a href="../guide-ms.html">Panduan Parser (MS)</a>
+        <a href="https://github.com/jongoz79/payping-lite-public" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/json" id="parser-json-touchngo">
+{
+  "schemaVersion": 1,
+  "id": "touchngo",
+  "name": "Touch 'n Go eWallet",
+  "version": 2,
+  "author": "PayPing community",
+  "description": "Real-notification starter for TNG transfers, payments, tolls, parking and informational alerts.",
+  "androidPackages": ["my.com.tngdigital.ewallet"],
+  "iosAppNames": ["TNG eWallet", "Touch 'n Go eWallet"],
+  "rules": [
+    {
+      "id": "touchngo.cashin-dup.v1",
+      "priority": 400,
+      "match": { "title": "Cash In Successful" },
+      "direction": "info"
+    },
+    {
+      "id": "touchngo.non-money.v1",
+      "priority": 390,
+      "match": {
+        "title": "points!$|^Travel eSIM purchase successful$|^Payment to |^Mobile prepaid top up$|^LPR parking payment is successful$"
+      },
+      "direction": "info",
+      "confidence": "none"
+    },
+    {
+      "id": "touchngo.kaching-review.v1",
+      "priority": 380,
+      "match": { "title": "^Ka-ching! Incoming Money", "body": "received from" },
+      "direction": "info",
+      "confidence": "none"
+    },
+    {
+      "id": "touchngo.toll.v1",
+      "priority": 370,
+      "match": { "title": "^Successful Toll Payment$" },
+      "direction": "out",
+      "extract": {
+        "amount": "(?:RM|MYR)\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": { "pattern": "(?<counterparty>Toll)", "source": "title" }
+      }
+    },
+    {
+      "id": "touchngo.received-title.v1",
+      "priority": 360,
+      "match": { "title": "^You.*received money" },
+      "direction": "in",
+      "extract": {
+        "amount": "(?:RM|MYR)\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "^(?:.*received from |(?=.* has transferred))(?<counterparty>.+?)(?: has transferred| for|\\.|$)"
+      }
+    },
+    {
+      "id": "touchngo.sent-title.v1",
+      "priority": 350,
+      "match": { "title": "^Payment To:|^DuitNow Payment to " },
+      "direction": "out",
+      "extract": {
+        "amount": "(?:RM|MYR)\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": { "pattern": "^(?:Payment To:|DuitNow Payment to )\\s?(?<counterparty>.+)$", "source": "title" }
+      }
+    },
+    {
+      "id": "touchngo.parking.v1",
+      "priority": 340,
+      "match": { "title": "^Parking Payment Successful" },
+      "direction": "out",
+      "extract": {
+        "amount": "(?:RM|MYR)\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "paid for (?<counterparty>Parking.*?)(?:\\.|$)"
+      }
+    },
+    {
+      "id": "touchngo.received-body.v1",
+      "priority": 330,
+      "match": { "body": "received from|has transferred" },
+      "direction": "in",
+      "extract": {
+        "amount": "(?:RM|MYR)\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "^(?:.*received from |(?=.* has transferred))(?<counterparty>.+?)(?: has transferred| for|\\.|$)"
+      }
+    },
+    {
+      "id": "touchngo.sent-body.v1",
+      "priority": 320,
+      "match": {
+        "body": "you have paid|has been deducted|deducted from your|successfully transferred|toll payment|parking"
+      },
+      "direction": "out",
+      "extract": {
+        "amount": "(?:RM|MYR)\\s?(?<amount>[\\d,]+\\.?\\d{0,2})",
+        "counterparty": "(?:transferred (?:RM|MYR)\\s?[\\d,.]+ to|transferred to|paid (?:RM|MYR)\\s?[\\d,.]+ (?:to|at|for)|paid (?:to|at|for)|at)\\s?(?<counterparty>.+?)(?:\\.(?= (?:REF|Merchant)\\b|$)|$)"
+      }
+    },
+    {
+      "id": "touchngo.unmatched.v1",
+      "priority": -100,
+      "match": { "title": ".*" },
+      "direction": "info",
+      "confidence": "none"
+    }
+  ]
+}
+
+</script>
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+appId: com.paypingmy.app
+---
+- launchApp
+- assertVisible: "Everything stays on your phone"
+- assertVisible: "No accounts, no servers, no ads. PayPing Lite reads payment alerts only from apps you pick."
+- tapOn: "Next"
+- assertVisible: "Allow notification access"
+- tapOn: "Next"
+- assertVisible: "Choose bank apps"
+- scrollUntilVisible:
+    element: "Read payment alerts from E2E Notifier"
+- tapOn: "Read payment alerts from E2E Notifier"
+- scrollUntilVisible:
+    element: "Next"
+- tapOn: "Next"
+- assertVisible: "Keep announcements on time"
+- tapOn: "Next"
+- assertVisible: "Test voice announcements"
+- tapOn: "Test Voice Announcement"
+- tapOn: "Get started"
+- assertVisible: "Today"
+- assertVisible: "Listening to 1 app"

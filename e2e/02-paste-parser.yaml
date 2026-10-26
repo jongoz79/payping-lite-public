@@ -1,0 +1,17 @@
+appId: com.paypingmy.app
+env:
+  PARSER_JSON: '{"schemaVersion":1,"id":"e2e-shell","name":"E2E Shell Parser","version":1,"androidPackages":["com.paypingmy.e2e.notifier"],"iosAppNames":[],"rules":[{"id":"e2e-shell.received.v1","priority":100,"match":{"title":"^E2E Pay$"},"direction":"in","extract":{"amount":"RM (?<amount>[\\d,]+\\.\\d{2}) from (?<counterparty>[^.]+)","counterparty":"from (?<counterparty>[^.]+)"}}]}'
+---
+- launchApp
+- tapOn: "Bank Rules"
+- tapOn:
+    id: "parser-add"
+- tapOn: "Paste Rule Code"
+- tapOn:
+    text: "Paste Rule Code"
+    index: 2
+- inputText: ${PARSER_JSON}
+- hideKeyboard
+- tapOn:
+    id: "parser-import-submit"
+- assertVisible: "E2E Shell Parser"

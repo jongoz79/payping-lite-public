@@ -1,0 +1,123 @@
+[
+  {
+    "name": "cash-in confirmation is informational",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Cash In Successful",
+    "body": "Cash In of RM 50.00 completed.",
+    "synthetic": true,
+    "expect": { "ruleId": "touchngo.cashin-dup.v1", "direction": "info", "amountMinor": null, "confidence": "high" }
+  },
+  {
+    "name": "received title",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "You've received money!",
+    "body": "You've received RM 5.90! Ka-ching!",
+    "expect": { "ruleId": "touchngo.received-title.v1", "direction": "in", "amountMinor": 590, "confidence": "high" }
+  },
+  {
+    "name": "mojibake received title and sender",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Youâve received money!",
+    "body": "RM 30.00 received from HAIKAL BIN KAMAL ARIFFIN for Fund Transfer",
+    "expect": { "ruleId": "touchngo.received-title.v1", "direction": "in", "amountMinor": 3000, "counterparty": "HAIKAL BIN KAMAL ARIFFIN", "confidence": "high" }
+  },
+  {
+    "name": "sender transferred to you",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Ka-ching! Incoming Money",
+    "body": "KAMAL ARIFFIN BIN YUSOF has transferred RM 1500.00 to you",
+    "expect": { "ruleId": "touchngo.received-body.v1", "direction": "in", "amountMinor": 150000, "counterparty": "KAMAL ARIFFIN BIN YUSOF", "confidence": "high" }
+  },
+  {
+    "name": "received body fallback",
+    "platform": "ios",
+    "sourceApp": "TNG eWallet",
+    "title": "Transaction",
+    "body": "RM 12.50 received from Ali.",
+    "synthetic": true,
+    "expect": { "ruleId": "touchngo.received-body.v1", "direction": "in", "amountMinor": 1250, "counterparty": "Ali", "confidence": "high" }
+  },
+  {
+    "name": "payment recipient in title",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Payment To: MASJID KAMPUNG TUNKU",
+    "body": "Payment of RM 10.00 completed.",
+    "synthetic": true,
+    "expect": { "ruleId": "touchngo.sent-title.v1", "direction": "out", "amountMinor": 1000, "counterparty": "MASJID KAMPUNG TUNKU", "confidence": "high" }
+  },
+  {
+    "name": "DuitNow payment recipient in title",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "DuitNow Payment to AMIR HAKIM",
+    "body": "RM316.93 has been deducted from your TNG eWallet.",
+    "synthetic": true,
+    "expect": { "ruleId": "touchngo.sent-title.v1", "direction": "out", "amountMinor": 31693, "counterparty": "AMIR HAKIM", "confidence": "high" }
+  },
+  {
+    "name": "paid recipient in body",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "DuitNow Payment",
+    "body": "You have paid RM21.70 to RESTORAN AMETHYST AYAM KAMPUNG",
+    "expect": { "ruleId": "touchngo.sent-body.v1", "direction": "out", "amountMinor": 2170, "counterparty": "RESTORAN AMETHYST AYAM KAMPUNG", "confidence": "high" }
+  },
+  {
+    "name": "recipient with initials",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "DuitNow Payment",
+    "body": "You have paid RM18.00 to S.A.Y.A EMPIRE.",
+    "synthetic": true,
+    "expect": { "ruleId": "touchngo.sent-body.v1", "direction": "out", "amountMinor": 1800, "counterparty": "S.A.Y.A EMPIRE", "confidence": "high" }
+  },
+  {
+    "name": "recipient with company suffix and two full stops",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "DuitNow Payment",
+    "body": "You have paid RM15.00 to FNB CONCEPT SDN. BHD..",
+    "synthetic": true,
+    "expect": { "ruleId": "touchngo.sent-body.v1", "direction": "out", "amountMinor": 1500, "counterparty": "FNB CONCEPT SDN. BHD", "confidence": "high" }
+  },
+  {
+    "name": "for recipient with company suffix and two full stops",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "DuitNow Payment",
+    "body": "You have paid RM15.00 for MAJU TEKNOLOGI SDN. BHD..",
+    "synthetic": true,
+    "expect": { "ruleId": "touchngo.sent-body.v1", "direction": "out", "amountMinor": 1500, "counterparty": "MAJU TEKNOLOGI SDN. BHD", "confidence": "high" }
+  },
+  {
+    "name": "sent body fallback",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Transfer update",
+    "body": "RM 7.00 has been successfully transferred to NUR AINA BINTI ABDUL RAHMAN",
+    "expect": { "ruleId": "touchngo.sent-body.v1", "direction": "out", "amountMinor": 700, "counterparty": "NUR AINA BINTI ABDUL RAHMAN", "confidence": "high" }
+  },
+  {
+    "name": "marketing amount is ignored",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Special Offer",
+    "body": "Enjoy RM 20.00 cashback with our partners.",
+    "synthetic": true,
+    "expect": { "ruleId": "touchngo.unmatched.v1", "direction": "info", "amountMinor": null, "confidence": "none" }
+  },
+  {
+    "name": "OTP is ignored",
+    "platform": "android",
+    "sourceApp": "my.com.tngdigital.ewallet",
+    "title": "Security code",
+    "body": "Your one-time password is 827361. Do not share it.",
+    "synthetic": true,
+    "expect": { "ruleId": "touchngo.unmatched.v1", "direction": "info", "amountMinor": null, "confidence": "none" }
+  }
+]

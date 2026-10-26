@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cara Mengajar PayPing Memahami Bank Anda &mdash; Panduan Parser</title>
+  <meta name="description" content="Panduan lengkap mencipta, menguji dan menyumbang parser notifikasi bank untuk PayPing Lite.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <svg viewBox="0 0 32 32" width="28" height="28" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="#059669"/><text x="16" y="21" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="-0.5">RM</text></svg>
+        <span class="brand-text">PayPing <span class="brand-sub">Parser Library</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link ">Parsers</a>
+        <a href="guide.html" class="nav-link ">Guide (EN)</a>
+        <a href="guide-ms.html" class="nav-link active">Panduan (MS)</a>
+        <a href="https://github.com/jongoz79/payping-lite-public/issues/new?template=parser.md" target="_blank" rel="noopener" class="nav-link nav-link-external">
+          Contribute <svg class="icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container guide-content">
+    <div class="lang-switch">
+      <a href="guide.html">English</a>
+      <a href="guide-ms.html" class="active">Bahasa Melayu</a>
+    </div>
+
+    <article class="guide-prose">
+      <h1>Cara Mengajar PayPing Memahami Bank Anda</h1>
+      <p>
+        PayPing Lite beroperasi sepenuhnya di luar talian (offline). Aplikasi ini langsung tidak memerlukan kebenaran internet dan tidak pernah menghantar notifikasi anda ke mana-mana pelayan awan (cloud). Untuk menukar notifikasi bank dan e-dompet kepada suara pengumuman ringgit yang pantas, PayPing menggunakan <strong>parser ungkapan nalar (regular expressions) yang deterministik</strong>.
+      </p>
+      <p>
+        Terdapat dua cara untuk menambah sokongan bagi bank atau e-dompet baharu:
+      </p>
+      <ol>
+        <li><strong>Penjana Visual Dalam Aplikasi (Disyorkan):</strong> Tekan pada notifikasi yang diterima di telefon anda dan biarkan PayPing membina peraturan secara automatik.</li>
+        <li><strong>Definisi JSON (Untuk Pengguna Lanjutan &amp; Komuniti):</strong> Tulis peraturan regex mudah alih yang boleh dikongsi ke dalam pustaka parser.</li>
+      </ol>
+
+      <h2>1. Aliran Visual Berpandu Dalam Aplikasi</h2>
+      <p>
+        Apabila PayPing Lite menerima notifikasi daripada aplikasi perbankan yang belum dikenali, ia disimpan secara selamat di dalam tab <strong>Perlu Semakan (Needs Review)</strong> tanpa meneka secara melulu.
+      </p>
+      <ol>
+        <li>Buka <strong>PayPing Lite</strong> dan pilih tab <strong>Perlu Semakan</strong>.</li>
+        <li>Tekan notifikasi yang ingin diajar kepada PayPing.</li>
+        <li>Pilih <strong>"Bina parser daripada notifikasi ini"</strong>.</li>
+        <li>
+          <strong>Sorot jumlah wang:</strong> Paparan aplikasi akan menunjukkan teks notifikasi. Cukup sekadar menekan atau memilih jumlah wang (contoh: <code>RM 45.20</code>). PayPing akan menjana corak pengekstrakan secara automatik.
+        </li>
+        <li>
+          <strong>Pilih arah transaksi:</strong>
+          <ul>
+            <li><strong>Duit Masuk (Money In):</strong> Pindahan DuitNow diterima, bayaran QR diterima, gaji atau deposit tunai.</li>
+            <li><strong>Duit Keluar (Money Out):</strong> Transaksi kad debit/kredit, bayaran QR dibuat, pembayaran bil.</li>
+            <li><strong>Maklumat / Abaikan (Info):</strong> Kod OTP/TAC, promosi diskaun, amaran keselamatan log masuk.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Uji pada rekod sejarah terkini:</strong> PayPing akan menguji peraturan baharu terhadap notifikasi terdahulu daripada aplikasi yang sama untuk memastikan tiada padanan palsu (false positive).
+        </li>
+        <li>Tekan <strong>Simpan Parser</strong>. Notifikasi seterusnya akan diproses dan diumumkan secara bersuara serta-merta.</li>
+      </ol>
+
+      <h2>2. Skema JSON Parser</h2>
+      <p>
+        Setiap parser di dalam pustaka ini merupakan dokumen JSON lengkap yang mematuhi <code>schemaVersion: 1</code>.
+      </p>
+      <pre><code>{
+  "schemaVersion": 1,
+  "id": "mybank",
+  "name": "My Bank Malaysia",
+  "version": 1,
+  "author": "Penyumbang Komuniti",
+  "description": "Parser untuk notifikasi terima pindahan dan caj kad My Bank.",
+  "androidPackages": ["com.mybank.app"],
+  "iosAppNames": ["My Bank Mobile"],
+  "rules": [
+    {
+      "id": "mybank.received.v1",
+      "priority": 200,
+      "match": {
+        "title": "duit diterima|duitnow received",
+        "body": "dipindahkan ke akaun anda"
+      },
+      "direction": "in",
+      "confidence": "high",
+      "extract": {
+        "amount": "(?:RM|MYR)\s*(?<amount>[\d,]+\.?\d{0,2})",
+        "counterparty": "daripada\s+(?<counterparty>.+?)(?:\s+pada|\.|$)",
+        "reference": "ref(?:erens)?\s*(?:no)?:?\s*(?<reference>[A-Z0-9]+)"
+      }
+    }
+  ]
+}</code></pre>
+
+      <h3>Medan Utama Peraturan (Rules)</h3>
+      <ul>
+        <li>
+          <code>id</code>: Pengenalpasti unik bertitik mengikut format <code>&lt;id-bank&gt;.&lt;nama-peraturan&gt;.v&lt;versi&gt;</code> (contoh: <code>hsbc.card-charged.v1</code>).
+        </li>
+        <li>
+          <code>priority</code>: Nombor integer (contoh: <code>200</code>). Peraturan dengan nombor lebih tinggi akan dinilai terlebih dahulu. Letakkan peraturan khusus (seperti caj kad kredit tertentu) lebih tinggi daripada peraturan umum.
+        </li>
+        <li>
+          <code>match</code>: Objek yang mengandungi corak regex pilihan <code>title</code> dan <code>body</code>. Jika kedua-duanya dinyatakan, <strong>kedua-duanya mesti sepadan</strong>. Padanan tidak sensitif huruf besar/kecil (case-insensitive).
+        </li>
+        <li>
+          <code>direction</code>: <code>"in"</code> (wang masuk), <code>"out"</code> (wang keluar), atau <code>"info"</code> (bukan kewangan seperti OTP atau promosi).
+        </li>
+        <li>
+          <code>confidence</code>: <code>"high"</code> untuk transaksi sah yang perlu direkod dan disebut; <code>"none"</code> untuk notifikasi yang tidak boleh direkodkan sebagai transaksi kewangan.
+        </li>
+        <li>
+          <code>extract</code>: Corak pengekstrakan yang menggunakan kumpulan bernama (named capture groups):
+          <ul>
+            <li><code>(?&lt;amount&gt;...)</code>: Jumlah angka transaksi (digit, koma, dan titik perpuluhan).</li>
+            <li><code>(?&lt;currency&gt;...)</code>: Mata wang pilihan (lalai kepada <code>MYR</code> jika tidak dinyatakan).</li>
+            <li><code>(?&lt;counterparty&gt;...)</code>: Nama peniaga atau nama penghantar/penerima.</li>
+            <li><code>(?&lt;reference&gt;...)</code>: Nombor rujukan transaksi.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>3. Peraturan Ketat untuk Regex yang Selamat</h2>
+      <p>
+        Memandangkan PayPing Lite beroperasi di latar belakang telefon pintar (Android Hermes/V8 dan iOS JavaScriptCore/Swift), pelaksanaan regex mestilah <strong>100% konsisten, selamat dan pantas</strong>:
+      </p>
+
+      <div style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 18px; margin: 20px 0;">
+        <h4 style="color: #b91c1c; margin-bottom: 8px; font-weight: 700;">Panduan Keselamatan Enjin Regex</h4>
+        <ul style="margin-bottom: 0;">
+          <li>
+            <strong>DILARANG Menggunakan Lookbehind:</strong> Lookbehind positif <code>(?&lt;=...)</code> dan negatif <code>(?&lt;!...)</code> dilarang sama sekali. Enjin peranti berbeza mengendalikan lookbehind secara tidak seragam dan boleh menyebabkan aplikasi terhenti (crash). Gunakan kumpulan awalan bukan tangkapan <code>(?:awalan)</code> bersama kumpulan bernama.
+          </li>
+          <li>
+            <strong>DILARANG Pengulangan Bersarang (Nested Quantifiers):</strong> Jangan sekali-kali menggandakan penentu kuantiti seperti <code>(a+)+</code> atau <code>(.*)*</code>. Ini boleh menyebabkan kegagalan <em>catastrophic backtracking</em> (ReDoS) yang membekukan telefon.
+          </li>
+          <li>
+            <strong>Had Masa 50 Milisaat:</strong> Sebarang penilaian regex yang melebihi 50ms akan dibatalkan secara automatik oleh enjin parser PayPing demi menjimatkan bateri dan kelancaran sistem.
+          </li>
+          <li>
+            <strong>Had 4,000 Aksara:</strong> Teks notifikasi yang melebihi 4,000 aksara akan dipendekkan secara automatik sebelum diproses.
+          </li>
+          <li>
+            <strong>Sintaks Kumpulan Bernama:</strong> Sentiasa gunakan format standard <code>(?&lt;nama&gt;...)</code>.
+          </li>
+        </ul>
+      </div>
+
+      <h2>4. Contoh Transaksi Sebenar</h2>
+
+      <h3>Contoh A: Wang Masuk (Pindahan DuitNow Diterima)</h3>
+      <p><strong>Teks Notifikasi:</strong> <code>You've received RM 120.00 in your A/C from AHMAD BIN ALI on 24/10/2026.</code></p>
+      <pre><code>{
+  "id": "sample.duitnow-in.v1",
+  "priority": 200,
+  "match": {
+    "body": "You've received .* in your A/C"
+  },
+  "direction": "in",
+  "confidence": "high",
+  "extract": {
+    "amount": "You've received\s+(?<currency>RM|MYR)?\s*(?<amount>[\d,]+\.?\d{0,2})",
+    "counterparty": "from\s+(?<counterparty>.+?)(?:\s+pada|\.|$)"
+  }
+}</code></pre>
+      <p><em>Hasil:</em> Arah adalah <strong>in</strong>, jumlah adalah <strong>12000</strong> sen (RM 120.00), pihak lawan adalah <strong>AHMAD BIN ALI</strong>.</p>
+
+      <h3>Contoh B: Wang Keluar (Caj Kad Kredit)</h3>
+      <p><strong>Teks Notifikasi:</strong> <code>MYR950.00 was charged to your credit card ending 1681 at MYDIN MART on 21/09/25.</code></p>
+      <pre><code>{
+  "id": "hsbc.card-charged.v1",
+  "priority": 200,
+  "match": {
+    "body": "was charged to your (?:supp )?credit card"
+  },
+  "direction": "out",
+  "confidence": "high",
+  "extract": {
+    "amount": "(?<currency>RM|MYR)\s*(?<amount>[\d,]+\.?\d{0,2})",
+    "counterparty": "at (?<counterparty>.+?) on \d"
+  }
+}</code></pre>
+      <p><em>Hasil:</em> Arah adalah <strong>out</strong>, jumlah adalah <strong>95000</strong> sen (RM 950.00), pihak lawan adalah <strong>MYDIN MART</strong>.</p>
+
+      <h3>Contoh C: Penapis Negatif (Abaikan Notifikasi Promosi)</h3>
+      <p><strong>Teks Notifikasi:</strong> <code>Tawaran Khas! Nikmati pulangan tunai RM 20.00 bersama rakan niaga kami hari ini.</code></p>
+      <pre><code>{
+  "id": "sample.promo-filter.v1",
+  "priority": 300,
+  "match": {
+    "body": "pulangan tunai bersama|baucar diskaun|nikmati ganjaran"
+  },
+  "direction": "info",
+  "confidence": "none"
+}</code></pre>
+      <p><em>Hasil:</em> Arah adalah <strong>info</strong> dengan keyakinan <strong>none</strong>. PayPing Lite tidak akan merekod atau membaca promosi ini.</p>
+
+      <h2>5. Cara Menghantar Parser Baharu atau Sampel Notifikasi</h2>
+      <p>
+        Bantu kami memperluaskan pustaka parser komuniti! Sumbangan parser dan sampel notifikasi bank amat dialu-alukan:
+      </p>
+      <ol>
+        <li>
+          <strong>Padamkan maklumat sensitif (Anonymise):</strong> Gantikan nama sebenar dengan nama samaran (contoh: "SITI AMINAH"), padamkan nombor akaun/kad penuh (contoh: "ending 1234"), dan ubah sedikit jumlah wang.
+        </li>
+        <li>
+          Buka <a href="https://github.com/jongoz79/payping-lite-public/issues/new?template=parser.md" target="_blank" rel="noopener">Templat Sumbangan Parser di GitHub</a>.
+        </li>
+        <li>Isikan nama bank, ID pakej aplikasi, dan teks contoh notifikasi.</li>
+        <li>Penyelenggara akan menyemak, mencipta ujian automatik di dalam <code>parser-library/fixtures-real</code>, dan menyertakannya ke dalam keluaran rasmi seterusnya.</li>
+      </ol>
+    </article>
+  </main>
+
+  
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p><strong>PayPing Lite</strong> &mdash; Zero network permissions, privacy-first ringgit voice alerts.</p>
+        <p class="footer-subtext">Community bank parsers run entirely offline on your device.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Library</a>
+        <a href="guide.html">Parser Guide (EN)</a>
+        <a href="guide-ms.html">Panduan Parser (MS)</a>
+        <a href="https://github.com/jongoz79/payping-lite-public" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

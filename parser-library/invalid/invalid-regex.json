@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "touchngo",
+  "name": "Broken Touch 'n Go parser",
+  "version": 1,
+  "androidPackages": ["my.com.tngdigital.ewallet"],
+  "iosAppNames": ["TNG eWallet"],
+  "rules": [
+    {
+      "id": "touchngo.cashin-dup.v1",
+      "priority": 300,
+      "match": { "title": "(?<=Cash) In Successful" },
+      "direction": "info"
+    },
+    {
+      "id": "touchngo.received.v1",
+      "priority": 200,
+      "match": { "title": "(" },
+      "direction": "in",
+      "extract": {
+        "amount": "RM\\s*(?<value>[\\d.]+)",
+        "counterparty": "from (?<counterparty>[A-)"
+      }
+    }
+  ]
+}

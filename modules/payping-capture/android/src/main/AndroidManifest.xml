@@ -1,0 +1,19 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+  <queries>
+    <!-- Launcher visibility, adapted from azimul-kabir/actua (GPL-3.0). -->
+    <intent><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent>
+    <intent><action android:name="android.intent.action.TTS_SERVICE" /></intent></queries>
+  <permission android:name="${applicationId}.permission.CAPTURE_EVENT" android:protectionLevel="signature" />
+  <uses-permission android:name="${applicationId}.permission.CAPTURE_EVENT" />
+  <!-- Finish parsing and speaking a payment while the screen is off. -->
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <application>
+    <service android:name=".RegexWorkerService" android:exported="false" android:process=":paypingRegex" />
+    <provider android:name=".CaptureProvider" android:authorities="${applicationId}.paypingcapture"
+      android:exported="false" android:process=":paypingCapture" />
+    <service android:name=".PayPingListenerService" android:process=":paypingCapture" android:label="PayPing Lite" android:exported="true"
+      android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+      <intent-filter><action android:name="android.service.notification.NotificationListenerService" /></intent-filter>
+    </service>
+  </application>
+</manifest>

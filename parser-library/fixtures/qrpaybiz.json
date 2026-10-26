@@ -1,0 +1,60 @@
+[
+  {
+    "name": "standard QRPay payment",
+    "platform": "android",
+    "sourceApp": "com.maybank.quickmerchant",
+    "title": "QRPay Payment Notification",
+    "body": "RM 1.00 is credited successfully to your account. Reference No: QR01677302",
+    "expect": { "ruleId": "qrpaybiz.received.v1", "direction": "in", "amountMinor": 100, "reference": "QR01677302", "confidence": "high" }
+  },
+  {
+    "name": "thousands separator",
+    "platform": "android",
+    "sourceApp": "com.maybank.quickmerchant",
+    "title": "QRPay Payment Notification",
+    "body": "RM 1,234.56 is credited successfully. Reference No: QR99999999",
+    "expect": { "ruleId": "qrpaybiz.received.v1", "direction": "in", "amountMinor": 123456, "reference": "QR99999999", "confidence": "high" }
+  },
+  {
+    "name": "DuitNow QR payment",
+    "platform": "android",
+    "sourceApp": "com.maybank.quickmerchant",
+    "title": "QRPay Payment Notification",
+    "body": "RM 50.00 is credited successfully via DuitNow QR. Reference No: QR12345678",
+    "expect": { "ruleId": "qrpaybiz.received.v1", "direction": "in", "amountMinor": 5000, "reference": "QR12345678", "confidence": "high" }
+  },
+  {
+    "name": "sender is available",
+    "platform": "android",
+    "sourceApp": "com.maybank.quickmerchant",
+    "title": "QRPay Payment Notification",
+    "body": "RM 100.00 credited from JOHN DOE ENTERPRISE. Reference No: QR55555555",
+    "expect": { "ruleId": "qrpaybiz.received.v1", "direction": "in", "amountMinor": 10000, "counterparty": "JOHN DOE ENTERPRISE", "reference": "QR55555555", "confidence": "high" }
+  },
+  {
+    "name": "iOS app name routing",
+    "platform": "ios",
+    "sourceApp": "QRPayBiz",
+    "title": "QRPay Payment Notification",
+    "body": "RM 25.00 is credited successfully to your account.",
+    "synthetic": true,
+    "expect": { "ruleId": "qrpaybiz.received.v1", "direction": "in", "amountMinor": 2500, "confidence": "high" }
+  },
+  {
+    "name": "missing amount is not logged",
+    "platform": "android",
+    "sourceApp": "com.maybank.quickmerchant",
+    "title": "QRPay Payment Notification",
+    "body": "Payment credited successfully.",
+    "expect": { "ruleId": null, "direction": "info", "amountMinor": null, "confidence": "none" }
+  },
+  {
+    "name": "marketing amount is ignored",
+    "platform": "android",
+    "sourceApp": "com.maybank.quickmerchant",
+    "title": "Merchant Reward",
+    "body": "Enjoy RM 20.00 cashback with our partners.",
+    "synthetic": true,
+    "expect": { "ruleId": null, "direction": "info", "amountMinor": null, "confidence": "none" }
+  }
+]

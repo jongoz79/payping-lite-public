@@ -1,0 +1,83 @@
+[
+  {
+    "name": "received title",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Funds Received",
+    "body": "You've just received RM 500.00 in your account.",
+    "synthetic": true,
+    "expect": { "ruleId": "mae.received-title.v1", "direction": "in", "amountMinor": 50000, "confidence": "high" }
+  },
+  {
+    "name": "received body",
+    "platform": "ios",
+    "sourceApp": "MAE",
+    "title": "Maybank2u: Funds Received",
+    "body": "You've just received RM 25.00 in your account.",
+    "synthetic": true,
+    "expect": { "ruleId": "mae.received-title.v1", "direction": "in", "amountMinor": 2500, "confidence": "high" }
+  },
+  {
+    "name": "card transaction title",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 12.50 at COFFEE HOUSE with your card.",
+    "synthetic": true,
+    "expect": { "ruleId": "mae.sent-title.v1", "direction": "out", "amountMinor": 1250, "counterparty": "COFFEE HOUSE", "confidence": "high" }
+  },
+  {
+    "name": "scan and pay body with reference",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 8.00 to GRAB. REF: ABC123",
+    "synthetic": true,
+    "expect": { "ruleId": "mae.sent-body.v1", "direction": "out", "amountMinor": 800, "counterparty": "GRAB", "reference": "ABC123", "confidence": "high" }
+  },
+  {
+    "name": "scan and pay incoming",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "You've received RM 18.00 from ALI: 987654321Q.",
+    "synthetic": true,
+    "expect": { "ruleId": "mae.scanpay-received.v1", "direction": "in", "amountMinor": 1800, "counterparty": "ALI", "confidence": "high" }
+  },
+  {
+    "name": "loan account recipient keeps the full description",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Transfer",
+    "body": "You've paid RM 1,998.00 to the PUBLIC BANK loan account ending ****0010",
+    "synthetic": true,
+    "expect": { "ruleId": "mae.transfer-named-account.v1", "direction": "out", "amountMinor": 199800, "counterparty": "PUBLIC BANK loan", "confidence": "high" }
+  },
+  {
+    "name": "possessive account recipient strips the possessive s",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Transfer",
+    "body": "You've transferred RM 1,300.00 to HAFIZ's HONG LEONG BANK account ending",
+    "synthetic": true,
+    "expect": { "ruleId": "mae.transfer-named-account.v1", "direction": "out", "amountMinor": 130000, "counterparty": "HAFIZ", "confidence": "high" }
+  },
+  {
+    "name": "marketing amount is ignored",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Special Offer",
+    "body": "Enjoy RM 20.00 cashback with our partners.",
+    "synthetic": true,
+    "expect": { "ruleId": "mae.unmatched.v1", "direction": "info", "amountMinor": null, "confidence": "none" }
+  },
+  {
+    "name": "OTP is ignored",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Security code",
+    "body": "Your one-time password is 827361. Do not share it.",
+    "synthetic": true,
+    "expect": { "ruleId": "mae.unmatched.v1", "direction": "info", "amountMinor": null, "confidence": "none" }
+  }
+]

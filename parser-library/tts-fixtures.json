@@ -1,0 +1,801 @@
+[
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": 1250,
+      "currency": "MYR",
+      "counterparty": "Ali",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "expected": "Plus 12 ringgit 50 sen, Ali"
+  },
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": 1200,
+      "currency": "MYR",
+      "counterparty": null,
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "expected": "Plus 12 ringgit"
+  },
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": 50,
+      "currency": "MYR",
+      "counterparty": "",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "expected": "Plus 50 cents"
+  },
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": 0,
+      "currency": "MYR",
+      "counterparty": "Cafe",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "expected": "Plus 0 ringgit, Cafe"
+  },
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": 79000,
+      "currency": "JPY",
+      "counterparty": "東京",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "expected": "Plus 790 JPY, 東京"
+  },
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": 1205,
+      "currency": "USD",
+      "counterparty": "Cafe",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "expected": "Plus 12.05 USD, Cafe"
+  },
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": -50,
+      "currency": "MYR",
+      "counterparty": null,
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "expected": "Plus 50 cents"
+  },
+  {
+    "result": {
+      "direction": "out",
+      "amountMinor": 1250,
+      "currency": "MYR",
+      "counterparty": "Ali",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "expected": "Minus 12 ringgit 50 sen, Ali"
+  },
+  {
+    "result": {
+      "direction": "out",
+      "amountMinor": 1200,
+      "currency": "MYR",
+      "counterparty": null,
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "expected": "Minus 12 ringgit"
+  },
+  {
+    "result": {
+      "direction": "out",
+      "amountMinor": 50,
+      "currency": "MYR",
+      "counterparty": "",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "expected": "Minus 50 cents"
+  },
+  {
+    "result": {
+      "direction": "out",
+      "amountMinor": 0,
+      "currency": "MYR",
+      "counterparty": "Cafe",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "expected": "Minus 0 ringgit, Cafe"
+  },
+  {
+    "result": {
+      "direction": "out",
+      "amountMinor": 79000,
+      "currency": "JPY",
+      "counterparty": "東京",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "expected": "Minus 790 JPY, 東京"
+  },
+  {
+    "result": {
+      "direction": "out",
+      "amountMinor": 1205,
+      "currency": "USD",
+      "counterparty": "Cafe",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "expected": "Minus 12.05 USD, Cafe"
+  },
+  {
+    "result": {
+      "direction": "out",
+      "amountMinor": -50,
+      "currency": "MYR",
+      "counterparty": null,
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "expected": "Minus 50 cents"
+  },
+  {
+    "result": {
+      "direction": "info",
+      "amountMinor": 1250,
+      "currency": "MYR",
+      "counterparty": "Ali",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "expected": null
+  },
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": 1250,
+      "currency": "MYR",
+      "counterparty": "Ali",
+      "confidence": "none",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "expected": null
+  },
+  {
+    "result": {
+      "direction": "out",
+      "amountMinor": null,
+      "currency": "MYR",
+      "counterparty": "Ali",
+      "confidence": "low",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "expected": null
+  },
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": 1250,
+      "currency": "MYR",
+      "counterparty": "Ali",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "ms",
+    "expected": "Tambah 12 ringgit 50 sen, Ali"
+  },
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": 1200,
+      "currency": "MYR",
+      "counterparty": null,
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "ms",
+    "expected": "Tambah 12 ringgit"
+  },
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": 50,
+      "currency": "MYR",
+      "counterparty": "",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "ms",
+    "expected": "Tambah 50 sen"
+  },
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": 0,
+      "currency": "MYR",
+      "counterparty": "Cafe",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "ms",
+    "expected": "Tambah 0 ringgit, Cafe"
+  },
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": 79000,
+      "currency": "JPY",
+      "counterparty": "東京",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "ms",
+    "expected": "Tambah 790 JPY, 東京"
+  },
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": 1205,
+      "currency": "USD",
+      "counterparty": "Cafe",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "ms",
+    "expected": "Tambah 12.05 USD, Cafe"
+  },
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": -50,
+      "currency": "MYR",
+      "counterparty": null,
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "ms",
+    "expected": "Tambah 50 sen"
+  },
+  {
+    "result": {
+      "direction": "out",
+      "amountMinor": 1250,
+      "currency": "MYR",
+      "counterparty": "Ali",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "ms",
+    "expected": "Tolak 12 ringgit 50 sen, Ali"
+  },
+  {
+    "result": {
+      "direction": "out",
+      "amountMinor": 1200,
+      "currency": "MYR",
+      "counterparty": null,
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "ms",
+    "expected": "Tolak 12 ringgit"
+  },
+  {
+    "result": {
+      "direction": "out",
+      "amountMinor": 50,
+      "currency": "MYR",
+      "counterparty": "",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "ms",
+    "expected": "Tolak 50 sen"
+  },
+  {
+    "result": {
+      "direction": "out",
+      "amountMinor": 0,
+      "currency": "MYR",
+      "counterparty": "Cafe",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "ms",
+    "expected": "Tolak 0 ringgit, Cafe"
+  },
+  {
+    "result": {
+      "direction": "out",
+      "amountMinor": 79000,
+      "currency": "JPY",
+      "counterparty": "東京",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "ms",
+    "expected": "Tolak 790 JPY, 東京"
+  },
+  {
+    "result": {
+      "direction": "out",
+      "amountMinor": 1205,
+      "currency": "USD",
+      "counterparty": "Cafe",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "ms",
+    "expected": "Tolak 12.05 USD, Cafe"
+  },
+  {
+    "result": {
+      "direction": "out",
+      "amountMinor": -50,
+      "currency": "MYR",
+      "counterparty": null,
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "ms",
+    "expected": "Tolak 50 sen"
+  },
+  {
+    "result": {
+      "direction": "info",
+      "amountMinor": 1250,
+      "currency": "MYR",
+      "counterparty": "Ali",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "ms",
+    "expected": null
+  },
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": 1250,
+      "currency": "MYR",
+      "counterparty": "Ali",
+      "confidence": "none",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "ms",
+    "expected": null
+  },
+  {
+    "result": {
+      "direction": "out",
+      "amountMinor": null,
+      "currency": "MYR",
+      "counterparty": "Ali",
+      "confidence": "low",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "ms",
+    "expected": null
+  },
+  {
+    "result": {
+      "ruleId": null,
+      "reference": null,
+      "confidence": "high",
+      "currency": "MYR",
+      "direction": "in",
+      "amountMinor": 400,
+      "counterparty": "IMRAAN CORNER"
+    },
+    "language": "en",
+    "app": "TNG eWallet",
+    "expected": "Plus 4 ringgit, TNG eWallet, Imraan Corner"
+  },
+  {
+    "result": {
+      "ruleId": null,
+      "reference": null,
+      "confidence": "high",
+      "currency": "MYR",
+      "direction": "in",
+      "amountMinor": 400,
+      "counterparty": "IMRAAN CORNER"
+    },
+    "language": "ms",
+    "app": "TNG eWallet",
+    "expected": "Tambah 4 ringgit, TNG eWallet, Imraan Corner"
+  },
+  {
+    "result": {
+      "ruleId": null,
+      "reference": null,
+      "confidence": "high",
+      "currency": "MYR",
+      "direction": "out",
+      "amountMinor": 62975,
+      "counterparty": "MAXIS-AUTO 2375810146"
+    },
+    "language": "en",
+    "app": "MAE",
+    "expected": "Minus 629 ringgit 75 sen, MAE, Maxis-Auto"
+  },
+  {
+    "result": {
+      "ruleId": null,
+      "reference": null,
+      "confidence": "high",
+      "currency": "MYR",
+      "direction": "out",
+      "amountMinor": 62975,
+      "counterparty": "MAXIS-AUTO 2375810146"
+    },
+    "language": "ms",
+    "app": "MAE",
+    "expected": "Tolak 629 ringgit 75 sen, MAE, Maxis-Auto"
+  },
+  {
+    "result": {
+      "ruleId": null,
+      "reference": null,
+      "confidence": "high",
+      "currency": "MYR",
+      "direction": "out",
+      "amountMinor": 7500,
+      "counterparty": "PLASTICITY PLT"
+    },
+    "language": "en",
+    "app": "MAE",
+    "expected": "Minus 75 ringgit, MAE, Plasticity PLT"
+  },
+  {
+    "result": {
+      "ruleId": null,
+      "reference": null,
+      "confidence": "high",
+      "currency": "MYR",
+      "direction": "out",
+      "amountMinor": 7500,
+      "counterparty": "PLASTICITY PLT"
+    },
+    "language": "ms",
+    "app": "MAE",
+    "expected": "Tolak 75 ringgit, MAE, Plasticity PLT"
+  },
+  {
+    "result": {
+      "ruleId": null,
+      "reference": null,
+      "confidence": "high",
+      "currency": "MYR",
+      "direction": "out",
+      "amountMinor": 360,
+      "counterparty": "D'SAJI KJL McDONALDS"
+    },
+    "language": "en",
+    "app": "Google Wallet",
+    "expected": "Minus 3 ringgit 60 sen, Google Wallet, D'Saji KJL McDONALDS"
+  },
+  {
+    "result": {
+      "ruleId": null,
+      "reference": null,
+      "confidence": "high",
+      "currency": "MYR",
+      "direction": "out",
+      "amountMinor": 360,
+      "counterparty": "D'SAJI KJL McDONALDS"
+    },
+    "language": "ms",
+    "app": "Google Wallet",
+    "expected": "Tolak 3 ringgit 60 sen, Google Wallet, D'Saji KJL McDONALDS"
+  },
+  {
+    "result": {
+      "ruleId": null,
+      "reference": null,
+      "confidence": "high",
+      "currency": "MYR",
+      "direction": "in",
+      "amountMinor": 1500,
+      "counterparty": null
+    },
+    "language": "en",
+    "app": "TNG eWallet",
+    "expected": "Plus 15 ringgit, TNG eWallet"
+  },
+  {
+    "result": {
+      "ruleId": null,
+      "reference": null,
+      "confidence": "high",
+      "currency": "MYR",
+      "direction": "in",
+      "amountMinor": 1500,
+      "counterparty": null
+    },
+    "language": "ms",
+    "app": "TNG eWallet",
+    "expected": "Tambah 15 ringgit, TNG eWallet"
+  },
+  {
+    "result": {
+      "ruleId": null,
+      "reference": null,
+      "confidence": "high",
+      "currency": "MYR",
+      "direction": "in",
+      "amountMinor": 1500,
+      "counterparty": "Ali"
+    },
+    "language": "en",
+    "app": "  ",
+    "expected": "Plus 15 ringgit, Ali"
+  },
+  {
+    "result": {
+      "ruleId": null,
+      "reference": null,
+      "confidence": "high",
+      "currency": "MYR",
+      "direction": "in",
+      "amountMinor": 1500,
+      "counterparty": "Ali"
+    },
+    "language": "ms",
+    "app": "  ",
+    "expected": "Tambah 15 ringgit, Ali"
+  },
+  {
+    "result": {
+      "ruleId": null,
+      "reference": null,
+      "confidence": "high",
+      "currency": "USD",
+      "direction": "out",
+      "amountMinor": 1205,
+      "counterparty": "東京 CAFE"
+    },
+    "language": "en",
+    "app": "HSBC MY",
+    "expected": "Minus 12.05 USD, HSBC MY, 東京 Cafe"
+  },
+  {
+    "result": {
+      "ruleId": null,
+      "reference": null,
+      "confidence": "high",
+      "currency": "USD",
+      "direction": "out",
+      "amountMinor": 1205,
+      "counterparty": "東京 CAFE"
+    },
+    "language": "ms",
+    "app": "HSBC MY",
+    "expected": "Tolak 12.05 USD, HSBC MY, 東京 Cafe"
+  },
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": 1250,
+      "currency": "MYR",
+      "counterparty": "Ali",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "template": "Received {amount}[ from {payee}][ via {app}]",
+    "expected": "Received 12 ringgit 50 sen from Ali via TNG eWallet",
+    "app": "TNG eWallet"
+  },
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": 1250,
+      "currency": "MYR",
+      "counterparty": null,
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "template": "Received {amount}[ from {payee}][ via {app}]",
+    "expected": "Received 12 ringgit 50 sen via TNG eWallet",
+    "app": "TNG eWallet"
+  },
+  {
+    "result": {
+      "direction": "out",
+      "amountMinor": 800,
+      "currency": "MYR",
+      "counterparty": "IMRAAN CORNER",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "ms",
+    "template": "Bayar {amount}[ kepada {payee}]",
+    "expected": "Bayar 8 ringgit kepada Imraan Corner",
+    "app": "MAE"
+  },
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": 1250,
+      "currency": "MYR",
+      "counterparty": "Ali",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "template": "{amount}",
+    "expected": "12 ringgit 50 sen",
+    "app": "MAE"
+  },
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": 1250,
+      "currency": "MYR",
+      "counterparty": null,
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "template": "{payee}, {sign} {amount}",
+    "expected": "Plus 12 ringgit 50 sen"
+  },
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": 1250,
+      "currency": "MYR",
+      "counterparty": null,
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "template": "[{payee}]",
+    "expected": "Plus 12 ringgit 50 sen, TNG eWallet",
+    "app": "TNG eWallet"
+  },
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": 1250,
+      "currency": "MYR",
+      "counterparty": "Ali",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "template": "   ",
+    "expected": "Plus 12 ringgit 50 sen, Ali"
+  },
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": 1250,
+      "currency": "MYR",
+      "counterparty": "Ali",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "template": "{foo} {amount}",
+    "expected": "{foo} 12 ringgit 50 sen"
+  },
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": 1250,
+      "currency": "MYR",
+      "counterparty": "Ali",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "template": "{amount}, , {app}",
+    "expected": "12 ringgit 50 sen"
+  },
+  {
+    "result": {
+      "direction": "in",
+      "amountMinor": 1250,
+      "currency": "MYR",
+      "counterparty": "Ali",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "ms",
+    "template": "Duit masuk {amount}!",
+    "expected": "Duit masuk 12 ringgit 50 sen!",
+    "app": "Boost"
+  },
+  {
+    "result": {
+      "direction": "out",
+      "amountMinor": 1205,
+      "currency": "USD",
+      "counterparty": "Cafe",
+      "confidence": "high",
+      "ruleId": null,
+      "reference": null
+    },
+    "language": "en",
+    "template": "{sign} {amount} [at {payee}]",
+    "expected": "Minus 12.05 USD at Cafe",
+    "app": "Google Wallet"
+  }
+]

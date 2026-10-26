@@ -1,0 +1,30 @@
+appId: com.paypingmy.app
+---
+- launchApp
+- assertVisible: "CHECK UNCONFIRMED PAYMENTS (1)"
+- assertVisible: "You received RM 7.25 from E2E Customer"
+- tapOn: "Payment check actions"
+- tapOn: "Teach PayPing this format"
+- assertVisible: "Add Bank Rule"
+- tapOn:
+    id: "wizard-token-amount"
+    text: "7.25"
+- tapOn:
+    id: "wizard-token-counterparty"
+    text: "E2E"
+- tapOn:
+    id: "wizard-token-counterparty"
+    text: "Customer"
+- scrollUntilVisible:
+    element: "Save and test parser"
+- assertVisible: "Match found"
+- tapOn: "Save and test parser"
+- assertVisible: "Re-parse previous notifications?"
+- tapOn: "Confirm"
+- assertVisible: "1 notifications updated."
+- tapOn: "OK"
+- assertVisible: "Today"
+- assertVisible:
+    id: "capture-confidence-high"
+- assertVisible: "E2E Customer"
+- assertVisible: "+RM 7.25"

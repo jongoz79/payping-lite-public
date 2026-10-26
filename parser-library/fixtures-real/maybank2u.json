@@ -1,0 +1,2070 @@
+[
+  {
+    "name": "real life #3: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 15.46 at CAFE LANGIT with your Maybank Debit Card Visa ending 7828. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1546,
+      "counterparty": "CAFE LANGIT"
+    }
+  },
+  {
+    "name": "real life #4: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 7.71 at RESTORAN SELERA with your Maybank Debit Card Visa ending 9136. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 771,
+      "counterparty": "RESTORAN SELERA"
+    }
+  },
+  {
+    "name": "real life #5: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent IDR 1,000.00 at BOOKXCESS with your WEI JIE LEE ending 4959. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 100000,
+      "currency": "IDR",
+      "counterparty": "BOOKXCESS"
+    }
+  },
+  {
+    "name": "real life #12: Maybank2u: Transfer",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Transfer",
+    "body": "You've transferred RM 100.63 to SITI WONG account ending ****3890. REF: 967628475M",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 10063,
+      "counterparty": "SITI"
+    }
+  },
+  {
+    "name": "real life #13: Maybank2u: Transfer",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Transfer",
+    "body": "You've transferred RM 128.63 to RAVI ABDULLAH account ending ****7884. REF: 051589485M",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 12863,
+      "counterparty": "RAVI"
+    }
+  },
+  {
+    "name": "real life #14: Maybank2u: Transfer",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Transfer",
+    "body": "You've transferred RM 85.30 to HAFIZ TAN account ending ****9634. REF: 031476267M",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 8530,
+      "counterparty": "HAFIZ"
+    }
+  },
+  {
+    "name": "real life #15: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 23.69 to SITI WONG: 800686999Q.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 2369,
+      "counterparty": "SITI WONG"
+    }
+  },
+  {
+    "name": "real life #16: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 84.90 to HAFIZ ISMAIL: 131798705Q.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 8490,
+      "counterparty": "HAFIZ ISMAIL"
+    }
+  },
+  {
+    "name": "real life #17: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 20.67 to RAVI LEE: 684212894Q.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 2067,
+      "counterparty": "RAVI LEE"
+    }
+  },
+  {
+    "name": "real life #18: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 6.14 to WEI JIE HASSAN: QR25328238.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 614,
+      "counterparty": "WEI JIE HASSAN"
+    }
+  },
+  {
+    "name": "real life #19: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 4.09 to WEI JIE HASSAN: QR94036869.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 409,
+      "counterparty": "WEI JIE HASSAN"
+    }
+  },
+  {
+    "name": "real life #20: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 11.27 to FARID WONG: QR17784032.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1127,
+      "counterparty": "FARID WONG"
+    }
+  },
+  {
+    "name": "real life #30: Maybank2u: Transfer",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Transfer",
+    "body": "You've transferred RM 108.24 to DANIEL ISMAIL 's DANIEL ISMAIL account ending ****3789. REF: 491979376M",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 10824,
+      "counterparty": "DANIEL"
+    }
+  },
+  {
+    "name": "real life #31: Maybank2u: Transfer",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Transfer",
+    "body": "You've transferred RM 1,398.69 to HAFIZ LEE 's HAFIZ LEE account ending ****9105. REF: 918097286M",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 139869,
+      "counterparty": "HAFIZ"
+    }
+  },
+  {
+    "name": "real life #32: Maybank2u: Transfer",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Transfer",
+    "body": "You've transferred RM 24.59 to FARID ONG 's FARID ONG account ending ****2496. REF: 731634768M",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 2459,
+      "counterparty": "FARID"
+    }
+  },
+  {
+    "name": "real life #42: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 8.03 at KEDAI RUNCIT MAJU with your MasterCard Ikhwan World ending 4463. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 803,
+      "counterparty": "KEDAI RUNCIT MAJU"
+    }
+  },
+  {
+    "name": "real life #43: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 54.92 at MYDIN MART with your MasterCard Ikhwan World ending 5049. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 5492,
+      "counterparty": "MYDIN MART"
+    }
+  },
+  {
+    "name": "real life #44: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 480.05 at KEDAI RUNCIT MAJU with your MasterCard Ikhwan World ending 9043. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 48005,
+      "counterparty": "KEDAI RUNCIT MAJU"
+    }
+  },
+  {
+    "name": "real life #45: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 16.79 to AINA ABDULLAH . REF: 415454124Q.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1679,
+      "counterparty": "AINA ABDULLAH"
+    }
+  },
+  {
+    "name": "real life #46: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 65.48 to WEI JIE TAN . REF: 097305220Q.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 6548,
+      "counterparty": "WEI JIE TAN"
+    }
+  },
+  {
+    "name": "real life #47: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 167.65 to HAFIZ TAN . REF: 194445693Q.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 16765,
+      "counterparty": "HAFIZ TAN"
+    }
+  },
+  {
+    "name": "real life #51: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 14.36 at KEDAI RUNCIT MAJU with your Maybank Debit Card Visa ending 2093. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1436,
+      "counterparty": "KEDAI RUNCIT MAJU"
+    }
+  },
+  {
+    "name": "real life #52: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 17.18 at GROCER TOWN with your MasterCard Ikhwan World ending 4863. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1718,
+      "counterparty": "GROCER TOWN"
+    }
+  },
+  {
+    "name": "real life #53: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 34.68 at KEDAI RUNCIT MAJU with your MasterCard Ikhwan World ending 4477. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 3468,
+      "counterparty": "KEDAI RUNCIT MAJU"
+    }
+  },
+  {
+    "name": "real life #54: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 2.46 at CAFE LANGIT with your Maybank Debit Card Visa ending 7942. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 246,
+      "counterparty": "CAFE LANGIT"
+    }
+  },
+  {
+    "name": "real life #55: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 183.17 at RESTORAN SELERA with your MasterCard Ikhwan World ending 6473. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 18317,
+      "counterparty": "RESTORAN SELERA"
+    }
+  },
+  {
+    "name": "real life #56: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 72.15 at GROCER TOWN with your MasterCard Ikhwan World ending 1534. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 7215,
+      "counterparty": "GROCER TOWN"
+    }
+  },
+  {
+    "name": "real life #57: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 11.85 at BOOKXCESS with your MasterCard Ikhwan World ending 4127. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1185,
+      "counterparty": "BOOKXCESS"
+    }
+  },
+  {
+    "name": "real life #58: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 3.45 at KEDAI RUNCIT MAJU with your MasterCard Ikhwan World ending 4540. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 345,
+      "counterparty": "KEDAI RUNCIT MAJU"
+    }
+  },
+  {
+    "name": "real life #59: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 1.52 at GROCER TOWN with your MasterCard Ikhwan World ending 2870. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 152,
+      "counterparty": "GROCER TOWN"
+    }
+  },
+  {
+    "name": "real life #60: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 50.43 to AINA WONG . REF: QR36148635.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 5043,
+      "counterparty": "AINA WONG"
+    }
+  },
+  {
+    "name": "real life #61: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 36.85 to NURUL WONG . REF: QR12120484.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 3685,
+      "counterparty": "NURUL WONG"
+    }
+  },
+  {
+    "name": "real life #62: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 19.55 to DANIEL LIM . REF: QR94080303.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1955,
+      "counterparty": "DANIEL LIM"
+    }
+  },
+  {
+    "name": "real life #75: Maybank2u: Funds Received",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Funds Received",
+    "body": "You’ve just received RM 326.15 in your account ending ***8849. REF: 10888648HBMBMYKL010ORM46627184",
+    "real": true,
+    "expect": {
+      "direction": "in",
+      "confidence": "high",
+      "amountMinor": 32615
+    }
+  },
+  {
+    "name": "real life #76: Maybank2u: Funds Received",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Funds Received",
+    "body": "You’ve just received RM 854.57 in your account ending ***8267. REF: 98328528HBMBMYKL010ORM20547003",
+    "real": true,
+    "expect": {
+      "direction": "in",
+      "confidence": "high",
+      "amountMinor": 85457
+    }
+  },
+  {
+    "name": "real life #77: Maybank2u: Funds Received",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Funds Received",
+    "body": "You’ve just received RM 359.87 in your account ending ***5685. REF: 47225988HBMBMYKL010ORM34154242",
+    "real": true,
+    "expect": {
+      "direction": "in",
+      "confidence": "high",
+      "amountMinor": 35987
+    }
+  },
+  {
+    "name": "real life #81: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 29.10 at NASI KANDAR ALI with your MasterCard Ikhwan World ending 2659. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 2910,
+      "counterparty": "NASI KANDAR ALI"
+    }
+  },
+  {
+    "name": "real life #82: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 87.86 at BOOKXCESS with your MasterCard Ikhwan World ending 7591. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 8786,
+      "counterparty": "BOOKXCESS"
+    }
+  },
+  {
+    "name": "real life #83: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 56.97 at NASI KANDAR ALI with your MasterCard Ikhwan World ending 5020. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 5697,
+      "counterparty": "NASI KANDAR ALI"
+    }
+  },
+  {
+    "name": "real life #84: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 67.09 at BOOKXCESS with your MasterCard Ikhwan World ending 1850. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 6709,
+      "counterparty": "BOOKXCESS"
+    }
+  },
+  {
+    "name": "real life #85: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 8.55 at GROCER TOWN with your MasterCard Ikhwan World ending 6864. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 855,
+      "counterparty": "GROCER TOWN"
+    }
+  },
+  {
+    "name": "real life #86: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 315.88 at KEDAI RUNCIT MAJU with your MasterCard Ikhwan World ending 7428. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 31588,
+      "counterparty": "KEDAI RUNCIT MAJU"
+    }
+  },
+  {
+    "name": "real life #93: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 15.79 at CAFE LANGIT with your MasterCard Ikhwan World ending 3473. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1579,
+      "counterparty": "CAFE LANGIT"
+    }
+  },
+  {
+    "name": "real life #94: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 109.53 at FARMASI SIHAT with your MasterCard Ikhwan World ending 7643. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 10953,
+      "counterparty": "FARMASI SIHAT"
+    }
+  },
+  {
+    "name": "real life #95: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 187.96 at CAFE LANGIT with your MasterCard Ikhwan World ending 6629. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 18796,
+      "counterparty": "CAFE LANGIT"
+    }
+  },
+  {
+    "name": "real life #105: Maybank2u: Transfer",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Transfer",
+    "body": "You've transferred RM 78.42 to your own account ending 5793. Did not perform this? Call Maybank now. REF:677592189M",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 7842,
+      "counterparty": "your"
+    }
+  },
+  {
+    "name": "real life #106: Maybank2u: Transfer",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Transfer",
+    "body": "You've transferred RM 363.00 to your own account ending 2539. Did not perform this? Call Maybank now. REF:298218829M",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 36300,
+      "counterparty": "your"
+    }
+  },
+  {
+    "name": "real life #107: Maybank2u: Transfer",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Transfer",
+    "body": "You've transferred RM 481.25 to your own account ending 9956. Did not perform this? Call Maybank now. REF:660539310M",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 48125,
+      "counterparty": "your"
+    }
+  },
+  {
+    "name": "real life #111: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 29.56 to KUMAR ABDULLAH: 74688333.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 2956,
+      "counterparty": "KUMAR ABDULLAH"
+    }
+  },
+  {
+    "name": "real life #112: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 17.28 to FARID ABDULLAH: 27618486.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1728,
+      "counterparty": "FARID ABDULLAH"
+    }
+  },
+  {
+    "name": "real life #113: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 20.35 to WEI JIE LEE: 86780943.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 2035,
+      "counterparty": "WEI JIE LEE"
+    }
+  },
+  {
+    "name": "real life #120: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 54.28 at KEDAI RUNCIT MAJU with your MasterCard Ikhwan World ending 2917. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 5428,
+      "counterparty": "KEDAI RUNCIT MAJU"
+    }
+  },
+  {
+    "name": "real life #121: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 19.50 at MYDIN MART with your MasterCard Ikhwan World ending 7230. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1950,
+      "counterparty": "MYDIN MART"
+    }
+  },
+  {
+    "name": "real life #122: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 28.58 at NASI KANDAR ALI with your MasterCard Ikhwan World ending 4283. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 2858,
+      "counterparty": "NASI KANDAR ALI"
+    }
+  },
+  {
+    "name": "real life #123: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 22.95 at NASI KANDAR ALI with your MasterCard Ikhwan World ending 0391. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 2295,
+      "counterparty": "NASI KANDAR ALI"
+    }
+  },
+  {
+    "name": "real life #124: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 17.92 at KEDAI RUNCIT MAJU with your MasterCard Ikhwan World ending 2417. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1792,
+      "counterparty": "KEDAI RUNCIT MAJU"
+    }
+  },
+  {
+    "name": "real life #125: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 6.80 at NASI KANDAR ALI with your MasterCard Ikhwan World ending 6246. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 680,
+      "counterparty": "NASI KANDAR ALI"
+    }
+  },
+  {
+    "name": "real life #129: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 371.35 at PETRON STESEN with your MasterCard Ikhwan World ending 6250. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 37135,
+      "counterparty": "PETRON STESEN"
+    }
+  },
+  {
+    "name": "real life #130: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 12.89 at RESTORAN SELERA with your MasterCard Ikhwan World ending 9521. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1289,
+      "counterparty": "RESTORAN SELERA"
+    }
+  },
+  {
+    "name": "real life #131: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 15.21 at FARMASI SIHAT. K_LUMPUR MYS with your MasterCard Ikhwan World ending 8719. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1521,
+      "counterparty": "FARMASI SIHAT. K_LUMPUR MYS"
+    }
+  },
+  {
+    "name": "real life #135: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 19.96 at PETRON STESEN with your MasterCard Ikhwan World ending 9519. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1996,
+      "counterparty": "PETRON STESEN"
+    }
+  },
+  {
+    "name": "real life #136: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 97.65 at NASI KANDAR ALI with your MasterCard Ikhwan World ending 8051. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 9765,
+      "counterparty": "NASI KANDAR ALI"
+    }
+  },
+  {
+    "name": "real life #137: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 148.62 at RESTORAN SELERA with your MasterCard Ikhwan World ending 1175. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 14862,
+      "counterparty": "RESTORAN SELERA"
+    }
+  },
+  {
+    "name": "real life #141: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 6.61 at KOPITIAM 88 with your MasterCard Ikhwan World ending 9386. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 661,
+      "counterparty": "KOPITIAM 88"
+    }
+  },
+  {
+    "name": "real life #142: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 9.89 at BOOKXCESS with your MasterCard Ikhwan World ending 4659. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 989,
+      "counterparty": "BOOKXCESS"
+    }
+  },
+  {
+    "name": "real life #143: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 30.66 at KEDAI RUNCIT MAJU with your MasterCard Ikhwan World ending 6759. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 3066,
+      "counterparty": "KEDAI RUNCIT MAJU"
+    }
+  },
+  {
+    "name": "real life #147: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 57.82 to RAVI RAHMAN & RAVI RAHMAN: 929854291Q.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 5782,
+      "counterparty": "RAVI RAHMAN & RAVI RAHMAN"
+    }
+  },
+  {
+    "name": "real life #148: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 33.44 to KUMAR LEE & KUMAR LEE: 807685336Q.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 3344,
+      "counterparty": "KUMAR LEE & KUMAR LEE"
+    }
+  },
+  {
+    "name": "real life #149: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 42.72 to AINA SUBRAMANIAM & AINA SUBRAMANIAM: 421662253Q.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 4272,
+      "counterparty": "AINA SUBRAMANIAM & AINA SUBRAMANIAM"
+    }
+  },
+  {
+    "name": "real life #153: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 498.81 at BOOKXCESS with your MasterCard Ikhwan World ending 2152. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 49881,
+      "counterparty": "BOOKXCESS"
+    }
+  },
+  {
+    "name": "real life #154: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 686.32 at KOPITIAM 88 with your MasterCard Ikhwan World ending 9087. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 68632,
+      "counterparty": "KOPITIAM 88"
+    }
+  },
+  {
+    "name": "real life #155: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 357.51 at MYDIN MART with your MasterCard Ikhwan World ending 6904. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 35751,
+      "counterparty": "MYDIN MART"
+    }
+  },
+  {
+    "name": "real life #156: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 15.91 at KOPITIAM 88 with your MasterCard Ikhwan World ending 9891. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1591,
+      "counterparty": "KOPITIAM 88"
+    }
+  },
+  {
+    "name": "real life #157: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 21.15 at RESTORAN SELERA with your MasterCard Ikhwan World ending 9660. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 2115,
+      "counterparty": "RESTORAN SELERA"
+    }
+  },
+  {
+    "name": "real life #158: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 11.34 at CAFE LANGIT with your MasterCard Ikhwan World ending 7559. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1134,
+      "counterparty": "CAFE LANGIT"
+    }
+  },
+  {
+    "name": "real life #162: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 20.64 at MYDIN MART with your MasterCard Ikhwan World ending 6471. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 2064,
+      "counterparty": "MYDIN MART"
+    }
+  },
+  {
+    "name": "real life #163: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 21.27 at CAFE LANGIT with your MasterCard Ikhwan World ending 6047. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 2127,
+      "counterparty": "CAFE LANGIT"
+    }
+  },
+  {
+    "name": "real life #164: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 28.09 at FARMASI SIHAT with your MasterCard Ikhwan World ending 6493. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 2809,
+      "counterparty": "FARMASI SIHAT"
+    }
+  },
+  {
+    "name": "real life #171: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 78.60 to WEI JIE HASSAN & CAFE . REF: 924838512Q.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 7860,
+      "counterparty": "WEI JIE HASSAN & CAFE"
+    }
+  },
+  {
+    "name": "real life #172: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 39.73 to MEI LING ISMAIL & CAFE . REF: 837245243Q.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 3973,
+      "counterparty": "MEI LING ISMAIL & CAFE"
+    }
+  },
+  {
+    "name": "real life #173: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 32.61 to KUMAR LIM & CAFE . REF: 211609215Q.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 3261,
+      "counterparty": "KUMAR LIM & CAFE"
+    }
+  },
+  {
+    "name": "real life #174: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 2.00 to AINA ONG: QR51233498.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 200,
+      "counterparty": "AINA ONG"
+    }
+  },
+  {
+    "name": "real life #175: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 7.52 to MEI LING TAN: QR11267017.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 752,
+      "counterparty": "MEI LING TAN"
+    }
+  },
+  {
+    "name": "real life #176: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 42.90 to AINA LIM: QR15180503.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 4290,
+      "counterparty": "AINA LIM"
+    }
+  },
+  {
+    "name": "real life #177: Maybank2u: Funds Received",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Funds Received",
+    "body": "You’ve just received RM 18.88 in your account ending ***7154. REF: Yasmeen",
+    "real": true,
+    "expect": {
+      "direction": "in",
+      "confidence": "high",
+      "amountMinor": 1888
+    }
+  },
+  {
+    "name": "real life #178: Maybank2u: Funds Received",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Funds Received",
+    "body": "You’ve just received RM 384.90 in your account ending ***1315. REF: Meja",
+    "real": true,
+    "expect": {
+      "direction": "in",
+      "confidence": "high",
+      "amountMinor": 38490
+    }
+  },
+  {
+    "name": "real life #179: Maybank2u: Funds Received",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Funds Received",
+    "body": "You’ve just received RM 94.25 in your account ending ***4090. REF: Coffee",
+    "real": true,
+    "expect": {
+      "direction": "in",
+      "confidence": "high",
+      "amountMinor": 9425
+    }
+  },
+  {
+    "name": "real life #189: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 62.34 to RAVI RAHMAN . REF: 498000408Q.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 6234,
+      "counterparty": "RAVI RAHMAN"
+    }
+  },
+  {
+    "name": "real life #190: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 12.35 to AINA RAHMAN . REF: 286580238Q.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1235,
+      "counterparty": "AINA RAHMAN"
+    }
+  },
+  {
+    "name": "real life #191: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 33.61 to FARID LIM . REF: 566128022Q.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 3361,
+      "counterparty": "FARID LIM"
+    }
+  },
+  {
+    "name": "real life #192: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent SGD 12.70 at KEDAI RUNCIT MAJU with your MasterCard Ikhwan World ending 4024. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1270,
+      "currency": "SGD",
+      "counterparty": "KEDAI RUNCIT MAJU"
+    }
+  },
+  {
+    "name": "real life #193: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent SGD 0.10 at KEDAI RUNCIT MAJU with your MasterCard Ikhwan World ending 1136. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 10,
+      "currency": "SGD",
+      "counterparty": "KEDAI RUNCIT MAJU"
+    }
+  },
+  {
+    "name": "real life #194: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent SGD 43.00 at KOPITIAM 88 with your MasterCard Ikhwan World ending 4282. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 4300,
+      "currency": "SGD",
+      "counterparty": "KOPITIAM 88"
+    }
+  },
+  {
+    "name": "real life #223: Maybank2u: Secure2u",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Secure2u",
+    "body": "Your Secure2u will be activated in two hours on a new device Pixel 8 Pro, Pixel8Pro. Not you? Call 03-26158888.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #224: Maybank2u: Secure2u",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Secure2u",
+    "body": "Your Secure2u is now activated on Pixel 8 Pro, Pixel8Pro. You can now approve your transactions through this device. Did not request? Call 03-58249739.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #225: How was your recent experience in perfor",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "How was your recent experience in performing Scan & Pay?",
+    "body": "Tap below and let us know by filling in a 2-minutes survey. Your feedback matters and will help us improve our ability to serve you better. This survey will expire on Sat, Jul 19, 2025, 11:20:47 AM",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #226: How was your recent experience in perfor",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "How was your recent experience in performing Scan & Pay?",
+    "body": "Tap below and let us know by filling in a 2-minutes survey. Your feedback matters and will help us improve our ability to serve you better. This survey will expire on Wed, Oct 21, 2026, 08:39:18 PM",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #227: ATM Cash-out",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "ATM Cash-out",
+    "body": "ATM Cash-out will be activated in two hours. Upon successful activation, you will be able to start withdrawing money through the app.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #228: Heal a Child. Your donation counts.",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Heal a Child. Your donation counts.",
+    "body": "A small act today, a lasting source of barakah tomorrow.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #229: How was your recent experience with Mayb",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "How was your recent experience with Maybank?",
+    "body": "Tap below and let us know by filling in a 2-minutes survey. Your feedback matters and will help us improve our ability to serve you better. This survey will expire on Mon, Sep 1, 2025, 07:26:15 AM",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #230: How was your recent experience with Mayb",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "How was your recent experience with Maybank?",
+    "body": "Tap below and let us know by filling in a 2-minutes survey. Your feedback matters and will help us improve our ability to serve you better. This survey will expire on Sat, Sep 20, 2025, 11:28:07 AM",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #233: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 74.17 at NASI KANDAR ALI with your MasterCard Ikhwan World ending 0269. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 7417,
+      "counterparty": "NASI KANDAR ALI"
+    }
+  },
+  {
+    "name": "real life #234: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 34.56 at FARMASI SIHAT with your MasterCard Ikhwan World ending 6403. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 3456,
+      "counterparty": "FARMASI SIHAT"
+    }
+  },
+  {
+    "name": "real life #247: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 17.29 at CAFE LANGIT with your MasterCard Ikhwan World ending 2918. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1729,
+      "counterparty": "CAFE LANGIT"
+    }
+  },
+  {
+    "name": "real life #248: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 716.65 at GROCER TOWN with your MasterCard Ikhwan World ending 8095. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 71665,
+      "counterparty": "GROCER TOWN"
+    }
+  },
+  {
+    "name": "real life #249: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 26.09 at NASI KANDAR ALI with your MasterCard Ikhwan World ending 6105. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 2609,
+      "counterparty": "NASI KANDAR ALI"
+    }
+  },
+  {
+    "name": "real life #250: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 13.76 at KEDAI RUNCIT MAJU with your MasterCard Ikhwan World ending 8297. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1376,
+      "counterparty": "KEDAI RUNCIT MAJU"
+    }
+  },
+  {
+    "name": "real life #251: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 4.80 at KOPITIAM 88 with your MasterCard Ikhwan World ending 6916. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 480,
+      "counterparty": "KOPITIAM 88"
+    }
+  },
+  {
+    "name": "real life #252: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 9.78 at PETRON STESEN with your MasterCard Ikhwan World ending 2682. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 978,
+      "counterparty": "PETRON STESEN"
+    }
+  },
+  {
+    "name": "real life #255: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 89.87 at KOPITIAM 88 with your MasterCard Ikhwan World ending 9821. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 8987,
+      "counterparty": "KOPITIAM 88"
+    }
+  },
+  {
+    "name": "real life #256: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 23.36 at RESTORAN SELERA with your MasterCard Ikhwan World ending 1513. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 2336,
+      "counterparty": "RESTORAN SELERA"
+    }
+  },
+  {
+    "name": "real life #257: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 11.44 at CAFE LANGIT with your MasterCard Ikhwan World ending 7572. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1144,
+      "counterparty": "CAFE LANGIT"
+    }
+  },
+  {
+    "name": "real life #258: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 70.82 at RESTORAN SELERA with your MasterCard Ikhwan World ending 4372. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 7082,
+      "counterparty": "RESTORAN SELERA"
+    }
+  },
+  {
+    "name": "real life #275: Maybank2u: Account Activated",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Account Activated",
+    "body": "MAE: Your Global Access Account-i has now been activated. We welcome you onboard & hope you'll enjoy banking with us.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #276: Maybank2u: Scan & Pay Registration",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay Registration",
+    "body": "You've successfully activated Scan & Pay and set your daily limit to SITI ABDULLAH you? Please call Maybank now.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #277: Your card on Google Pay is ready",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Your card on Google Pay is ready",
+    "body": "You can now use Google Pay. You have successfully added your Visa Debit ending 0614 to WEI JIE HASSAN may change your Debit Card's purchase limit via M2U or ATM.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #278: ATM Cash-out",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "ATM Cash-out",
+    "body": "You've successfully set up ATM Cash-out. For security purposes, it will only be activated after 24 hours.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #279: ATM Cash-out",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "ATM Cash-out",
+    "body": "Your ATM Cash-out is now activated. Set up a preferred withdrawal amount for a convenient cash-out experience.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #280: Have you claimed your cashback yet?",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Have you claimed your cashback yet?",
+    "body": "Tap 'Join Now' and check in for 7 days with Tap, Track, Win to get cashback 💰🌟",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #281: Maybank2u: Updates",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Updates",
+    "body": "You've successfully updated the purchase limit to WEI JIE ONG 20,000.00 for your card ending 1560. Not you? Please call Maybank now.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #282: Maybank",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank",
+    "body": "You have a Maybank2u transaction to be approved",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #283: Maybank2u: Link ASNB Account ",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Link ASNB Account ",
+    "body": "You've successfully linked your ASNB account to your M2U on 21 Aug 2025 22:40:19. Call Maybank now if you did not perform this.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #284: Your card on Google Pay is ready",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Your card on Google Pay is ready",
+    "body": "Your MasterCard card ending 3560 is ready for use in Google Wallet. You can use it wherever you see the contactless symbol or Google Pay logo.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #287: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 7.86 at KOPITIAM 88. Bhd. Jalan Contoh MYS with your MasterCard Ikhwan World ending 0433. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 786,
+      "counterparty": "KOPITIAM 88. Bhd. Jalan Contoh MYS"
+    }
+  },
+  {
+    "name": "real life #294: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 17.45 to nlbh bangsar 2. REF: QR06914067.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1745,
+      "counterparty": "nlbh bangsar 2"
+    }
+  },
+  {
+    "name": "real life #295: Maybank2u: Transfer",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Transfer",
+    "body": "You've transferred RM 34.13 to HAFIZ SUBRAMANIAM account ending ****1247. REF: 100061404M",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 3413,
+      "counterparty": "HAFIZ"
+    }
+  },
+  {
+    "name": "real life #298: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 11.89 at KOPITIAM 88 with your MasterCard Ikhwan World ending 5496. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1189,
+      "counterparty": "KOPITIAM 88"
+    }
+  },
+  {
+    "name": "real life #300: Maybank2u: Transfer",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Transfer",
+    "body": "Your transfer of RM 35.33 to WEI JIE SUBRAMANIAM account ending ****5739 has been accepted. REF: 024672111M",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 3533,
+      "counterparty": "WEI"
+    }
+  },
+  {
+    "name": "real life #301: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 6.12 at PETRON STESEN with your MasterCard Ikhwan World ending 7572. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 612,
+      "counterparty": "PETRON STESEN"
+    }
+  },
+  {
+    "name": "real life #308: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 27.91 at NASI KANDAR ALI with your MasterCard Ikhwan World ending 8669. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 2791,
+      "counterparty": "NASI KANDAR ALI"
+    }
+  },
+  {
+    "name": "real life #309: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 12.41 at CAFE LANGIT with your MasterCard Ikhwan World ending 3176. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1241,
+      "counterparty": "CAFE LANGIT"
+    }
+  },
+  {
+    "name": "real life #315: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 21.08 at KEDAI RUNCIT MAJU with your MasterCard Ikhwan World ending 6585. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 2108,
+      "counterparty": "KEDAI RUNCIT MAJU"
+    }
+  },
+  {
+    "name": "real life #320: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 198.45 at GROCER TOWN with your MasterCard Ikhwan World ending 3383. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 19845,
+      "counterparty": "GROCER TOWN"
+    }
+  },
+  {
+    "name": "real life #325: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "Successful payment of RM 26.83 to DANIEL LIM: 279973324Q.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 2683,
+      "counterparty": "DANIEL LIM"
+    }
+  },
+  {
+    "name": "real life #327: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 10.83 at MYDIN MART with your MasterCard Ikhwan World ending 4963. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 1083,
+      "counterparty": "MYDIN MART"
+    }
+  },
+  {
+    "name": "real life #332: Maybank2u: Scan & Pay",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Scan & Pay",
+    "body": "M2U: You have successfully paid RM45.79 to MEI LING TAN on 06 Sep 2026 12:51:38.Call 03-73738927 if you did not perform this payment.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 4579,
+      "counterparty": "MEI LING TAN"
+    }
+  },
+  {
+    "name": "real life #335: Maybank2u: Payments",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Payments",
+    "body": "Successful payment of RM 24,345.22 to KUMAR WONG:305743940M",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #337: Maybank2u: Card Transaction",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Card Transaction",
+    "body": "You've just spent RM 102.44 at CAFE LANGIT with your MasterCard Ikhwan World ending 3906. View your receipt now.",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 10244,
+      "counterparty": "CAFE LANGIT"
+    }
+  },
+  {
+    "name": "real life #339: Maybank2u: Transfer",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Transfer",
+    "body": "You've transferred RM 664.32 to KUMAR TAN ('s KUMAR TAN account ending ****9941. REF: 604251816M",
+    "real": true,
+    "expect": {
+      "direction": "out",
+      "confidence": "high",
+      "amountMinor": 66432,
+      "counterparty": "KUMAR"
+    }
+  },
+  {
+    "name": "real life #341: Maybank2u: Add as Favourite",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank2u: Add as Favourite",
+    "body": "TAN Gas Masak added to favourites (NURUL TAN account ending ****9185).",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #342: Tap, Track, Win rewards are back!",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Tap, Track, Win rewards are back!",
+    "body": "The more you transact, the more you can earn. Check out how you can start earning rewards now.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #343: Q4 is here 🤩. Top up ASB 2 via MAE",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Q4 is here 🤩. Top up ASB 2 via MAE",
+    "body": "Transact twice and stand to win up to AINA HASSAN in ASNB units.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #344: 🚨 ASB Fiesta kini lebih meriah!",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "🚨 ASB Fiesta kini lebih meriah!",
+    "body": "Mula melabur tanpa tunai pendahuluan & rebut ganjaran menarik!",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #345: Notice: Upcoming System Maintenance",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Notice: Upcoming System Maintenance",
+    "body": "From 12.00am – 8.00am on Saturday, 17 October 2026, certain banking services will be temporarily unavailable. You may continue to use the MAE app as usual for selected services. Tap for more info.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #346: Maybank Privilege exclusive awaits!",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Maybank Privilege exclusive awaits!",
+    "body": "Stand to win a curated trip for 4 pax. ✈️",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #347: Vouchers worth RM51 await 🤩",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Vouchers worth RM51 await 🤩",
+    "body": "Turn your everyday MAE transactions into a carnival of rewards!",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #348: Unlocked your bonus returns yet? 🤔",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Unlocked your bonus returns yet? 🤔",
+    "body": "Enjoy up to 2.38% p.a. bonus returns on your funds. Join now. 👉🏻",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #349: Hantar ke 🇸🇬 dan jimat RM7.41",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Hantar ke 🇸🇬 dan jimat RM7.41",
+    "body": "Nikmati pengecualian caj dengan Maybank Overseas Transfer.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #350: Elevate the journey, together",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "Elevate the journey, together",
+    "body": "Fly two in Singapore Airlines Business Class, pay for one.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  },
+  {
+    "name": "real life #351: The pinkest protection you’ll have💗",
+    "platform": "android",
+    "sourceApp": "com.maybank2u.life",
+    "title": "The pinkest protection you’ll have💗",
+    "body": "Get up to AINA LIM female cancer coverage from just RM28/month.",
+    "real": true,
+    "expect": {
+      "direction": "info",
+      "amountMinor": null,
+      "confidence": "none"
+    }
+  }
+]
