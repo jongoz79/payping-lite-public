@@ -106,8 +106,12 @@ function renderFooter(relativePrefix = '') {
   </footer>`;
 }
 
-// Read all parsers
-const parserFiles = fs.readdirSync(PARSERS_DIR).filter(f => f.endsWith('.json')).sort();
+// Read all parsers, or only PAYPING_SITE_PARSERS (comma-separated ids) when set
+const onlyParsers = (process.env.PAYPING_SITE_PARSERS || '').split(',').map(s => s.trim()).filter(Boolean);
+const parserFiles = fs.readdirSync(PARSERS_DIR)
+  .filter(f => f.endsWith('.json'))
+  .filter(f => !onlyParsers.length || onlyParsers.includes(f.replace(/\.json$/, '')))
+  .sort();
 const parsers = [];
 
 for (const file of parserFiles) {
